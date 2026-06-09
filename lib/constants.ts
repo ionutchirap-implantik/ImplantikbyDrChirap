@@ -1,3 +1,14 @@
+const CLINIC_ADDRESS = {
+  formatted: "Strada Milcov nr. 2, bl. 1206, sc. D, Iași 700581",
+  street: "Strada Milcov nr. 2, bl. 1206, sc. D",
+  locality: "Iași",
+  country: "RO",
+  postalCode: "700581",
+  geo: { latitude: 47.159767, longitude: 27.568553 },
+} as const;
+
+const mapsAddressQuery = encodeURIComponent(CLINIC_ADDRESS.formatted);
+
 export const SITE = {
   name: "Implantik by Dr. Chirap",
   shortName: "Implantik",
@@ -13,11 +24,12 @@ export const SITE = {
   whatsappHref: "https://wa.me/40758169234",
   email: "implantikdrchirap@gmail.com",
   emailHref: "mailto:implantikdrchirap@gmail.com",
-  address: "Strada Milcov nr. 2, bl. 1206, sc. D, Iași 700581",
-  addressLocality: "Iași",
-  addressCountry: "RO",
-  postalCode: "700581",
-  geo: { latitude: 47.159767, longitude: 27.568553 },
+  address: CLINIC_ADDRESS.formatted,
+  streetAddress: CLINIC_ADDRESS.street,
+  addressLocality: CLINIC_ADDRESS.locality,
+  addressCountry: CLINIC_ADDRESS.country,
+  postalCode: CLINIC_ADDRESS.postalCode,
+  geo: CLINIC_ADDRESS.geo,
   hours: "Luni–Vineri 8:00–19:30; Sâmbătă & Duminică: Închis",
   openingHours: ["Mo-Fr 08:00-19:30"],
   priceRange: "$$",
@@ -30,11 +42,12 @@ export const SITE = {
   tiktokEventsToken: "[TIKTOK_EVENTS_TOKEN]",
   googleRating: "[RATING REAL]",
   googleProfileUrl: "https://g.page/implantik?share",
+  // Google Place: Implantik by Dr. Chirap — Strada Milcov nr. 2, bl. 1206, sc. D
   mapsEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.9023506684193!2d27.568553015614988!3d47.15976687915747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb7240aa0941%3A0xe693326141ff6c45!2sImplantik%20by%20Dr.%20Chirap%20Clinica%20Medicina%20Dentara!5e0!3m2!1sen!2sro!4v1620795858505!5m2!1sen!2sro",
-  mapsDirectionsUrl:
-    "https://www.google.com/maps/dir/?api=1&destination=47.159767,27.568553",
-  wazeUrl: "https://www.waze.com/ul?ll=47.159767,27.568553&navigate=yes",
+  mapsDirectionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${mapsAddressQuery}`,
+  mapsSearchUrl: `https://www.google.com/maps/search/?api=1&query=${mapsAddressQuery}`,
+  wazeUrl: `https://www.waze.com/ul?q=${mapsAddressQuery}&ll=${CLINIC_ADDRESS.geo.latitude},${CLINIC_ADDRESS.geo.longitude}&navigate=yes`,
   social: {
     handle: "@implantikbydr.chirap",
     facebook: "https://www.facebook.com/implantik",

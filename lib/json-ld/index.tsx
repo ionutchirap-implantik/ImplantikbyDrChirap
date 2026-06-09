@@ -12,7 +12,7 @@ export function medicalClinicJsonLd(locale: Locale) {
     priceRange: SITE.priceRange,
     address: {
       "@type": "PostalAddress",
-      streetAddress: SITE.address,
+      streetAddress: SITE.streetAddress,
       addressLocality: SITE.addressLocality,
       postalCode: SITE.postalCode,
       addressCountry: SITE.addressCountry,
