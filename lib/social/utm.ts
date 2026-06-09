@@ -23,10 +23,10 @@ export function buildUtmUrl(
   return `${base}?${params.toString()}`;
 }
 
-export const SOCIAL_HANDLE = "@implantikbydrchirap";
+export const SOCIAL_HANDLE = SITE.social.handle;
 
 export const SOCIAL_URLS = {
-  facebook: "https://www.facebook.com/implantikbydrchirap",
-  instagram: "https://www.instagram.com/implantikbydrchirap",
-  tiktok: "https://www.tiktok.com/@implantikbydrchirap",
+  facebook: SITE.social.facebook,
+  instagram: SITE.social.instagram,
+  tiktok: SITE.social.tiktok,
 } as const;

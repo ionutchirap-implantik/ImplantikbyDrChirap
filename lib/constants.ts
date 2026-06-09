@@ -26,9 +26,9 @@ export const SITE = {
   googleRating: "[RATING REAL]",
   googleProfileUrl: "[URL PROFIL GOOGLE — DE CONFIRMAT]",
   social: {
-    handle: "@implantikbydrchirap",
-    facebook: "https://www.facebook.com/implantikbydrchirap",
-    instagram: "https://www.instagram.com/implantikbydrchirap",
+    handle: "@implantikbydr.chirap",
+    facebook: "https://www.facebook.com/implantik",
+    instagram: "https://www.instagram.com/implantikbydr.chirap/",
     tiktok: "https://www.tiktok.com/@implantikbydrchirap",
   },
 } as const;
