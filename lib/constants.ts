@@ -4,7 +4,8 @@ export const SITE = {
   tagline: "Clinică dentară, Iași",
   domain: "implantik.ro",
   url: "https://implantik.ro",
-  logoPath: "/Logo-Implantik-Dr.-Chirap.png",
+  logoPath: "/logo.png",
+  logoPdfPath: "/logo.pdf",
   phone: "(0758) 169 234",
   phoneHref: "tel:+40758169234",
   phoneNote: "Disponibile Luni–Vineri, 8:00–19:30",
@@ -60,7 +61,7 @@ export const FORM_SERVICES = [
 export type FormService = (typeof FORM_SERVICES)[number];
 
 export const PLACEHOLDERS = {
-  logoVector: "[LOGO VECTOR DE PRIMIT]",
+  logoVector: "/logo.pdf",
   photo: "[POZĂ REALĂ DE ADĂUGAT]",
   stat: "[CIFRĂ REALĂ, DOVEDIBILĂ — DE CONFIRMAT]",
   beforeAfter: "[CAZ PROPRIU + CONSIMȚĂMÂNT PACIENT]",

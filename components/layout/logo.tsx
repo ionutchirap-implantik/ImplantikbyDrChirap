@@ -14,9 +14,9 @@ export function Logo({ locale }: LogoProps) {
       <Image
         src={SITE.logoPath}
         alt={SITE.name}
-        width={140}
-        height={40}
-        className="h-9 w-auto object-contain"
+        width={576}
+        height={456}
+        className="h-10 w-auto object-contain sm:h-11"
         priority
       />
       <span className="sr-only">{SITE.name}</span>
