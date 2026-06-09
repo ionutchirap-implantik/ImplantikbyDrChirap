@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ImagePlaceholder } from "@/components/shared/image-placeholder";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { CtaSection } from "@/components/shared/cta-section";
+import { ViewContentTracker } from "@/components/tracking/view-content-tracker";
 import { RevealOnScroll } from "@/components/shared/reveal-on-scroll";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { buildMetadata } from "@/lib/metadata";
@@ -41,8 +42,11 @@ export default async function GenZPage({ params }: PageProps) {
     { icon: Users, title: p.yourChoice, text: p.yourChoiceText },
   ];
 
+  const page = `/${locale}/stomatologie-fara-bariere`;
+
   return (
     <>
+      <ViewContentTracker page={page} contentName="stomatologie-fara-bariere" />
       <section className="section-padding bg-gradient-to-b from-primary/10 to-background">
         <div className="container-narrow text-center">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">
@@ -96,7 +100,14 @@ export default async function GenZPage({ params }: PageProps) {
         </div>
       </section>
 
-      <CtaSection title={t.ctaTitle} text={t.ctaText} dict={dict} locale={locale} />
+      <CtaSection
+        title={t.ctaTitle}
+        text={t.ctaText}
+        dict={dict}
+        locale={locale}
+        page={page}
+        whatsappContext="genZ"
+      />
     </>
   );
 }

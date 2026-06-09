@@ -83,6 +83,17 @@ function loadTrackingScripts(categories: ConsentCategories) {
   const gtmId = SITE.gtmId;
   if (gtmId.startsWith("[") || document.getElementById("gtm-script")) return;
 
+  const w = window as Window & { dataLayer?: Record<string, unknown>[] };
+  w.dataLayer = w.dataLayer || [];
+  w.dataLayer.push({
+    event: "consent_granted",
+    analytics: categories.analytics,
+    marketing: categories.marketing,
+    gtm_server_url: SITE.gtmServerUrl.startsWith("[") ? null : SITE.gtmServerUrl,
+    meta_pixel_id: SITE.metaPixelId.startsWith("[") ? null : SITE.metaPixelId,
+    tiktok_pixel_id: SITE.tiktokPixelId.startsWith("[") ? null : SITE.tiktokPixelId,
+  });
+
   const script = document.createElement("script");
   script.id = "gtm-script";
   script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -114,7 +125,9 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
     persistConsent(next);
     setShowBanner(false);
     updateGtagConsent(next.categories);
-    loadTrackingScripts(next.categories);
+    if (next.categories.analytics || next.categories.marketing) {
+      loadTrackingScripts(next.categories);
+    }
   }, []);
 
   const acceptAll = useCallback(() => {

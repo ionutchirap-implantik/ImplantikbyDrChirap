@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone, Facebook, Instagram } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import { SOCIAL_HANDLE } from "@/lib/social/utm";
+import { PhoneLink } from "@/components/social/phone-link";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
 import { localePath } from "@/lib/i18n/paths";
@@ -19,6 +21,7 @@ const serviceLinks = [
 
 export function Footer({ dict, locale }: FooterProps) {
   const year = new Date().getFullYear();
+  const page = `/${locale}`;
 
   return (
     <footer className="border-t bg-secondary/30">
@@ -63,9 +66,9 @@ export function Footer({ dict, locale }: FooterProps) {
           </div>
           <div className="flex gap-3">
             <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-            <a href={SITE.phoneHref} className="text-muted-foreground hover:text-foreground">
+            <PhoneLink page={page} location="footer" className="text-muted-foreground hover:text-foreground">
               {SITE.phone}
-            </a>
+            </PhoneLink>
           </div>
         </div>
 
@@ -89,12 +92,44 @@ export function Footer({ dict, locale }: FooterProps) {
                 {dict.footer.terms}
               </Link>
             </li>
+            <li>
+              <Link href={localePath(locale, "/social")} className="text-muted-foreground hover:text-foreground">
+                {dict.social.title}
+              </Link>
+            </li>
           </ul>
           <p className="mt-6 font-display text-sm font-semibold">{dict.footer.followUs}</p>
-          <div className="mt-2 flex flex-wrap gap-3 text-sm text-muted-foreground">
-            <span>FB: {SITE.social.facebook}</span>
-            <span>IG: {SITE.social.instagram}</span>
-            <span>TikTok: {SITE.social.tiktok}</span>
+          <p className="mt-1 text-xs text-muted-foreground">{SOCIAL_HANDLE}</p>
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a
+              href={SITE.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary"
+              aria-label="Facebook"
+            >
+              <Facebook className="h-4 w-4" />
+              Facebook
+            </a>
+            <a
+              href={SITE.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary"
+              aria-label="Instagram"
+            >
+              <Instagram className="h-4 w-4" />
+              Instagram
+            </a>
+            <a
+              href={SITE.social.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary"
+              aria-label="TikTok"
+            >
+              TikTok
+            </a>
           </div>
         </div>
       </div>

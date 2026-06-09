@@ -135,6 +135,22 @@ export const dictionary = {
       "Această pagină este structurată pentru draft. Conținutul final va fi completat de echipa clinică.",
     backHome: "Înapoi acasă",
   },
+  social: {
+    title: "Implantik — Link-uri utile",
+    subtitle: "Programează, află despre servicii sau contactează-ne direct.",
+    links: {
+      programare: "Programează o consultație",
+      implantologie: "Implantologie",
+      genZ: "Stomatologie fără bariere",
+      contact: "Contact",
+      whatsapp: "Scrie pe WhatsApp",
+    },
+  },
+  instagram: {
+    title: "Pe Instagram",
+    follow: "Urmărește-ne",
+    placeholder: "[FEED INSTAGRAM — TODO token sau imagini statice de adăugat]",
+  },
   legal: {
     privacyTitle: "Politica de confidențialitate",
     cookiesTitle: "Politica cookies",

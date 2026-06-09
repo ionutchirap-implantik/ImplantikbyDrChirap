@@ -62,6 +62,16 @@ Deschide [http://localhost:3000](http://localhost:3000) — redirecționează au
 3. Adaugă variabilele din `.env.example`
 4. Deploy
 
+## Social media (Prompt #2)
+
+- **Link hub:** `/ro/social` — rute cu UTM către programare, servicii, WhatsApp
+- **OG images:** `app/opengraph-image.tsx` + per pagină cheie (`implantologie`, `stomatologie-fara-bariere`)
+- **WhatsApp contextual:** mesaje diferite per pagină + tracking `whatsapp_click` / `Contact`
+- **Tracking:** GTM + Meta/TikTok via consent; `event_id` pentru deduplicare CAPI
+- **Instagram:** secțiune lazy pe Home (placeholder până la token)
+
+Vezi `SECURITY-AUDIT.md` pentru auditul de securitate.
+
 ## CMSR
 
 Tot conținutul respectă regulile deontologice: fără garanții, superlative, oferte promoționale sau promovare de mărci.

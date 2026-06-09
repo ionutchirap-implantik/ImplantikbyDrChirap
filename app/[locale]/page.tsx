@@ -5,6 +5,7 @@ import { FeatureSections } from "@/components/home/feature-sections";
 import { Testimonials } from "@/components/home/testimonials";
 import { FaqSection } from "@/components/shared/faq-section";
 import { CtaSection } from "@/components/shared/cta-section";
+import { InstagramFeed } from "@/components/home/instagram-feed";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { buildMetadata } from "@/lib/metadata";
 import type { Locale } from "@/lib/i18n/config";
@@ -48,12 +49,19 @@ export default async function HomePage({ params }: PageProps) {
       <ServicesGrid dict={dict} locale={locale} />
       <FeatureSections dict={dict} locale={locale} />
       <Testimonials dict={dict} />
+      <InstagramFeed
+        title={dict.instagram.title}
+        followLabel={dict.instagram.follow}
+        placeholderNote={dict.instagram.placeholder}
+      />
       <FaqSection title={dict.home.faqTitle} items={faqItems} />
       <CtaSection
         title={dict.home.ctaTitle}
         text={dict.home.ctaText}
         dict={dict}
         locale={locale}
+        page={`/${locale}`}
+        whatsappContext="home"
       />
     </>
   );

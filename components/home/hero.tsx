@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ImagePlaceholder } from "@/components/shared/image-placeholder";
 import { RevealOnScroll } from "@/components/shared/reveal-on-scroll";
-import { SITE } from "@/lib/constants";
+import { WhatsAppLink } from "@/components/social/whatsapp-link";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
 import { localePath } from "@/lib/i18n/paths";
@@ -12,12 +12,9 @@ type HeroProps = {
   locale: Locale;
 };
 
-const whatsappMessage = encodeURIComponent(
-  "Bună ziua, aș dori o programare la Implantik by Dr. Chirap."
-);
-
 export function Hero({ dict, locale }: HeroProps) {
   const h = dict.home;
+  const page = `/${locale}`;
 
   return (
     <section className="section-padding pb-8">
@@ -37,13 +34,9 @@ export function Hero({ dict, locale }: HeroProps) {
               <Link href={localePath(locale, "/programare")}>{dict.cta.book}</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a
-                href={`${SITE.whatsappHref}?text=${whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <WhatsAppLink context="home" locale={locale} page={page} location="hero">
                 {dict.cta.whatsapp}
-              </a>
+              </WhatsAppLink>
             </Button>
           </div>
         </RevealOnScroll>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { SITE } from "@/lib/constants";
+import { WhatsAppLink } from "@/components/social/whatsapp-link";
+import type { WhatsAppContext } from "@/lib/social/whatsapp";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
 import { localePath } from "@/lib/i18n/paths";
@@ -10,13 +11,18 @@ type CtaSectionProps = {
   text: string;
   dict: Dictionary;
   locale: Locale;
+  page: string;
+  whatsappContext?: WhatsAppContext;
 };
 
-const whatsappMessage = encodeURIComponent(
-  "Bună ziua, aș dori o programare la Implantik by Dr. Chirap."
-);
-
-export function CtaSection({ title, text, dict, locale }: CtaSectionProps) {
+export function CtaSection({
+  title,
+  text,
+  dict,
+  locale,
+  page,
+  whatsappContext = "default",
+}: CtaSectionProps) {
   return (
     <section className="section-padding">
       <div className="container-narrow rounded-3xl bg-primary px-6 py-12 text-center text-primary-foreground sm:px-12 sm:py-16">
@@ -27,13 +33,15 @@ export function CtaSection({ title, text, dict, locale }: CtaSectionProps) {
             <Link href={localePath(locale, "/programare")}>{dict.cta.book}</Link>
           </Button>
           <Button variant="coral" size="lg" asChild>
-            <a
-              href={`${SITE.whatsappHref}?text=${whatsappMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              context={whatsappContext}
+              locale={locale}
+              page={page}
+              location="cta_section"
+              className="inline-flex items-center justify-center"
             >
               {dict.cta.whatsapp}
-            </a>
+            </WhatsAppLink>
           </Button>
         </div>
       </div>

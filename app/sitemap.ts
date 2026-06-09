@@ -25,6 +25,7 @@ const paths = [
   "/ghiduri/ingrijire-post-operator",
   "/contact",
   "/programare",
+  "/social",
   "/confidentialitate",
   "/cookies",
   "/termeni",

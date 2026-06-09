@@ -135,6 +135,22 @@ export const dictionary = {
       "This page is structured for the draft. Final content will be provided by the clinic team.",
     backHome: "Back to home",
   },
+  social: {
+    title: "Implantik — Useful links",
+    subtitle: "Book, explore services, or contact us directly.",
+    links: {
+      programare: "Book a consultation",
+      implantologie: "Dental implants",
+      genZ: "Dentistry without barriers",
+      contact: "Contact",
+      whatsapp: "Message on WhatsApp",
+    },
+  },
+  instagram: {
+    title: "On Instagram",
+    follow: "Follow us",
+    placeholder: "[INSTAGRAM FEED — TODO token or static images to add]",
+  },
   legal: {
     privacyTitle: "Privacy policy",
     cookiesTitle: "Cookie policy",

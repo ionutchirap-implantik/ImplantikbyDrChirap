@@ -7,6 +7,8 @@ import { ImagePlaceholder } from "@/components/shared/image-placeholder";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { FaqSection } from "@/components/shared/faq-section";
 import { CtaSection } from "@/components/shared/cta-section";
+import { ViewContentTracker } from "@/components/tracking/view-content-tracker";
+import { WhatsAppLink } from "@/components/social/whatsapp-link";
 import { RevealOnScroll } from "@/components/shared/reveal-on-scroll";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { buildMetadata } from "@/lib/metadata";
@@ -109,17 +111,27 @@ export default async function ImplantologiePage({ params }: PageProps) {
 
   const pageUrl = `${SITE.url}/${locale}/implantologie`;
 
+  const page = `/${locale}/implantologie`;
+
   return (
     <>
+      <ViewContentTracker page={page} contentName="implantologie" />
       <section className="section-padding">
         <div className="container-narrow">
           <SectionHeading title={t.title} subtitle={t.subtitle} />
           <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
             <RevealOnScroll>
               <p className="text-lg text-muted-foreground">{t.intro}</p>
-              <Button asChild className="mt-6">
-                <Link href={localePath(locale, "/programare")}>{dict.cta.book}</Link>
-              </Button>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button asChild>
+                  <Link href={localePath(locale, "/programare")}>{dict.cta.book}</Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <WhatsAppLink context="implantologie" locale={locale} page={page} location="intro">
+                    {dict.cta.whatsapp}
+                  </WhatsAppLink>
+                </Button>
+              </div>
             </RevealOnScroll>
             <RevealOnScroll>
               <ImagePlaceholder />
@@ -169,6 +181,8 @@ export default async function ImplantologiePage({ params }: PageProps) {
         text={dict.home.ctaText}
         dict={dict}
         locale={locale}
+        page={page}
+        whatsappContext="implantologie"
       />
 
       <JsonLd

@@ -9,7 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { submitLead, type LeadFormState } from "@/lib/actions/submit-lead";
 import { getAttributionForLead } from "@/lib/tracking/attribution";
-import { pushDataLayer } from "@/lib/tracking/data-layer";
+import { TurnstileWidget } from "@/components/forms/turnstile-widget";
+import { trackLead } from "@/lib/tracking/data-layer";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
 import { localePath } from "@/lib/i18n/paths";
@@ -26,11 +27,13 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
   const t = dict.contact;
   const f = dict.form;
 
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
   useEffect(() => {
     if (state.success) {
-      pushDataLayer({ event: "generate_lead", form_name: "contact" });
+      trackLead("contact", state.eventId);
     }
-  }, [state.success]);
+  }, [state.success, state.eventId]);
 
   return (
     <form action={formAction} className="space-y-5">
@@ -144,17 +147,22 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
         </Label>
       </div>
 
-      {/* TODO: Cloudflare Turnstile widget — add TURNSTILE_SITE_KEY */}
-      <div className="rounded-xl border border-dashed border-muted-foreground/30 px-4 py-3 text-xs text-muted-foreground">
-        [Cloudflare Turnstile — DE CONFIGURAT]
-      </div>
+      {turnstileSiteKey ? (
+        <TurnstileWidget siteKey={turnstileSiteKey} />
+      ) : (
+        <div className="rounded-xl border border-dashed border-muted-foreground/30 px-4 py-3 text-xs text-muted-foreground">
+          [Cloudflare Turnstile — DE CONFIGURAT în .env.local]
+        </div>
+      )}
 
       {state.message === "success" && (
         <p className="rounded-xl bg-secondary px-4 py-3 text-sm text-secondary-foreground">
           {t.success}
         </p>
       )}
-      {state.message === "validation_error" && (
+      {(state.message === "validation_error" ||
+        state.message === "rate_limited" ||
+        state.message === "captcha_failed") && (
         <p className="rounded-xl bg-destructive/10 px-4 py-3 text-sm text-destructive">
           {t.error}
         </p>

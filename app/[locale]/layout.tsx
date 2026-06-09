@@ -35,7 +35,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         <Header dict={dict} locale={locale} />
         <main className="pb-20 md:pb-0">{children}</main>
         <Footer dict={dict} locale={locale} />
-        <MobileActionBar dict={dict} />
+        <MobileActionBar dict={dict} locale={locale} />
         <CookieBanner dict={dict} locale={locale} />
       </ConsentProvider>
       <JsonLd data={medicalClinicJsonLd(locale)} />
