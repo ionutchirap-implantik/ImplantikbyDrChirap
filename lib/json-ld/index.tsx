@@ -7,8 +7,8 @@ export function medicalClinicJsonLd(locale: Locale) {
     "@type": "Dentist",
     name: SITE.name,
     url: `${SITE.url}/${locale}`,
-    telephone: ["+40758169234", "+40232704222"],
-    email: SITE.email.startsWith("[") ? undefined : SITE.email,
+    telephone: "+40758169234",
+    email: SITE.email,
     priceRange: SITE.priceRange,
     address: {
       "@type": "PostalAddress",

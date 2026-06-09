@@ -12,6 +12,7 @@ type WhatsAppLinkProps = {
   location?: string;
   className?: string;
   children: ReactNode;
+  "aria-label"?: string;
 };
 
 export function WhatsAppLink({
@@ -21,6 +22,7 @@ export function WhatsAppLink({
   location,
   className,
   children,
+  "aria-label": ariaLabel,
 }: WhatsAppLinkProps) {
   return (
     <a
@@ -28,6 +30,7 @@ export function WhatsAppLink({
       target="_blank"
       rel="noopener noreferrer"
       className={className}
+      aria-label={ariaLabel}
       onClick={() => trackWhatsAppClick(page, location)}
     >
       {children}

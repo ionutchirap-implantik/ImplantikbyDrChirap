@@ -33,6 +33,7 @@ export const dictionary = {
     terms: "Termeni",
     schedule: "Program",
     address: "Adresă",
+    email: "Email",
     followUs: "Urmărește-ne",
   },
   cookie: {
@@ -134,7 +135,7 @@ export const dictionary = {
     openGoogleMaps: "Deschide în Google Maps",
     openWaze: "Navighează cu Waze",
     call: "Sună",
-    phones: "Telefoane",
+    phones: "Telefon",
   },
   scaffold: {
     comingSoon: "Conținut în pregătire",

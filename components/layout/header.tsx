@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/layout/logo";
+import { HeaderActions } from "@/components/layout/header-actions";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
-import { localePath, switchLocalePath } from "@/lib/i18n/paths";
+import { localePath } from "@/lib/i18n/paths";
 
 type HeaderProps = {
   dict: Dictionary;
@@ -26,23 +26,19 @@ const navItems = [
 
 export function Header({ dict, locale }: HeaderProps) {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
-  const otherLocale = locale === "ro" ? "en" : "ro";
-
   return (
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
-      <div className="container-narrow flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="container-narrow flex h-16 items-center justify-between gap-2 px-4 sm:gap-4 sm:px-6 lg:px-8">
         <Logo locale={locale} />
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
           {navItems.map((item) => {
             const label =
               "labelKey" in item ? dict.nav[item.labelKey] : dict.nav[item.key as keyof typeof dict.nav];
-            const href = localePath(locale, item.href);
             return (
               <Link
                 key={item.href}
-                href={href}
+                href={localePath(locale, item.href)}
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {label}
@@ -52,19 +48,12 @@ export function Header({ dict, locale }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            href={switchLocalePath(locale, otherLocale, pathname)}
-            className="rounded-lg px-2 py-1 text-xs font-medium uppercase text-muted-foreground hover:bg-muted hover:text-foreground"
-            hrefLang={otherLocale}
-          >
-            {otherLocale}
-          </Link>
-          <Button asChild size="sm" className="hidden sm:inline-flex">
-            <Link href={localePath(locale, "/programare")}>{dict.nav.book}</Link>
-          </Button>
+          <div className="hidden md:flex">
+            <HeaderActions dict={dict} locale={locale} />
+          </div>
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg md:hidden"
             onClick={() => setOpen(!open)}
             aria-label={open ? "Close menu" : "Open menu"}
           >
@@ -74,8 +63,9 @@ export function Header({ dict, locale }: HeaderProps) {
       </div>
 
       {open && (
-        <nav className="border-t px-4 py-4 lg:hidden" aria-label="Mobile">
-          <ul className="space-y-3">
+        <nav className="border-t px-4 py-4 md:hidden" aria-label="Mobile">
+          <HeaderActions dict={dict} locale={locale} compact />
+          <ul className="mt-4 space-y-3">
             {navItems.map((item) => {
               const label =
                 "labelKey" in item ? dict.nav[item.labelKey] : dict.nav[item.key as keyof typeof dict.nav];

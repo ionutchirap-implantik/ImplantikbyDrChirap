@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone, Mail } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import { MapEmbed } from "./map-embed";
 import { NavigationButtons } from "./navigation-buttons";
@@ -30,7 +30,7 @@ export function LocationSection({ dict, page, variant = "footer" }: LocationSect
 
           <NavigationButtons dict={dict} page={page} location={variant} />
 
-          <div className="grid gap-4 rounded-2xl border bg-secondary/20 p-5 text-sm sm:grid-cols-3">
+          <div className="grid gap-4 rounded-2xl border bg-secondary/20 p-5 text-sm sm:grid-cols-2 lg:grid-cols-4">
             <div className="flex gap-3">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <div>
@@ -52,13 +52,16 @@ export function LocationSection({ dict, page, variant = "footer" }: LocationSect
                 <PhoneLink page={page} location={variant} className="block text-primary hover:underline">
                   {SITE.phone}
                 </PhoneLink>
-                <a
-                  href={SITE.phoneLandlineHref}
-                  className="block text-muted-foreground hover:text-foreground"
-                >
-                  {SITE.phoneLandline}
-                </a>
                 <p className="mt-1 text-xs text-muted-foreground">{SITE.phoneNote}</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <div>
+                <p className="font-medium">{dict.footer.email}</p>
+                <a href={SITE.emailHref} className="text-primary hover:underline">
+                  {SITE.email}
+                </a>
               </div>
             </div>
           </div>

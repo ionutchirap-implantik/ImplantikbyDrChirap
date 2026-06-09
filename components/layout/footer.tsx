@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Clock, Phone, Facebook, Instagram } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import { SOCIAL_HANDLE } from "@/lib/social/utm";
 import { PhoneLink } from "@/components/social/phone-link";
@@ -72,10 +72,16 @@ export function Footer({ dict, locale }: FooterProps) {
               <PhoneLink page={page} location="footer" className="block text-muted-foreground hover:text-foreground">
                 {SITE.phone}
               </PhoneLink>
-              <a href={SITE.phoneLandlineHref} className="block text-muted-foreground hover:text-foreground">
-                {SITE.phoneLandline}
-              </a>
               <p className="mt-1 text-xs text-muted-foreground">{SITE.phoneNote}</p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+            <div>
+              <p className="font-medium">{dict.footer.email}</p>
+              <a href={SITE.emailHref} className="text-muted-foreground hover:text-primary hover:underline">
+                {SITE.email}
+              </a>
             </div>
           </div>
         </div>

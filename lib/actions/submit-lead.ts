@@ -6,6 +6,7 @@ import { FORM_SERVICES } from "@/lib/constants";
 import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 import { safeParseAttribution, sanitizeText } from "@/lib/security/sanitize";
 import { verifyTurnstileToken } from "@/lib/security/turnstile";
+import { sendLeadNotificationEmail } from "@/lib/email/send-lead-email";
 
 const leadSchema = z.object({
   lastName: z.string().min(2).max(80),
@@ -92,6 +93,16 @@ export async function submitLead(
   };
 
   // TODO: Connect Supabase — insert into `leads` with service role (server-only)
+
+  await sendLeadNotificationEmail({
+    lastName: lead.last_name,
+    firstName: lead.first_name,
+    phone: lead.phone,
+    service: lead.service,
+    message: lead.message,
+    locale: lead.locale,
+    eventId,
+  });
 
   if (process.env.NODE_ENV === "development") {
     console.log("[LEAD]", { event_id: eventId, service: lead.service, locale: lead.locale });

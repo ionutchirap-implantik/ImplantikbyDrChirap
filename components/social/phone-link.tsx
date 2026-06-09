@@ -9,13 +9,21 @@ type PhoneLinkProps = {
   location?: string;
   className?: string;
   children: ReactNode;
+  "aria-label"?: string;
 };
 
-export function PhoneLink({ page, location, className, children }: PhoneLinkProps) {
+export function PhoneLink({
+  page,
+  location,
+  className,
+  children,
+  "aria-label": ariaLabel,
+}: PhoneLinkProps) {
   return (
     <a
       href={SITE.phoneHref}
       className={className}
+      aria-label={ariaLabel}
       onClick={() => trackPhoneCall(page, location)}
     >
       {children}

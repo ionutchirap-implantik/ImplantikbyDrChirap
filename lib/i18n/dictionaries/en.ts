@@ -33,6 +33,7 @@ export const dictionary = {
     terms: "Terms",
     schedule: "Hours",
     address: "Address",
+    email: "Email",
     followUs: "Follow us",
   },
   cookie: {
@@ -134,7 +135,7 @@ export const dictionary = {
     openGoogleMaps: "Open in Google Maps",
     openWaze: "Navigate with Waze",
     call: "Call",
-    phones: "Phones",
+    phones: "Phone",
   },
   scaffold: {
     comingSoon: "Content in preparation",
