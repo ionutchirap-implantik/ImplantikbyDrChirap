@@ -1,0 +1,27 @@
+# Implantik by Dr. Chirap
+
+> Clinică de implantologie și stomatologie în Iași, România.
+
+## Despre
+Implantik by Dr. Chirap oferă implantologie, chirurgie orală, stomatologie generală și estetică dentară/facială. Abordare bazată pe plan de tratament personalizat, transparență și consimțământ informat.
+
+## Pagini principale
+- /ro — Acasă
+- /ro/implantologie — Implantologie Iași
+- /ro/stomatologie-fara-bariere — Stomatologie pentru tineri, fără bariere
+- /ro/contact — Contact și programare
+- /ro/preturi — Prețuri transparente
+- /ro/echipa/dr-ionut-chirap — Dr. Ionuț Chirap
+- /ro/ghiduri — Ghiduri pentru pacienți
+
+## Limbi
+- Română (implicit): /ro/
+- English: /en/
+
+## Contact
+- Telefon: [TELEFON CLINICĂ]
+- WhatsApp: [NUMĂR WHATSAPP]
+- Adresă: [ADRESĂ], Iași, România
+
+## Note
+Conținutul este în draft. Cifre, poze și date de contact sunt placeholder-e de completat de clinică.

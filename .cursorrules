@@ -1,0 +1,27 @@
+# Implantik by Dr. Chirap — Cursor Rules
+
+## Stack
+- Next.js 15 App Router, TypeScript strict, Tailwind + shadcn/ui
+- Server Components by default; client only when needed (forms, consent, tracking)
+- i18n: RO (default) + EN via `[locale]` routes
+
+## Brand
+- Primary purple: `#534AB7` — single source in `globals.css` (`--brand-purple`)
+- Accent coral: `#F0997B` — sparingly
+- Fonts: Poppins (display), Inter (body) via `next/font`
+- Premium, airy, rounded corners, mobile-first
+
+## CMSR / Medical advertising (mandatory)
+- No result guarantees, superlatives, or comparative/denigrating claims
+- No promotional offers/discounts; transparent pricing allowed
+- No product brand promotion; factual service mentions only
+- Stats and before/after: placeholders only, marked for client confirmation
+- Civil, friendly, factual tone
+
+## Placeholders
+Never invent clinic data. Use marked placeholders: `[TELEFON CLINICĂ]`, `[POZĂ REALĂ DE ADĂUGAT]`, etc.
+
+## Code style
+- Use shadcn components; avoid custom CSS unless in globals.css tokens
+- Minimize client JS; prefer Server Actions for forms
+- All tracking gated behind consent (Consent Mode v2)

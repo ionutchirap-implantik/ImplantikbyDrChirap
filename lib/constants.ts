@@ -1,0 +1,37 @@
+export const SITE = {
+  name: "Implantik by Dr. Chirap",
+  shortName: "Implantik",
+  domain: "implantik.ro",
+  url: "https://implantik.ro",
+  phone: "[TELEFON CLINICĂ]",
+  phoneHref: "tel:+40000000000",
+  whatsapp: "[NUMĂR WHATSAPP]",
+  whatsappHref: "https://wa.me/40000000000",
+  email: "contact@implantik.ro",
+  address: "[ADRESĂ]",
+  addressLocality: "Iași",
+  addressCountry: "RO",
+  postalCode: "[COD POȘTAL]",
+  geo: { latitude: 47.1585, longitude: 27.6014 },
+  hours: "[PROGRAM]",
+  openingHours: ["Mo-Fr 09:00-18:00", "Sa 09:00-14:00"],
+  priceRange: "$$",
+  gtmId: "[GTM_ID]",
+  ga4Id: "[GA4_ID]",
+  googleRating: "[RATING REAL]",
+  googleProfileUrl: "[URL PROFIL GOOGLE — DE CONFIRMAT]",
+  social: {
+    facebook: "[URL FB — DE CONFIRMAT]",
+    instagram: "[URL IG — DE CONFIRMAT]",
+    tiktok: "[URL TikTok — DE CONFIRMAT]",
+  },
+} as const;
+
+export const PLACEHOLDERS = {
+  logo: "[LOGO DE ADĂUGAT]",
+  photo: "[POZĂ REALĂ DE ADĂUGAT]",
+  stat: "[CIFRĂ REALĂ, DOVEDIBILĂ — DE CONFIRMAT]",
+  beforeAfter: "[CAZ PROPRIU + CONSIMȚĂMÂNT PACIENT]",
+  bio: "[BIO + TITLURI/COMPETENȚE Dr. Chirap]",
+  prices: "[PREȚURI — DE CONFIRMAT]",
+} as const;
