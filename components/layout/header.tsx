@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { PLACEHOLDERS } from "@/lib/constants";
+import { Logo } from "@/components/layout/logo";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
 import { localePath, switchLocalePath } from "@/lib/i18n/paths";
@@ -32,12 +32,7 @@ export function Header({ dict, locale }: HeaderProps) {
   return (
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
       <div className="container-narrow flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link
-          href={localePath(locale)}
-          className="font-display text-lg font-semibold text-primary"
-        >
-          {PLACEHOLDERS.logo}
-        </Link>
+        <Logo locale={locale} />
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
           {navItems.map((item) => {

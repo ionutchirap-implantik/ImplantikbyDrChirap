@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { FORM_SERVICES } from "@/lib/constants";
 import { submitLead, type LeadFormState } from "@/lib/actions/submit-lead";
 import { getAttributionForLead } from "@/lib/tracking/attribution";
 import { TurnstileWidget } from "@/components/forms/turnstile-widget";
@@ -46,36 +47,36 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="name">{t.name}</Label>
+          <Label htmlFor="lastName">{t.lastName}</Label>
           <Input
-            id="name"
-            name="name"
-            autoComplete="name"
+            id="lastName"
+            name="lastName"
+            autoComplete="family-name"
             required
-            placeholder={t.name}
+            placeholder={t.lastName}
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="phone">{t.phone}</Label>
+          <Label htmlFor="firstName">{t.firstName}</Label>
           <Input
-            id="phone"
-            name="phone"
-            type="tel"
-            autoComplete="tel"
+            id="firstName"
+            name="firstName"
+            autoComplete="given-name"
             required
-            placeholder={t.phone}
+            placeholder={t.firstName}
           />
         </div>
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="email">{t.email}</Label>
+        <Label htmlFor="phone">{t.phone}</Label>
         <Input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          placeholder={t.email}
+          id="phone"
+          name="phone"
+          type="tel"
+          autoComplete="tel"
+          required
+          placeholder={t.phone}
         />
       </div>
 
@@ -93,35 +94,13 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
           <option value="" disabled>
             {f.selectService}
           </option>
-          {Object.entries(f.services).map(([key, label]) => (
+          {FORM_SERVICES.map((key) => (
             <option key={key} value={key}>
-              {label}
+              {f.services[key]}
             </option>
           ))}
         </select>
       </div>
-
-      <fieldset className="space-y-3">
-        <legend className="text-sm font-medium">{t.intent}</legend>
-        {(
-          [
-            ["consultation", t.intentConsultation],
-            ["call", t.intentCall],
-            ["whatsapp", t.intentWhatsapp],
-          ] as const
-        ).map(([value, label]) => (
-          <label key={value} className="flex items-center gap-2 text-sm">
-            <input
-              type="radio"
-              name="intent"
-              value={value}
-              defaultChecked={value === "consultation"}
-              className="h-4 w-4 accent-primary"
-            />
-            {label}
-          </label>
-        ))}
-      </fieldset>
 
       <div className="space-y-2">
         <Label htmlFor="message">{t.message}</Label>

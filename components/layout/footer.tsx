@@ -3,6 +3,7 @@ import { MapPin, Clock, Phone, Facebook, Instagram } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import { SOCIAL_HANDLE } from "@/lib/social/utm";
 import { PhoneLink } from "@/components/social/phone-link";
+import { LocationSection } from "@/components/location/location-section";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
 import { localePath } from "@/lib/i18n/paths";
@@ -28,6 +29,7 @@ export function Footer({ dict, locale }: FooterProps) {
       <div className="container-narrow section-padding grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-display text-lg font-semibold text-primary">{SITE.name}</p>
+          <p className="mt-1 text-sm text-muted-foreground">{SITE.tagline}</p>
           <p className="mt-3 text-sm text-muted-foreground">{dict.meta.defaultDescription}</p>
         </div>
 
@@ -66,9 +68,15 @@ export function Footer({ dict, locale }: FooterProps) {
           </div>
           <div className="flex gap-3">
             <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-            <PhoneLink page={page} location="footer" className="text-muted-foreground hover:text-foreground">
-              {SITE.phone}
-            </PhoneLink>
+            <div>
+              <PhoneLink page={page} location="footer" className="block text-muted-foreground hover:text-foreground">
+                {SITE.phone}
+              </PhoneLink>
+              <a href={SITE.phoneLandlineHref} className="block text-muted-foreground hover:text-foreground">
+                {SITE.phoneLandline}
+              </a>
+              <p className="mt-1 text-xs text-muted-foreground">{SITE.phoneNote}</p>
+            </div>
           </div>
         </div>
 
@@ -134,8 +142,18 @@ export function Footer({ dict, locale }: FooterProps) {
         </div>
       </div>
 
+      <LocationSection dict={dict} page={page} variant="footer" />
+
       <div className="border-t py-6 text-center text-xs text-muted-foreground">
-        © {year} {SITE.name}. {dict.footer.rights}
+        <p>
+          © {SITE.legal.copyrightFrom}–{year} {SITE.legal.company}. {dict.footer.rights}
+        </p>
+        <p className="mt-1">
+          {dict.footer.companyLegal} ·{" "}
+          <Link href={localePath(locale, "/confidentialitate")} className="underline hover:text-foreground">
+            {dict.footer.privacy}
+          </Link>
+        </p>
       </div>
     </footer>
   );

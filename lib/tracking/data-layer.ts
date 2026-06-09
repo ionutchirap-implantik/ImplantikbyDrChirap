@@ -6,7 +6,9 @@ export type DataLayerEvent =
   | { event: "generate_lead"; form_name: string; event_id: string }
   | { event: "Lead"; event_id: string; content_name?: string }
   | { event: "Contact"; method: "whatsapp" | "phone"; page: string; event_id: string }
-  | { event: "ViewContent"; page: string; content_name: string; event_id: string };
+  | { event: "ViewContent"; page: string; content_name: string; event_id: string }
+  | { event: "maps_click"; page: string; location?: string; event_id: string }
+  | { event: "waze_click"; page: string; location?: string; event_id: string };
 
 declare global {
   interface Window {
@@ -41,4 +43,14 @@ export function trackLead(formName: string, serverEventId?: string) {
 export function trackViewContent(page: string, contentName: string) {
   const event_id = generateEventId();
   pushDataLayer({ event: "ViewContent", page, content_name: contentName, event_id });
+}
+
+export function trackMapsClick(page: string, location?: string) {
+  const event_id = generateEventId();
+  pushDataLayer({ event: "maps_click", page, location, event_id });
+}
+
+export function trackWazeClick(page: string, location?: string) {
+  const event_id = generateEventId();
+  pushDataLayer({ event: "waze_click", page, location, event_id });
 }

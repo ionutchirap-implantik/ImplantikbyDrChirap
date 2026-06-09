@@ -2,24 +2,17 @@
 
 import { headers } from "next/headers";
 import { z } from "zod";
+import { FORM_SERVICES } from "@/lib/constants";
 import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 import { safeParseAttribution, sanitizeText } from "@/lib/security/sanitize";
 import { verifyTurnstileToken } from "@/lib/security/turnstile";
 
 const leadSchema = z.object({
-  name: z.string().min(2).max(120),
+  lastName: z.string().min(2).max(80),
+  firstName: z.string().min(2).max(80),
   phone: z.string().min(6).max(20),
-  email: z.string().email().max(254).optional().or(z.literal("")),
-  service: z.enum([
-    "implantologie",
-    "stomatologie",
-    "estetica",
-    "ortodontie",
-    "chirurgie",
-    "other",
-  ]),
+  service: z.enum(FORM_SERVICES),
   message: z.string().max(2000).optional(),
-  intent: z.enum(["consultation", "call", "whatsapp"]),
   consent: z.literal(true),
   locale: z.enum(["ro", "en"]),
   attribution: z.record(z.string().max(256)).optional(),
@@ -59,12 +52,11 @@ export async function submitLead(
   }
 
   const raw = {
-    name: sanitizeText(formData.get("name"), 120),
+    lastName: sanitizeText(formData.get("lastName"), 80),
+    firstName: sanitizeText(formData.get("firstName"), 80),
     phone: sanitizeText(formData.get("phone"), 20),
-    email: sanitizeText(formData.get("email"), 254),
     service: sanitizeText(formData.get("service"), 50),
     message: sanitizeText(formData.get("message"), 2000),
-    intent: sanitizeText(formData.get("intent"), 20),
     consent: formData.get("consent") === "on",
     locale: sanitizeText(formData.get("locale"), 2),
     attribution: safeParseAttribution(formData.get("attribution")),
@@ -86,12 +78,11 @@ export async function submitLead(
 
   const eventId = generateServerEventId();
   const lead = {
-    name: parsed.data.name,
+    last_name: parsed.data.lastName,
+    first_name: parsed.data.firstName,
     phone: parsed.data.phone,
-    email: parsed.data.email || null,
     service: parsed.data.service,
     message: parsed.data.message || null,
-    intent: parsed.data.intent,
     locale: parsed.data.locale,
     attribution: parsed.data.attribution ?? {},
     event_id: eventId,
@@ -101,9 +92,6 @@ export async function submitLead(
   };
 
   // TODO: Connect Supabase — insert into `leads` with service role (server-only)
-  // const supabase = createServiceClient();
-  // await supabase.from('leads').insert(lead);
-  // Store event_id in conversion_events for Meta CAPI / TikTok Events API deduplication via GTM server-side
 
   if (process.env.NODE_ENV === "development") {
     console.log("[LEAD]", { event_id: eventId, service: lead.service, locale: lead.locale });

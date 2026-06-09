@@ -4,12 +4,11 @@
 -- leads: form submissions (health data — GDPR Art. 9)
 CREATE TABLE IF NOT EXISTS leads (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  first_name TEXT NOT NULL,
   phone TEXT NOT NULL,
-  email TEXT,
   service TEXT NOT NULL,
   message TEXT,
-  intent TEXT NOT NULL,
   locale TEXT NOT NULL,
   attribution JSONB DEFAULT '{}',
   fbclid TEXT,
