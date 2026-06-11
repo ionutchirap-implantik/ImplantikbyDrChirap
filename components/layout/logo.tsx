@@ -16,6 +16,7 @@ export function Logo({ locale }: LogoProps) {
         alt={SITE.name}
         width={576}
         height={456}
+        sizes="(max-width: 640px) 120px, 140px"
         className="h-10 w-auto object-contain sm:h-11"
         priority
       />

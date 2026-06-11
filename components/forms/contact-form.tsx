@@ -114,7 +114,7 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
           name="contact_preference"
           defaultValue=""
           className={cn(
-            "flex h-11 w-full rounded-xl border border-input bg-transparent px-4 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            "flex h-11 w-full rounded-xl border border-input bg-transparent px-4 py-2 text-base shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:text-sm"
           )}
         >
           <option value="">{t.contactPreferencePlaceholder}</option>
@@ -134,7 +134,7 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
           required
           defaultValue=""
           className={cn(
-            "flex h-11 w-full rounded-xl border border-input bg-transparent px-4 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            "flex h-11 w-full rounded-xl border border-input bg-transparent px-4 py-2 text-base shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:text-sm"
           )}
         >
           <option value="" disabled>

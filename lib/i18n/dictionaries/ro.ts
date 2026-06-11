@@ -7,6 +7,10 @@ export const dictionary = {
     homeDescription:
       "Implant dentar în Iași cu Dr. Ionuț Chirap, medic specialist chirurgie orală și maxilo-facială, 7.000+ implanturi inserate. Plan de tratament personalizat, prețuri transparente. Programează o consultație.",
   },
+  a11y: {
+    openMenu: "Deschide meniul",
+    closeMenu: "Închide meniul",
+  },
   nav: {
     services: "Servicii",
     implantologie: "Implantologie",

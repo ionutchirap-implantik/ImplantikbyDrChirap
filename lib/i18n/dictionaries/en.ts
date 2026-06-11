@@ -7,6 +7,10 @@ export const dictionary = {
     homeDescription:
       "Dental implants in Iași with Dr. Ionuț Chirap, oral and maxillofacial surgeon, 7,000+ implants placed. Personalized treatment plan and transparent pricing. Book a consultation.",
   },
+  a11y: {
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+  },
   nav: {
     services: "Services",
     implantologie: "Dental Implants",

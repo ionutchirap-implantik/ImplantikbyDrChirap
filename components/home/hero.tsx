@@ -43,7 +43,7 @@ export function Hero({ dict, locale }: HeroProps) {
           <p className="mt-4 text-sm text-muted-foreground">{h.heroNote}</p>
         </RevealOnScroll>
         <RevealOnScroll>
-          <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg lg:ml-auto lg:max-w-md">
+          <div className="relative aspect-[4/5] max-h-[70vh] overflow-hidden rounded-2xl shadow-lg sm:aspect-square sm:max-h-none lg:ml-auto lg:max-w-md">
             <Image
               src={SITE.doctorPortraitPath}
               alt={
@@ -53,6 +53,7 @@ export function Hero({ dict, locale }: HeroProps) {
               }
               width={800}
               height={800}
+              sizes="(max-width: 1024px) 100vw, 448px"
               className="h-full w-full object-cover object-top"
               priority
             />

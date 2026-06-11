@@ -39,7 +39,7 @@ export function CookieBanner({ dict, locale }: CookieBannerProps) {
     <div
       role="dialog"
       aria-labelledby="cookie-title"
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-primary/20 bg-primary p-4 text-primary-foreground shadow-2xl sm:bottom-4 sm:left-4 sm:right-4 sm:mx-auto sm:max-w-2xl sm:rounded-2xl sm:border"
+      className="fixed inset-x-0 bottom-0 z-50 max-h-[85dvh] overflow-y-auto overscroll-contain border-t border-primary/20 bg-primary p-4 pb-safe text-primary-foreground shadow-2xl sm:bottom-4 sm:left-4 sm:right-4 sm:mx-auto sm:max-h-none sm:max-w-2xl sm:overflow-visible sm:rounded-2xl sm:border"
     >
       <h2 id="cookie-title" className="font-display text-lg font-semibold">
         {t.title}

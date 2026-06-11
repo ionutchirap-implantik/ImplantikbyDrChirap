@@ -35,13 +35,13 @@ export function HeaderActions({ dict, locale, compact = false }: HeaderActionsPr
   const t = dict.location;
 
   const iconBtn =
-    "inline-flex h-10 w-10 items-center justify-center rounded-xl border border-input bg-background text-primary shadow-sm transition-colors hover:bg-secondary";
+    "inline-flex h-11 w-11 min-h-11 min-w-11 items-center justify-center rounded-xl border border-input bg-background text-primary shadow-sm transition-colors hover:bg-secondary";
 
   return (
     <div className={`flex items-center gap-1.5 ${compact ? "flex-wrap" : ""}`}>
       <Link
         href={switchLocalePath(locale, otherLocale, pathname)}
-        className="inline-flex h-10 min-w-10 items-center justify-center rounded-xl px-2 text-xs font-medium uppercase text-muted-foreground hover:bg-muted hover:text-foreground"
+        className="inline-flex h-11 min-h-11 min-w-11 items-center justify-center rounded-xl px-2 text-xs font-medium uppercase text-muted-foreground hover:bg-muted hover:text-foreground"
         hrefLang={otherLocale}
       >
         {otherLocale}

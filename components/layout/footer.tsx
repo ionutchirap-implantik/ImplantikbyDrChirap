@@ -26,7 +26,7 @@ export function Footer({ dict, locale }: FooterProps) {
   const page = `/${locale}`;
 
   return (
-    <footer className="border-t bg-secondary/30">
+    <footer className="border-t bg-secondary/30 pb-20 md:pb-0">
       <div className="container-narrow section-padding grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-display text-lg font-semibold text-primary">{SITE.name}</p>

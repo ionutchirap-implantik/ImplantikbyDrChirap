@@ -65,15 +65,33 @@
     @apply mx-auto max-w-6xl;
   }
 
-  .reveal {
+  .pb-safe {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  .reveal.reveal--js {
     @apply opacity-0;
   }
 
-  .reveal.visible {
+  .reveal.reveal--js.visible {
     @apply animate-fade-up opacity-100;
   }
 
   .pause-on-hover:hover {
     animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal.reveal--js {
+      @apply opacity-100;
+    }
+
+    .reveal.reveal--js.visible {
+      animation: none;
+    }
+
+    .animate-marquee {
+      animation: none;
+    }
   }
 }

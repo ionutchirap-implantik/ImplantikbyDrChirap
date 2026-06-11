@@ -11,7 +11,7 @@ export function GoogleReviewsMarquee() {
     <div className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-background to-transparent sm:w-20" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-background to-transparent sm:w-20" />
-      <div className="flex w-max animate-marquee gap-4 pause-on-hover">
+      <div className="flex w-max animate-marquee gap-4 pause-on-hover motion-reduce:flex-wrap motion-reduce:w-full motion-reduce:justify-center">
         {items.map((review, i) => (
           <Card
             key={`${review.id}-${i}`}

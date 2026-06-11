@@ -29,7 +29,7 @@ export function MobileActionBar({ dict, locale }: MobileActionBarProps) {
   const waContext = getWhatsAppContext(pathname);
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t bg-background/95 p-3 backdrop-blur md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t bg-background/95 p-3 pb-safe backdrop-blur md:hidden">
       <Button variant="outline" className="flex-1" asChild>
         <PhoneLink page={page} location="mobile_bar" className="flex items-center justify-center gap-2">
           <Phone className="h-4 w-4" />
