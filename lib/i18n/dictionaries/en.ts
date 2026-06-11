@@ -176,8 +176,9 @@ export const dictionary = {
     cases: {
       title: "Cases & results",
       subtitle: "Examples from the clinic's practice, shared with patient consent.",
-      placeholder: "[OWN CASE + PATIENT CONSENT]",
-      consentNote: "[REAL PHOTOS TO BE ADDED — documented consent only]",
+      cta: "See more on Instagram",
+      follow: "@implantikbydr.chirap",
+      consentNote: "Real results — see the full gallery on our Instagram profile.",
     },
     testimonialsTitle: "What patients say",
     faqTitle: "Frequently asked questions",

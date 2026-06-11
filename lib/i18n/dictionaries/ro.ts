@@ -175,8 +175,9 @@ export const dictionary = {
     cases: {
       title: "Cazuri & rezultate",
       subtitle: "Exemple din practica clinicii, prezentate cu acordul pacienților.",
-      placeholder: "[CAZ PROPRIU + CONSIMȚĂMÂNT PACIENT]",
-      consentNote: "[POZE REALE DE ADĂUGAT — doar cu consimțământ documentat]",
+      cta: "Vezi mai multe pe Instagram",
+      follow: "@implantikbydr.chirap",
+      consentNote: "Rezultate reale — galeria completă pe profilul nostru de Instagram.",
     },
     testimonialsTitle: "Ce spun pacienții",
     faqTitle: "Întrebări frecvente",

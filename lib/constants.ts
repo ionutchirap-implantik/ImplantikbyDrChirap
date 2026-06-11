@@ -63,6 +63,7 @@ export const SITE = {
     handle: "@implantikbydr.chirap",
     facebook: "https://www.facebook.com/implantik",
     instagram: "https://www.instagram.com/implantikbydr.chirap/",
+    instagramFeaturedPost: "https://www.instagram.com/p/DMCzpaFhXbT/",
     tiktok: "https://www.tiktok.com/@implantikbydrchirap",
   },
   legal: {

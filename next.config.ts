@@ -9,7 +9,7 @@ const csp = [
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://graph.facebook.com https://analytics.tiktok.com https://challenges.cloudflare.com",
-  "frame-src https://www.googletagmanager.com https://challenges.cloudflare.com https://www.google.com",
+  "frame-src https://www.googletagmanager.com https://challenges.cloudflare.com https://www.google.com https://www.instagram.com",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
