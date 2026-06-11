@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ImagePlaceholder } from "@/components/shared/image-placeholder";
+import { PageImage } from "@/components/shared/page-image";
+import { getServiceHeroImage } from "@/lib/images/site-images";
 import { RevealOnScroll } from "@/components/shared/reveal-on-scroll";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
@@ -18,7 +19,11 @@ export function GenZTeaser({ dict, locale }: GenZTeaserProps) {
     <section className="section-padding">
       <div className="container-narrow grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <RevealOnScroll>
-          <ImagePlaceholder aspect="video" label={g.imageLabel} />
+          <PageImage
+            src={getServiceHeroImage("stomatologie-fara-bariere")}
+            alt={g.title}
+            aspect="video"
+          />
         </RevealOnScroll>
         <RevealOnScroll>
           <h2 className="font-display text-3xl font-semibold sm:text-4xl">{g.title}</h2>

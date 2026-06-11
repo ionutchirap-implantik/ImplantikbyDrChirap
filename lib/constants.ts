@@ -19,7 +19,7 @@ export const SITE = {
   url: "https://implantik.ro",
   logoPath: "/logo.png",
   logoPdfPath: "/logo.pdf",
-  doctorPortraitPath: "/team/dr-ionut-chirap.jpg",
+  doctorPortraitPath: "/team/dr-ionut-chirap.jpeg",
   phone: "(0758) 169 234",
   phoneHref: "tel:+40758169234",
   phoneNote: "Disponibile Luni–Vineri, 8:00–19:30",

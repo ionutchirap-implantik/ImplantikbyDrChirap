@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ImagePlaceholder } from "@/components/shared/image-placeholder";
+import { PageImage } from "@/components/shared/page-image";
+import { getServiceHeroImage } from "@/lib/images/site-images";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { FaqVisibleSection } from "@/components/shared/faq-visible-section";
 import { CtaSection } from "@/components/shared/cta-section";
@@ -58,7 +59,11 @@ export function ServicePageView({ content, dict, locale }: ServicePageViewProps)
               </div>
             </RevealOnScroll>
             <RevealOnScroll>
-              <ImagePlaceholder aspect="video" />
+              <PageImage
+                src={getServiceHeroImage(content.slug)}
+                alt={content.h1}
+                aspect="video"
+              />
             </RevealOnScroll>
           </div>
         </div>
