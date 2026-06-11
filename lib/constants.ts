@@ -4,7 +4,8 @@ const CLINIC_ADDRESS = {
   locality: "Iași",
   country: "RO",
   postalCode: "700581",
-  geo: { latitude: 47.159767, longitude: 27.568553 },
+  geo: { latitude: 47.1598596, longitude: 27.5710137 },
+  googlePlaceId: "0x40cafb7240aa0941:0xe693326141ff6c45",
 } as const;
 
 const mapsAddressQuery = encodeURIComponent(CLINIC_ADDRESS.formatted);
@@ -42,10 +43,11 @@ export const SITE = {
   tiktokEventsToken: "[TIKTOK_EVENTS_TOKEN]",
   googleRating: "[RATING REAL]",
   googleProfileUrl: "https://g.page/implantik?share",
-  // Google Place: Implantik by Dr. Chirap — Strada Milcov nr. 2, bl. 1206, sc. D
+  // Embed + pin Google Maps — Implantik by Dr. Chirap, Strada Milcov nr. 2
   mapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.9023506684193!2d27.568553015614988!3d47.15976687915747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb7240aa0941%3A0xe693326141ff6c45!2sImplantik%20by%20Dr.%20Chirap%20Clinica%20Medicina%20Dentara!5e0!3m2!1sen!2sro!4v1620795858505!5m2!1sen!2sro",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1356.4488081514626!2d27.571013699999998!3d47.159859600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb7240aa0941%3A0xe693326141ff6c45!2sImplantik%20by%20Dr.%20Chirap%20Clinica%20Medicina%20Dentara!5e0!3m2!1sen!2sro!4v1781158209675!5m2!1sen!2sro",
   mapsDirectionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${mapsAddressQuery}`,
+  mapsPlaceUrl: `https://www.google.com/maps/place/Implantik+by+Dr.+Chirap+Clinica+Medicina+Dentara/@${CLINIC_ADDRESS.geo.latitude},${CLINIC_ADDRESS.geo.longitude},17z/data=!4m6!3m5!1s${encodeURIComponent(CLINIC_ADDRESS.googlePlaceId)}!8m2!3d${CLINIC_ADDRESS.geo.latitude}!4d${CLINIC_ADDRESS.geo.longitude}`,
   mapsSearchUrl: `https://www.google.com/maps/search/?api=1&query=${mapsAddressQuery}`,
   wazeUrl: `https://www.waze.com/ul?q=${mapsAddressQuery}&ll=${CLINIC_ADDRESS.geo.latitude},${CLINIC_ADDRESS.geo.longitude}&navigate=yes`,
   social: {
