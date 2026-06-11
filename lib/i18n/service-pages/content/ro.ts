@@ -464,6 +464,9 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
       text: "Îngrijire de bază, plan scris și prevenție — fundația pentru orice tratament.",
     },
     whatsappContext: "stomatologie",
+    heroImage: "/team/dr-ana-maria-chirap.jpeg",
+    heroImageAlt: "Dr. Ana Maria Chirap, medic stomatolog, Implantik Iași",
+    heroImageAspect: "portrait",
     trackName: "stomatologie",
   },
 

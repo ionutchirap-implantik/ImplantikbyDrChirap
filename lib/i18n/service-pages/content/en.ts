@@ -464,6 +464,9 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
       text: "Basic care, written plan, and prevention — the foundation for any treatment.",
     },
     whatsappContext: "stomatologie",
+    heroImage: "/team/dr-ana-maria-chirap.jpeg",
+    heroImageAlt: "Dr. Ana Maria Chirap, dentist, Implantik Iași",
+    heroImageAspect: "portrait",
     trackName: "stomatologie",
   },
 

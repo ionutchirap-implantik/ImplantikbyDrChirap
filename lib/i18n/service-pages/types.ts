@@ -41,5 +41,8 @@ export type ServicePageContent = {
   cta: { title: string; text?: string };
   whatsappContext: WhatsAppContext;
   heroVariant?: "default" | "accent";
+  heroImage?: string;
+  heroImageAlt?: string;
+  heroImageAspect?: "square" | "video" | "wide" | "portrait";
   trackName: string;
 };

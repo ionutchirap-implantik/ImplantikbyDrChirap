@@ -60,9 +60,9 @@ export function ServicePageView({ content, dict, locale }: ServicePageViewProps)
             </RevealOnScroll>
             <RevealOnScroll>
               <PageImage
-                src={getServiceHeroImage(content.slug)}
-                alt={content.h1}
-                aspect="video"
+                src={content.heroImage ?? getServiceHeroImage(content.slug)}
+                alt={content.heroImageAlt ?? content.h1}
+                aspect={content.heroImageAspect ?? "video"}
               />
             </RevealOnScroll>
           </div>

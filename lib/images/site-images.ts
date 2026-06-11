@@ -9,7 +9,7 @@ export const SERVICE_HERO_IMAGES: Record<ServicePageSlug, string> = {
   "reabilitari-complexe": "/images/services/reabilitari-complexe.png",
   "protetica-dentara": "/images/services/protetica-dentara.png",
   ortodontie: "/images/services/ortodontie.png",
-  stomatologie: "/images/services/stomatologie.jpeg",
+  stomatologie: "/team/dr-ana-maria-chirap.jpeg",
   "estetica-dentara": "/images/services/estetica-dentara.png",
   "estetica-faciala": "/images/services/estetica-faciala.png",
 };

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 type PageImageProps = {
   src: string;
   alt: string;
-  aspect?: "square" | "video" | "wide";
+  aspect?: "square" | "video" | "wide" | "portrait";
   className?: string;
   priority?: boolean;
 };
@@ -20,6 +20,7 @@ export function PageImage({
     square: "aspect-square",
     video: "aspect-video",
     wide: "aspect-[21/9]",
+    portrait: "aspect-[4/5]",
   }[aspect];
 
   return (
@@ -34,7 +35,7 @@ export function PageImage({
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className={cn("object-cover", aspect === "portrait" && "object-top")}
         sizes="(max-width: 1024px) 100vw, 50vw"
         priority={priority}
       />
