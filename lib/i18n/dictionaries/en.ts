@@ -3,6 +3,9 @@ export const dictionary = {
     siteName: "Implantik by Dr. Chirap",
     defaultDescription:
       "Dental implant and dentistry clinic in Iași, Romania. Personalized treatment plans, transparency, and safe, predictable outcomes.",
+    homeTitle: "Dental Implants Iași — Dr. Ionuț Chirap | Implantik",
+    homeDescription:
+      "Dental implants in Iași with Dr. Ionuț Chirap, oral and maxillofacial surgeon, 10,000+ implants placed. Personalized treatment plan and transparent pricing. Book a consultation.",
   },
   nav: {
     services: "Services",
@@ -54,24 +57,130 @@ export const dictionary = {
     privacy: "Privacy",
   },
   home: {
-    heroTitle: "Friendly dentists in Iași",
+    heroEyebrow: "Iași · Dental Implants & Oral and Maxillofacial Surgery",
+    heroTitle: "Dental implants in Iași with a surgeon you can trust",
     heroSubtitle:
-      "A personalized treatment plan, explained clearly. You decide — we support you at every step.",
+      "Dr. Ionuț Chirap — oral and maxillofacial surgeon with over 10,000 dental implants placed. A personalized treatment plan, explained clearly. You decide — we support you at every step.",
+    heroNote: "We reply Monday–Friday, 8:00 AM–7:30 PM",
+    heroImageLabel: "[REAL PHOTO DR. CHIRAP — professional portrait]",
+    stats: [
+      {
+        value: "10,000+",
+        label: "dental implants placed",
+        note: "[VERIFIABLE — confirmed by the clinic]",
+      },
+      {
+        value: "[YEARS]",
+        label: "years of clinical experience",
+        note: "[TO BE COMPLETED]",
+      },
+      {
+        value: "6",
+        label: "specialties under one roof",
+        note: "",
+      },
+      {
+        value: "4.9★",
+        label: "Google rating",
+        note: "[CONFIRM ACTUAL RATING + profile link]",
+      },
+    ],
+    about: {
+      title: "A surgeon for cases that require experience",
+      text: "Dr. Ionuț Chirap is a specialist in oral and maxillofacial surgery, with over 10,000 dental implants placed. At Implantik, every treatment starts with a careful evaluation and a personalized plan — from single implants to full-arch rehabilitation on implants (All-on-4, All-on-6), sinus lift, and bone grafting. Complex cases — severe bone loss, failed implants, difficult rehabilitations — are planned and treated here with a predictable approach and steps explained in plain language.",
+      bullets: [
+        "Specialized in oral and maxillofacial surgery",
+        "Implant systems: Nobel Biocare, Megagen AnyRidge, AlphaBio",
+        "Written treatment plan with transparent steps and costs",
+      ],
+      cta: "Meet Dr. Chirap",
+      note: "[FULL BIO + TITLES + MEDICAL LICENSE NO. — TO BE PROVIDED]",
+    },
     servicesTitle: "Services",
-    servicesSubtitle: "Surgical expertise and full dentistry under one roof.",
-    surgicalTitle: "Oral and maxillofacial surgery",
-    surgicalText:
-      "Experience with complex cases: full-mouth rehabilitation, sinus lift, oral surgery. Planned approach with safe, predictable outcomes.",
-    aestheticTitle: "Dental and facial aesthetics",
-    aestheticText:
-      "Aesthetic treatments with individual planning. Clear information about procedures and realistic expectations.",
-    genZTitle: "Dentistry without barriers",
-    genZText:
-      "For young adults who want transparency, not pressure. We present options — the decision is yours.",
+    servicesSubtitle:
+      "Dental implants and oral surgery, alongside complete dentistry — all under one roof in Iași, Romania.",
+    serviceItems: [
+      {
+        title: "Dental implants",
+        description:
+          "Dental implants for one or more missing teeth, with an individual plan and clear steps. From single implants to All-on-4 and All-on-6 in Romania.",
+      },
+      {
+        title: "Oral and maxillofacial surgery",
+        description:
+          "Sinus lift, bone grafting, complex extractions, wisdom teeth. Planned procedures performed by a specialist surgeon in Iași.",
+      },
+      {
+        title: "Complex rehabilitation",
+        description:
+          "Severe bone loss, failed implants, full oral rehabilitation. Careful evaluation and phased planning.",
+      },
+      {
+        title: "General dentistry",
+        description:
+          "Consultations, fillings, scaling and professional hygiene. Complete care for the whole family.",
+      },
+      {
+        title: "Orthodontics",
+        description:
+          "Traditional or aesthetic braces for children and adults. Tooth alignment with monitoring throughout.",
+      },
+      {
+        title: "Dental aesthetics",
+        description:
+          "Veneers, full-ceramic crowns, professional whitening. Natural-looking results planned together with you.",
+      },
+      {
+        title: "Facial aesthetics",
+        description:
+          "Hyaluronic acid and botulinum toxin treatments, performed medically with full information and realistic expectations.",
+      },
+      {
+        title: "Dentistry without barriers",
+        description:
+          "For young adults: full transparency, no pressure. We present the options — you decide.",
+      },
+    ],
+    servicesNote:
+      "[TO BE CONFIRMED with the clinic: emergency dentistry and digital radiology — cards added if available]",
+    process: {
+      title: "Your journey at Implantik",
+      steps: [
+        {
+          title: "Consultation and assessment",
+          text: "We discuss, examine, and understand your situation. No rush.",
+        },
+        {
+          title: "Personalized treatment plan",
+          text: "You receive a written plan: steps, timeline, costs. Everything transparent.",
+        },
+        {
+          title: "The decision is yours",
+          text: "We explain options in plain language. You choose the pace and solution.",
+        },
+        {
+          title: "Treatment and follow-up",
+          text: "We deliver the planned treatment and stay with you at check-ups.",
+        },
+      ],
+    },
+    genZTeaser: {
+      title: "Dentistry without barriers",
+      text: "For young adults who want transparency, not pressure. We present the options — the decision is yours.",
+      imageLabel: "[CLINIC ATMOSPHERE PHOTO — AI or real, no faces]",
+    },
+    cases: {
+      title: "Cases & results",
+      subtitle: "Examples from the clinic's practice, shared with patient consent.",
+      placeholder: "[OWN CASE + PATIENT CONSENT]",
+      consentNote: "[REAL PHOTOS TO BE ADDED — documented consent only]",
+    },
     testimonialsTitle: "What patients say",
     faqTitle: "Frequently asked questions",
-    ctaTitle: "Let's discuss your plan",
-    ctaText: "Book a consultation or message us on WhatsApp. We respond promptly.",
+    finalCta: {
+      title: "Let's discuss your plan",
+      text: "Book a consultation at Implantik in Iași. You'll receive a personalized treatment plan, explained clearly — and the decision is yours.",
+    },
   },
   implantologie: {
     title: "Dental implants in Iași",
@@ -167,13 +276,17 @@ export const dictionary = {
       "[LEGAL TEXT TO BE COMPLETED — consult lawyer / DPO for final version]",
   },
   faq: {
-    q1: "How do I book a consultation?",
-    a1: "Fill in the form, call, or message us on WhatsApp. We confirm your appointment as soon as possible.",
-    q2: "What does the first consultation include?",
-    a2: "Clinical evaluation, discussion of options, and recommendations for further investigations if needed.",
-    q3: "Do you provide a written treatment plan?",
-    a3: "Yes. You receive a personalized plan with proposed steps, explanations, and cost estimates before deciding.",
-    q4: "Do you work with patients from other cities?",
-    a4: "Yes. We offer logistical support for patients from Romania and abroad.",
+    q1: "How much does a dental implant cost in Iași?",
+    a1: "The cost depends on your clinical situation and the implant system chosen. At Implantik you receive a written treatment plan with transparent costs from the first consultation. See our pricing page for guidance.",
+    q2: "Does a dental implant hurt?",
+    a2: "The procedure is performed under local anaesthesia, so you should not feel pain during it. Post-operative discomfort is usually moderate and manageable, and the team explains exactly what to expect.",
+    q3: "How long does a dental implant take?",
+    a3: "Placing a single implant typically takes 30–60 minutes. Healing (osseointegration) usually takes 3–6 months depending on the case. In some situations immediate loading may be possible — you'll find out at consultation if you're a candidate.",
+    q4: "What happens at the first consultation?",
+    a4: "We discuss your situation and goals, perform a clinical examination, and arrange any necessary investigations. You then receive a personalized treatment plan with steps and costs, explained clearly.",
+    q5: "Can I have an implant if I was told I don't have enough bone?",
+    a5: "In many cases, yes. Procedures such as sinus lift and bone grafting can restore the bone volume needed. Dr. Chirap, oral and maxillofacial surgeon in Iași, evaluates each case individually.",
+    q6: "Do you work with patients from other cities?",
+    a6: "Yes. For patients outside Iași we plan stages efficiently and communicate via WhatsApp to keep travel to a minimum.",
   },
 } as const;

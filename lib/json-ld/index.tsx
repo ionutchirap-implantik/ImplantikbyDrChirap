@@ -33,16 +33,29 @@ export function medicalClinicJsonLd(locale: Locale) {
   };
 }
 
-export function physicianJsonLd() {
+export function physicianJsonLd(locale: Locale = "ro") {
+  const isRo = locale === "ro";
   return {
     "@context": "https://schema.org",
     "@type": "Physician",
     name: "Dr. Ionuț Chirap",
-    jobTitle: "[TITLU MEDICAL — DE CONFIRMAT]",
+    jobTitle: isRo
+      ? "Medic specialist chirurgie orală și maxilo-facială"
+      : "Oral and maxillofacial surgeon",
     worksFor: { "@type": "Dentist", name: SITE.name },
-    url: `${SITE.url}/ro/echipa/dr-ionut-chirap`,
-    description: "[BIO + TITLURI/COMPETENȚE Dr. Chirap]",
-    medicalSpecialty: ["Dentistry", "Oral Surgery"],
+    url: `${SITE.url}/${locale}/echipa/dr-ionut-chirap`,
+    description: isRo
+      ? "Medic specialist în chirurgie orală și maxilo-facială, cu peste 10.000 de implanturi dentare realizate. Implant dentar în Iași, All-on-4, reabilitări complexe."
+      : "Oral and maxillofacial surgeon with over 10,000 dental implants placed. Dental implants in Iași, Romania, All-on-4, complex rehabilitation.",
+    medicalSpecialty: "Oral and Maxillofacial Surgery",
+    image: `${SITE.url}${SITE.doctorPortraitPath}`,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: SITE.streetAddress,
+      addressLocality: SITE.addressLocality,
+      postalCode: SITE.postalCode,
+      addressCountry: SITE.addressCountry,
+    },
   };
 }
 

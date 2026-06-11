@@ -177,8 +177,8 @@ export default async function ImplantologiePage({ params }: PageProps) {
 
       <FaqSection title={t.faqTitle} items={faqItems} />
       <CtaSection
-        title={dict.home.ctaTitle}
-        text={dict.home.ctaText}
+        title={dict.home.finalCta.title}
+        text={dict.home.finalCta.text}
         dict={dict}
         locale={locale}
         page={page}

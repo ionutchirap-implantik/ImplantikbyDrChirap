@@ -19,6 +19,7 @@ export const SITE = {
   url: "https://implantik.ro",
   logoPath: "/logo.png",
   logoPdfPath: "/logo.pdf",
+  doctorPortraitPath: "/team/dr-ionut-chirap.jpg",
   phone: "(0758) 169 234",
   phoneHref: "tel:+40758169234",
   phoneNote: "Disponibile Luni–Vineri, 8:00–19:30",
@@ -42,7 +43,7 @@ export const SITE = {
   metaCapiToken: "[META_CAPI_TOKEN]",
   tiktokPixelId: process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID ?? "[TIKTOK_PIXEL_ID]",
   tiktokEventsToken: "[TIKTOK_EVENTS_TOKEN]",
-  googleRating: "[RATING REAL]",
+  googleRating: "4,9★",
   googleProfileUrl: GOOGLE_MAPS_URL,
   mapsUrl: GOOGLE_MAPS_URL,
   // Iframe embed (același pin ca mapsUrl)
