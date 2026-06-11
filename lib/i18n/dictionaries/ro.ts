@@ -219,6 +219,10 @@ export const dictionary = {
     lastName: "Nume",
     firstName: "Prenume",
     phone: "Telefon",
+    email: "Email (opțional)",
+    emailPlaceholder: "ex. nume@email.com",
+    contactPreference: "Preferință contact",
+    contactPreferencePlaceholder: "Selectează (opțional)",
     service: "Specialitate",
     message: "Mențiuni",
     consentBefore:
@@ -234,6 +238,11 @@ export const dictionary = {
   },
   form: {
     selectService: "Selectează specialitatea",
+    contactPreferences: {
+      consultation: "Consultație",
+      call: "Sună-mă",
+      whatsapp: "WhatsApp",
+    },
     services: {
       stomatologie: "Stomatologie",
       implantologie: "Implantologie",

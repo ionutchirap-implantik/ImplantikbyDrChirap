@@ -220,6 +220,10 @@ export const dictionary = {
     lastName: "Last name",
     firstName: "First name",
     phone: "Phone",
+    email: "Email (optional)",
+    emailPlaceholder: "e.g. name@email.com",
+    contactPreference: "Contact preference",
+    contactPreferencePlaceholder: "Select (optional)",
     service: "Specialty",
     message: "Notes",
     consentBefore:
@@ -234,6 +238,11 @@ export const dictionary = {
   },
   form: {
     selectService: "Select a specialty",
+    contactPreferences: {
+      consultation: "Consultation",
+      call: "Call me",
+      whatsapp: "WhatsApp",
+    },
     services: {
       stomatologie: "General dentistry",
       implantologie: "Dental implants",

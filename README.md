@@ -6,7 +6,7 @@ Draft site pentru clinică de implantologie și stomatologie din Iași.
 
 - Next.js 15 (App Router) + TypeScript strict
 - Tailwind CSS + shadcn/ui
-- Supabase (TODO — formular leads)
+- Supabase (leads) + Resend (notificări email)
 - Pregătit pentru Vercel
 
 ## Setup local
@@ -23,7 +23,7 @@ Deschide [http://localhost:3000](http://localhost:3000) — redirecționează au
 
 - `app/[locale]/` — rute bilingve RO/EN
 - `lib/constants.ts` — placeholder-e de contact și brand
-- `lib/actions/submit-lead.ts` — Server Action formular (log + TODO Supabase)
+- `lib/actions/submit-lead.ts` — Server Action formular (Supabase + email Resend)
 - `components/consent/` — banner CMP + Consent Mode v2
 - `globals.css` — token mov `#534AB7` (`--brand-purple`)
 
@@ -51,15 +51,33 @@ Deschide [http://localhost:3000](http://localhost:3000) — redirecționează au
 | `[BIO + TITLURI Dr. Chirap]` | `/echipa/dr-ionut-chirap` |
 | `[PREȚURI]` | `/preturi` |
 | `[GTM_ID]`, `[GA4_ID]` | `.env.local` + `lib/constants.ts` |
-| Supabase keys | `.env.local` + `submit-lead.ts` |
+| Supabase keys | `.env.local` |
+| Resend + email notificări | `.env.local` — vezi secțiunea de mai jos |
 | Turnstile keys | `.env.local` + `contact-form.tsx` |
 | Texte legale | `/confidentialitate`, `/cookies`, `/termeni` |
+
+## Email notificări lead-uri (Resend)
+
+La fiecare trimitere a formularului, lead-ul se salvează în Supabase și clinica primește un email instant. Dacă pacientul lasă email, primește și o confirmare scurtă.
+
+### Setup Resend
+
+1. Creează cont [Resend](https://resend.com) cu emailul clinicii.
+2. Verifică domeniul `implantik.ro` în Resend (SPF/DKIM — instrucțiunile le oferă Resend în dashboard). Până la verificare poți folosi domeniul de test Resend (`onboarding@resend.dev`), dar **emailurile pot ajunge în spam**; verificarea domeniului rezolvă asta.
+3. În Vercel (sau `.env.local`), setează:
+   - `RESEND_API_KEY` — din dashboard Resend
+   - `LEAD_NOTIFY_TO` — inbox-ul clinicii (ex. `implantikdrchirap@gmail.com`)
+   - `LEAD_NOTIFY_FROM` — expeditor verificat (ex. `Implantik <notificari@implantik.ro>`)
+
+### Supabase
+
+Rulează migrările din `supabase/migrations/` în SQL Editor (proiect Supabase), apoi setează `NEXT_PUBLIC_SUPABASE_URL` și `SUPABASE_SERVICE_ROLE_KEY` (cheia service role rămâne exclusiv server-side).
 
 ## Deploy Vercel
 
 1. Push pe GitHub
 2. Import proiect în Vercel
-3. Adaugă variabilele din `.env.example`
+3. Adaugă variabilele din `.env.example` (inclusiv Resend și Supabase)
 4. Deploy
 
 ## Social media (Prompt #2)

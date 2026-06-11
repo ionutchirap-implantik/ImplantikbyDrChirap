@@ -1,55 +1,87 @@
-import { SITE } from "@/lib/constants";
+import { Resend } from "resend";
+import {
+  buildClinicNotificationEmail,
+  buildPatientConfirmationEmail,
+  type ClinicNotificationPayload,
+} from "@/lib/email/lead-email-templates";
 
-type LeadEmailPayload = {
-  lastName: string;
-  firstName: string;
-  phone: string;
-  service: string;
-  message: string | null;
-  locale: string;
-  eventId: string;
-};
+function logEmailResult(kind: "clinic" | "patient", leadId: string, ok: boolean, detail?: string) {
+  if (ok) {
+    console.log(`[EMAIL:${kind}]`, leadId, "sent");
+    return;
+  }
+  console.error(`[EMAIL:${kind}]`, leadId, detail ?? "send_failed");
+}
+
+function getResendClient(): Resend | null {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return null;
+  return new Resend(apiKey);
+}
+
+function getNotifyFrom(): string | null {
+  return process.env.LEAD_NOTIFY_FROM?.trim() || null;
+}
+
+function getNotifyTo(): string | null {
+  return process.env.LEAD_NOTIFY_TO?.trim() || null;
+}
 
 export async function sendLeadNotificationEmail(
-  lead: LeadEmailPayload
-): Promise<{ sent: boolean }> {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
+  leadId: string,
+  payload: ClinicNotificationPayload
+): Promise<void> {
+  const resend = getResendClient();
+  const to = getNotifyTo();
+  const from = getNotifyFrom();
+
+  if (!resend || !to || !from) {
     if (process.env.NODE_ENV === "development") {
-      console.log("[EMAIL — configurează RESEND_API_KEY]", SITE.email, lead.eventId);
+      console.log("[EMAIL:clinic] skipped — configure RESEND_API_KEY, LEAD_NOTIFY_TO, LEAD_NOTIFY_FROM");
     }
-    return { sent: false };
+    return;
   }
 
-  const from = process.env.RESEND_FROM_EMAIL ?? "Implantik <onboarding@resend.dev>";
-  const subject = `Lead nou: ${lead.firstName} ${lead.lastName} — ${lead.service}`;
-  const text = [
-    `Nume: ${lead.lastName} ${lead.firstName}`,
-    `Telefon: ${lead.phone}`,
-    `Specialitate: ${lead.service}`,
-    `Mențiuni: ${lead.message || "—"}`,
-    `Limbă: ${lead.locale}`,
-    `Event ID: ${lead.eventId}`,
-  ].join("\n");
+  const { subject, html } = buildClinicNotificationEmail(payload);
 
   try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from,
-        to: SITE.email,
-        subject,
-        text,
-        reply_to: lead.phone.includes("@") ? lead.phone : undefined,
-      }),
-    });
+    const { error } = await resend.emails.send({ from, to, subject, html });
+    logEmailResult("clinic", leadId, !error, error?.message);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "unknown_error";
+    logEmailResult("clinic", leadId, false, message);
+  }
+}
 
-    return { sent: res.ok };
-  } catch {
-    return { sent: false };
+export async function sendPatientConfirmationEmail(
+  leadId: string,
+  email: string,
+  firstName: string
+): Promise<void> {
+  const resend = getResendClient();
+  const from = getNotifyFrom();
+
+  if (!resend || !from) return;
+
+  const { subject, html } = buildPatientConfirmationEmail(firstName);
+
+  try {
+    const { error } = await resend.emails.send({ from, to: email, subject, html });
+    logEmailResult("patient", leadId, !error, error?.message);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "unknown_error";
+    logEmailResult("patient", leadId, false, message);
+  }
+}
+
+export async function sendLeadEmails(
+  leadId: string,
+  clinicPayload: ClinicNotificationPayload,
+  patientEmail: string | null,
+  firstName: string
+): Promise<void> {
+  await sendLeadNotificationEmail(leadId, clinicPayload);
+  if (patientEmail) {
+    await sendPatientConfirmationEmail(leadId, patientEmail, firstName);
   }
 }

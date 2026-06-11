@@ -97,6 +97,36 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
       </div>
 
       <div className="space-y-2">
+        <Label htmlFor="email">{t.email}</Label>
+        <Input
+          id="email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          placeholder={t.emailPlaceholder}
+        />
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="contact_preference">{t.contactPreference}</Label>
+        <select
+          id="contact_preference"
+          name="contact_preference"
+          defaultValue=""
+          className={cn(
+            "flex h-11 w-full rounded-xl border border-input bg-transparent px-4 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          )}
+        >
+          <option value="">{t.contactPreferencePlaceholder}</option>
+          {(["consultation", "call", "whatsapp"] as const).map((key) => (
+            <option key={key} value={key}>
+              {f.contactPreferences[key]}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="space-y-2">
         <Label htmlFor="service">{t.service}</Label>
         <select
           id="service"
@@ -167,7 +197,8 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
       )}
       {(state.message === "validation_error" ||
         state.message === "rate_limited" ||
-        state.message === "captcha_failed") && (
+        state.message === "captcha_failed" ||
+        state.message === "server_error") && (
         <p className="rounded-xl bg-destructive/10 px-4 py-3 text-sm text-destructive">
           {t.error}
         </p>
