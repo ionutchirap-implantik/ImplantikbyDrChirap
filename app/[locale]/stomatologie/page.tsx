@@ -1,22 +1,6 @@
-import { notFound } from "next/navigation";
-import { ScaffoldPage } from "@/components/shared/scaffold-page";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
-import { createScaffoldMetadata } from "@/lib/create-scaffold-metadata";
-import { isValidLocale, type Locale } from "@/lib/i18n/config";
+import { createServicePageHandlers } from "@/lib/i18n/service-pages/create-route";
 
-type PageProps = { params: Promise<{ locale: string }> };
+const { generateMetadata, Page } = createServicePageHandlers("stomatologie");
 
-export async function generateMetadata({ params }: PageProps) {
-  const { locale: localeParam } = await params;
-  if (!isValidLocale(localeParam)) return {};
-  return createScaffoldMetadata(localeParam as Locale, "stomatologie", "Stomatologie", "General dentistry");
-}
-
-export default async function Page({ params }: PageProps) {
-  const { locale: localeParam } = await params;
-  if (!isValidLocale(localeParam)) notFound();
-  const locale = localeParam as Locale;
-  const dict = await getDictionary(locale);
-  const title = locale === "ro" ? "Stomatologie" : "General dentistry";
-  return <ScaffoldPage title={title} dict={dict} locale={locale} />;
-}
+export { generateMetadata };
+export default Page;

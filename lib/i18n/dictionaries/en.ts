@@ -5,7 +5,7 @@ export const dictionary = {
       "Dental implant and dentistry clinic in Iași, Romania. Personalized treatment plans, transparency, and safe, predictable outcomes.",
     homeTitle: "Dental Implants Iași — Dr. Ionuț Chirap | Implantik",
     homeDescription:
-      "Dental implants in Iași with Dr. Ionuț Chirap, oral and maxillofacial surgeon, 10,000+ implants placed. Personalized treatment plan and transparent pricing. Book a consultation.",
+      "Dental implants in Iași with Dr. Ionuț Chirap, oral and maxillofacial surgeon, 7,000+ implants placed. Personalized treatment plan and transparent pricing. Book a consultation.",
   },
   nav: {
     services: "Services",
@@ -60,12 +60,12 @@ export const dictionary = {
     heroEyebrow: "Iași · Dental Implants & Oral and Maxillofacial Surgery",
     heroTitle: "Dental implants in Iași with a surgeon you can trust",
     heroSubtitle:
-      "Dr. Ionuț Chirap — oral and maxillofacial surgeon with over 10,000 dental implants placed. A personalized treatment plan, explained clearly. You decide — we support you at every step.",
+      "Dr. Ionuț Chirap — oral and maxillofacial surgeon with over 7,000 implants placed. A personalized treatment plan, explained clearly. You decide — we support you at every step.",
     heroNote: "We reply Monday–Friday, 8:00 AM–7:30 PM",
     heroImageLabel: "[REAL PHOTO DR. CHIRAP — professional portrait]",
     stats: [
       {
-        value: "10,000+",
+        value: "7,000+",
         label: "dental implants placed",
         note: "[VERIFIABLE — confirmed by the clinic]",
       },
@@ -80,14 +80,14 @@ export const dictionary = {
         note: "",
       },
       {
-        value: "4.9★",
+        value: "5.0★",
         label: "Google rating",
-        note: "[CONFIRM ACTUAL RATING + profile link]",
+        note: "",
       },
     ],
     about: {
       title: "A surgeon for cases that require experience",
-      text: "Dr. Ionuț Chirap is a specialist in oral and maxillofacial surgery, with over 10,000 dental implants placed. At Implantik, every treatment starts with a careful evaluation and a personalized plan — from single implants to full-arch rehabilitation on implants (All-on-4, All-on-6), sinus lift, and bone grafting. Complex cases — severe bone loss, failed implants, difficult rehabilitations — are planned and treated here with a predictable approach and steps explained in plain language.",
+      text: "Dr. Ionuț Chirap is a specialist in oral and maxillofacial surgery, with over 7,000 implants placed. At Implantik, every treatment starts with a careful evaluation and a personalized plan — from single implants to full-arch rehabilitation on implants (All-on-4, All-on-6), sinus lift, and bone grafting. Complex cases — severe bone loss, failed implants, difficult rehabilitations — are planned and treated here with a predictable approach and steps explained in plain language.",
       bullets: [
         "Specialized in oral and maxillofacial surgery",
         "Implant systems: Nobel Biocare, Megagen AnyRidge, AlphaBio",
@@ -261,6 +261,7 @@ export const dictionary = {
       genZ: "Dentistry without barriers",
       contact: "Contact",
       whatsapp: "Message on WhatsApp",
+      googleReviews: "Google reviews (5.0★)",
     },
   },
   instagram: {

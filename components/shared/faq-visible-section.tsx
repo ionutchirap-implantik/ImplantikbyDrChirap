@@ -1,14 +1,17 @@
+import { RichServiceText } from "@/components/service/rich-service-text";
 import { SectionHeading } from "./section-heading";
 import { faqJsonLd, JsonLd } from "@/lib/json-ld";
+import type { Locale } from "@/lib/i18n/config";
 
 type FaqItem = { question: string; answer: string };
 
 type FaqVisibleSectionProps = {
   title: string;
   items: FaqItem[];
+  locale?: Locale;
 };
 
-export function FaqVisibleSection({ title, items }: FaqVisibleSectionProps) {
+export function FaqVisibleSection({ title, items, locale }: FaqVisibleSectionProps) {
   return (
     <section className="section-padding bg-secondary/20">
       <div className="container-narrow">
@@ -17,7 +20,13 @@ export function FaqVisibleSection({ title, items }: FaqVisibleSectionProps) {
           {items.map((item, i) => (
             <div key={i} className="rounded-2xl border bg-background p-6 shadow-sm">
               <dt className="font-display text-lg font-semibold">{item.question}</dt>
-              <dd className="mt-3 text-muted-foreground leading-relaxed">{item.answer}</dd>
+              <dd className="mt-3 text-muted-foreground leading-relaxed">
+                {locale ? (
+                  <RichServiceText text={item.answer} locale={locale} />
+                ) : (
+                  item.answer
+                )}
+              </dd>
             </div>
           ))}
         </dl>

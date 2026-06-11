@@ -9,6 +9,7 @@ const paths = [
   "/sinus-lift-iasi",
   "/reabilitari-complexe",
   "/chirurgie-orala",
+  "/protetica-dentara",
   "/estetica-faciala",
   "/estetica-dentara",
   "/ortodontie",

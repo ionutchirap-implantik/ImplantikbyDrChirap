@@ -5,7 +5,7 @@ export const dictionary = {
       "Clinică de implantologie și stomatologie în Iași. Plan de tratament personalizat, transparență și rezultate sigure și predictibile.",
     homeTitle: "Implant dentar Iași — Dr. Ionuț Chirap | Implantik",
     homeDescription:
-      "Implant dentar în Iași cu Dr. Ionuț Chirap, medic specialist chirurgie orală și maxilo-facială, 10.000+ implanturi realizate. Plan de tratament personalizat, prețuri transparente. Programează o consultație.",
+      "Implant dentar în Iași cu Dr. Ionuț Chirap, medic specialist chirurgie orală și maxilo-facială, 7.000+ implanturi inserate. Plan de tratament personalizat, prețuri transparente. Programează o consultație.",
   },
   nav: {
     services: "Servicii",
@@ -60,13 +60,13 @@ export const dictionary = {
     heroEyebrow: "Iași · Implantologie & Chirurgie Orală și Maxilo-Facială",
     heroTitle: "Implant dentar în Iași, cu un chirurg în care poți avea încredere",
     heroSubtitle:
-      "Dr. Ionuț Chirap — medic specialist chirurgie orală și maxilo-facială, cu peste 10.000 de implanturi dentare realizate. Plan de tratament personalizat, explicat clar. Tu decizi — noi suntem alături la fiecare pas.",
+      "Dr. Ionuț Chirap — medic specialist chirurgie orală și maxilo-facială, cu peste 7.000 de implanturi inserate. Plan de tratament personalizat, explicat clar. Tu decizi — noi suntem alături la fiecare pas.",
     heroNote: "Răspundem Luni–Vineri, 8:00–19:30",
     heroImageLabel: "[POZĂ REALĂ DR. CHIRAP — portret profesional]",
     stats: [
       {
-        value: "10.000+",
-        label: "implanturi dentare realizate",
+        value: "7.000+",
+        label: "implanturi inserate",
         note: "[DOVEDIBIL — confirmat de clinică]",
       },
       {
@@ -80,14 +80,14 @@ export const dictionary = {
         note: "",
       },
       {
-        value: "4,9★",
+        value: "5,0★",
         label: "rating Google",
-        note: "[CONFIRMĂ CIFRA REALĂ + link profil]",
+        note: "",
       },
     ],
     about: {
       title: "Un chirurg pentru cazurile care cer experiență",
-      text: "Dr. Ionuț Chirap este medic specialist în chirurgie orală și maxilo-facială, cu peste 10.000 de implanturi dentare realizate. La Implantik, fiecare tratament începe cu o evaluare atentă și un plan personalizat — de la implanturi unitare la reabilitări complete pe implanturi (All-on-4, All-on-6), sinus lift și adiție osoasă. Cazurile complexe — resorbție osoasă severă, implanturi eșuate, reabilitări dificile — sunt planificate și tratate aici, cu o abordare predictibilă și etape explicate pe înțeles.",
+      text: "Dr. Ionuț Chirap este medic specialist în chirurgie orală și maxilo-facială, cu peste 7.000 de implanturi inserate. La Implantik, fiecare tratament începe cu o evaluare atentă și un plan personalizat — de la implanturi unitare la reabilitări complete pe implanturi (All-on-4, All-on-6), sinus lift și adiție osoasă. Cazurile complexe — resorbție osoasă severă, implanturi eșuate, reabilitări dificile — sunt planificate și tratate aici, cu o abordare predictibilă și etape explicate pe înțeles.",
       bullets: [
         "Specializare în chirurgie orală și maxilo-facială",
         "Sisteme de implant: Nobel Biocare, Megagen AnyRidge, AlphaBio",
@@ -260,6 +260,7 @@ export const dictionary = {
       genZ: "Stomatologie fără bariere",
       contact: "Contact",
       whatsapp: "Scrie pe WhatsApp",
+      googleReviews: "Recenzii Google (5,0★)",
     },
   },
   instagram: {

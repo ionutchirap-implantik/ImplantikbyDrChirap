@@ -14,7 +14,9 @@ import { buildMetadata } from "@/lib/metadata";
 import type { Locale } from "@/lib/i18n/config";
 import { isValidLocale } from "@/lib/i18n/config";
 import { notFound } from "next/navigation";
-import { physicianJsonLd, JsonLd } from "@/lib/json-ld";
+import { GOOGLE_REVIEWS } from "@/lib/google-reviews";
+import { SITE } from "@/lib/constants";
+import { physicianJsonLd, reviewsJsonLd, JsonLd } from "@/lib/json-ld";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -51,7 +53,15 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <>
-      <JsonLd data={physicianJsonLd(locale)} />
+      <JsonLd
+        data={[
+          physicianJsonLd(locale),
+          ...reviewsJsonLd(GOOGLE_REVIEWS, {
+            name: SITE.name,
+            url: `${SITE.url}/${locale}`,
+          }),
+        ]}
+      />
       <Hero dict={dict} locale={locale} />
       <StatsBand dict={dict} />
       <AboutDoctor dict={dict} locale={locale} />
@@ -59,7 +69,7 @@ export default async function HomePage({ params }: PageProps) {
       <HowWeWork dict={dict} />
       <GenZTeaser dict={dict} locale={locale} />
       <CasesSection dict={dict} />
-      <Testimonials dict={dict} />
+      <Testimonials dict={dict} locale={locale} />
       <FaqVisibleSection title={dict.home.faqTitle} items={faqItems} />
       <HomeCtaSection dict={dict} locale={locale} />
     </>

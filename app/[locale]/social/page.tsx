@@ -6,6 +6,7 @@ import {
   MessageCircle,
   Phone,
   Sparkles,
+  Star,
   Stethoscope,
   Users,
 } from "lucide-react";
@@ -38,6 +39,7 @@ const linkIcons = {
   implantologie: Stethoscope,
   genZ: Users,
   contact: Phone,
+  googleReviews: Star,
   whatsapp: MessageCircle,
 } as const;
 
@@ -68,6 +70,11 @@ export default async function SocialPage({ params }: PageProps) {
       key: "contact" as const,
       href: buildUtmUrl("/contact", locale, { source: "social_hub", campaign: "contact" }),
       external: false,
+    },
+    {
+      key: "googleReviews" as const,
+      href: SITE.googleReviewsUrl,
+      external: true,
     },
     {
       key: "whatsapp" as const,
@@ -108,15 +115,27 @@ export default async function SocialPage({ params }: PageProps) {
               );
             }
 
+            const className =
+              "flex w-full items-center justify-center gap-3 rounded-2xl border bg-background px-5 py-4 text-sm font-medium shadow-sm transition-transform hover:scale-[1.02] hover:border-primary/30";
+
             return (
               <li key={link.key}>
-                <Link
-                  href={link.href}
-                  className="flex w-full items-center justify-center gap-3 rounded-2xl border bg-background px-5 py-4 text-sm font-medium shadow-sm transition-transform hover:scale-[1.02] hover:border-primary/30"
-                >
-                  <Icon className="h-5 w-5 text-primary" />
-                  {label}
-                </Link>
+                {link.external ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={className}
+                  >
+                    <Icon className="h-5 w-5 text-primary" />
+                    {label}
+                  </a>
+                ) : (
+                  <Link href={link.href} className={className}>
+                    <Icon className="h-5 w-5 text-primary" />
+                    {label}
+                  </Link>
+                )}
               </li>
             );
           })}

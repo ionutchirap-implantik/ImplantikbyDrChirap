@@ -1,4 +1,5 @@
 import { SITE } from "@/lib/constants";
+import { GOOGLE_REVIEWS, GOOGLE_RATING_VALUE } from "@/lib/google-reviews";
 import type { Locale } from "@/lib/i18n/config";
 
 export function medicalClinicJsonLd(locale: Locale) {
@@ -10,6 +11,13 @@ export function medicalClinicJsonLd(locale: Locale) {
     telephone: "+40758169234",
     email: SITE.email,
     priceRange: SITE.priceRange,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: GOOGLE_RATING_VALUE,
+      bestRating: 5,
+      worstRating: 1,
+      reviewCount: GOOGLE_REVIEWS.length,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.streetAddress,
@@ -45,8 +53,8 @@ export function physicianJsonLd(locale: Locale = "ro") {
     worksFor: { "@type": "Dentist", name: SITE.name },
     url: `${SITE.url}/${locale}/echipa/dr-ionut-chirap`,
     description: isRo
-      ? "Medic specialist în chirurgie orală și maxilo-facială, cu peste 10.000 de implanturi dentare realizate. Implant dentar în Iași, All-on-4, reabilitări complexe."
-      : "Oral and maxillofacial surgeon with over 10,000 dental implants placed. Dental implants in Iași, Romania, All-on-4, complex rehabilitation.",
+      ? "Medic specialist în chirurgie orală și maxilo-facială, cu peste 7.000 de implanturi inserate. Implant dentar în Iași, All-on-4, reabilitări complexe."
+      : "Oral and maxillofacial surgeon with over 7,000 implants placed. Dental implants in Iași, Romania, All-on-4, complex rehabilitation.",
     medicalSpecialty: "Oral and Maxillofacial Surgery",
     image: `${SITE.url}${SITE.doctorPortraitPath}`,
     address: {
@@ -57,6 +65,24 @@ export function physicianJsonLd(locale: Locale = "ro") {
       addressCountry: SITE.addressCountry,
     },
   };
+}
+
+export function reviewsJsonLd(
+  reviews: { author: string; text: string; rating: number }[],
+  itemReviewed: { name: string; url: string }
+) {
+  return reviews.map((review) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    author: { "@type": "Person", name: review.author },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating,
+      bestRating: 5,
+    },
+    reviewBody: review.text,
+    itemReviewed: { "@type": "Dentist", name: itemReviewed.name, url: itemReviewed.url },
+  }));
 }
 
 export function faqJsonLd(items: { question: string; answer: string }[]) {

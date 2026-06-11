@@ -43,8 +43,12 @@ export const SITE = {
   metaCapiToken: "[META_CAPI_TOKEN]",
   tiktokPixelId: process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID ?? "[TIKTOK_PIXEL_ID]",
   tiktokEventsToken: "[TIKTOK_EVENTS_TOKEN]",
-  googleRating: "4,9★",
+  googleRating: "5,0★",
+  googleRatingValue: 5.0,
+  googleCid: "16614678843600366661",
   googleProfileUrl: GOOGLE_MAPS_URL,
+  googleReviewsUrl:
+    "https://www.google.com/maps/place/Implantik+by+Dr.+Chirap+Clinica+Medicina+Dentara/@47.1598596,27.5710137,17z/data=!4m8!3m7!1s0x40cafb7240aa0941:0xe693326141ff6c45!8m2!3d47.1598596!4d27.5710137!9m1!1b1",
   mapsUrl: GOOGLE_MAPS_URL,
   // Iframe embed (același pin ca mapsUrl)
   mapsEmbedUrl:

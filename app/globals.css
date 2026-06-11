@@ -72,4 +72,8 @@
   .reveal.visible {
     @apply animate-fade-up opacity-100;
   }
+
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
 }
