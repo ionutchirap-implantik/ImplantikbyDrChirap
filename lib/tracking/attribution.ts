@@ -1,3 +1,6 @@
+import { readConsentCookie } from "@/lib/consent/preferences";
+import { clearCookie } from "@/lib/consent/preferences";
+
 const ATTRIBUTION_COOKIE = "implantik_attribution";
 const ATTRIBUTION_PARAMS = [
   "gclid",
@@ -19,6 +22,9 @@ export type AttributionData = Partial<
 export function captureAttributionFromUrl(): void {
   if (typeof window === "undefined") return;
 
+  const consent = readConsentCookie();
+  if (!consent?.decided || !consent.categories.marketing) return;
+
   const params = new URLSearchParams(window.location.search);
   const captured: AttributionData = {};
 
@@ -31,7 +37,12 @@ export function captureAttributionFromUrl(): void {
 
   const existing = getAttributionCookie();
   const merged = { ...existing, ...captured };
-  document.cookie = `${ATTRIBUTION_COOKIE}=${encodeURIComponent(JSON.stringify(merged))};path=/;max-age=${60 * 60 * 24 * 90};SameSite=Lax`;
+  const secure = window.location.protocol === "https:" ? ";Secure" : "";
+  document.cookie = `${ATTRIBUTION_COOKIE}=${encodeURIComponent(JSON.stringify(merged))};path=/;max-age=${60 * 60 * 24 * 90};SameSite=Lax${secure}`;
+}
+
+export function clearAttributionCookie(): void {
+  clearCookie(ATTRIBUTION_COOKIE);
 }
 
 function getAttributionCookie(): AttributionData {

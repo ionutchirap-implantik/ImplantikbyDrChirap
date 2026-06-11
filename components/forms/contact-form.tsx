@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useEffect } from "react";
+import { useActionState, useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { FORM_SERVICES } from "@/lib/constants";
+import { POLICY_VERSION } from "@/lib/consent/policy-version";
 import { submitLead, type LeadFormState } from "@/lib/actions/submit-lead";
 import { getAttributionForLead } from "@/lib/tracking/attribution";
 import { TurnstileWidget } from "@/components/forms/turnstile-widget";
@@ -25,6 +26,8 @@ type ContactFormProps = {
 
 export function ContactForm({ dict, locale }: ContactFormProps) {
   const [state, formAction, pending] = useActionState(submitLead, initialState);
+  const [consentChecked, setConsentChecked] = useState(false);
+  const [consentTouched, setConsentTouched] = useState(false);
   const t = dict.contact;
   const f = dict.form;
 
@@ -36,9 +39,22 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
     }
   }, [state.success, state.eventId]);
 
+  const showConsentError =
+    (consentTouched || state.message === "validation_error") && !consentChecked;
+
   return (
-    <form action={formAction} className="space-y-5">
+    <form
+      action={formAction}
+      className="space-y-5"
+      onSubmit={(e) => {
+        if (!consentChecked) {
+          e.preventDefault();
+          setConsentTouched(true);
+        }
+      }}
+    >
       <input type="hidden" name="locale" value={locale} />
+      <input type="hidden" name="policy_version" value={POLICY_VERSION} />
       <input
         type="hidden"
         name="attribution"
@@ -107,23 +123,33 @@ export function ContactForm({ dict, locale }: ContactFormProps) {
         <Textarea id="message" name="message" placeholder={t.message} />
       </div>
 
-      <div className="flex items-start gap-3">
-        <input
-          id="consent"
-          name="consent"
-          type="checkbox"
-          required
-          className="mt-1 h-4 w-4 shrink-0 rounded border-primary accent-primary"
-        />
-        <Label htmlFor="consent" className="text-sm leading-relaxed text-muted-foreground">
-          {t.consent}{" "}
-          <Link
-            href={localePath(locale, "/confidentialitate")}
-            className="text-primary underline"
-          >
-            {dict.footer.privacy}
-          </Link>
-        </Label>
+      <div className="space-y-2">
+        <div className="flex items-start gap-3">
+          <input type="hidden" name="consent" value={consentChecked ? "on" : ""} />
+          <input
+            id="consent"
+            type="checkbox"
+            checked={consentChecked}
+            onChange={(e) => {
+              setConsentChecked(e.target.checked);
+              setConsentTouched(true);
+            }}
+            className="mt-1 h-4 w-4 shrink-0 rounded border-primary accent-primary"
+          />
+          <Label htmlFor="consent" className="text-sm leading-relaxed text-muted-foreground">
+            {t.consentBefore}{" "}
+            <Link
+              href={localePath(locale, "/confidentialitate")}
+              className="text-primary underline"
+            >
+              {dict.footer.privacy}
+            </Link>
+            , {t.consentAfter}
+          </Label>
+        </div>
+        {showConsentError ? (
+          <p className="text-sm text-destructive">{t.consentError}</p>
+        ) : null}
       </div>
 
       {turnstileSiteKey ? (

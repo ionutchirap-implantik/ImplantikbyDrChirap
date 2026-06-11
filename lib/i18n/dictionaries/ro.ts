@@ -40,21 +40,25 @@ export const dictionary = {
     followUs: "Urmărește-ne",
   },
   cookie: {
-    title: "Preferințe cookies",
+    title: "Respectăm alegerile tale",
     description:
-      "Folosim cookies necesare pentru funcționarea site-ului. Cu acordul tău, folosim și cookies de analiză și marketing pentru a îmbunătăți experiența.",
-    necessary: "Necesare",
-    necessaryDesc: "Esentiale pentru navigare și securitate.",
+      "Folosim cookie-uri pentru a îmbunătăți site-ul și pentru a măsura campaniile noastre. Cele strict necesare funcționează mereu; restul — doar cu acordul tău. Detalii în",
+    necessary: "Strict necesare",
+    necessaryDesc: "Esențiale pentru navigare, securitate și funcționarea site-ului.",
     analytics: "Analiză",
-    analyticsDesc: "Ne ajută să înțelegem cum este folosit site-ul.",
+    analyticsDesc: "Google Analytics (GA4) — ne ajută să înțelegem cum este folosit site-ul.",
     marketing: "Marketing",
-    marketingDesc: "Pentru măsurarea campaniilor publicitare.",
-    acceptAll: "Accept toate",
-    rejectAll: "Refuz",
+    marketingDesc: "Google Ads, Meta Pixel, TikTok Pixel — măsurarea campaniilor publicitare.",
+    acceptAll: "Accept tot",
+    rejectAll: "Refuz tot",
     save: "Salvează preferințele",
     customize: "Personalizează",
-    policy: "Politica cookies",
+    policy: "Politica de cookie-uri",
     privacy: "Confidențialitate",
+    settings: "Setări cookie-uri",
+    close: "Închide",
+    withdrawNote:
+      "Pentru ștergerea completă a cookie-urilor terțe deja plasate, poți folosi setările browserului.",
   },
   home: {
     heroEyebrow: "Iași · Implantologie & Chirurgie Orală și Maxilo-Facială",
@@ -217,8 +221,11 @@ export const dictionary = {
     phone: "Telefon",
     service: "Specialitate",
     message: "Mențiuni",
-    consent:
-      "Sunt de acord cu prelucrarea datelor conform politicii de confidențialitate.",
+    consentBefore:
+      "Sunt de acord cu prelucrarea datelor mele, inclusiv a celor privind sănătatea, conform",
+    consentAfter: "în scopul preluării solicitării mele.",
+    consentError:
+      "Trebuie să accepți prelucrarea datelor pentru a trimite solicitarea.",
     submit: "Trimite",
     success: "Mesajul a fost trimis. Te contactăm în curând.",
     error: "A apărut o eroare. Încearcă din nou sau sună-ne.",

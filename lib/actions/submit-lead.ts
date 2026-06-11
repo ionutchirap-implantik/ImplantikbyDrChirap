@@ -6,6 +6,7 @@ import { FORM_SERVICES } from "@/lib/constants";
 import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 import { safeParseAttribution, sanitizeText } from "@/lib/security/sanitize";
 import { verifyTurnstileToken } from "@/lib/security/turnstile";
+import { POLICY_VERSION } from "@/lib/consent/policy-version";
 import { sendLeadNotificationEmail } from "@/lib/email/send-lead-email";
 
 const leadSchema = z.object({
@@ -15,6 +16,7 @@ const leadSchema = z.object({
   service: z.enum(FORM_SERVICES),
   message: z.string().max(2000).optional(),
   consent: z.literal(true),
+  policy_version: z.string().min(1).max(32),
   locale: z.enum(["ro", "en"]),
   attribution: z.record(z.string().max(256)).optional(),
   turnstileToken: z.string().optional(),
@@ -59,6 +61,7 @@ export async function submitLead(
     service: sanitizeText(formData.get("service"), 50),
     message: sanitizeText(formData.get("message"), 2000),
     consent: formData.get("consent") === "on",
+    policy_version: sanitizeText(formData.get("policy_version"), 32) || POLICY_VERSION,
     locale: sanitizeText(formData.get("locale"), 2),
     attribution: safeParseAttribution(formData.get("attribution")),
     turnstileToken,
@@ -90,6 +93,9 @@ export async function submitLead(
     fbclid: parsed.data.attribution?.fbclid ?? null,
     ttclid: parsed.data.attribution?.ttclid ?? null,
     created_at: new Date().toISOString(),
+    consent_form: true,
+    consent_form_at: new Date().toISOString(),
+    policy_version: parsed.data.policy_version,
   };
 
   // TODO: Connect Supabase — insert into `leads` with service role (server-only)

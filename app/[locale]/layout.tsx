@@ -8,7 +8,6 @@ import { ConsentScripts } from "@/components/consent/consent-scripts";
 import { HtmlLang } from "@/components/shared/html-lang";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { isValidLocale, locales, type Locale } from "@/lib/i18n/config";
-import { SITE } from "@/lib/constants";
 import { medicalClinicJsonLd, JsonLd } from "@/lib/json-ld";
 
 type LayoutProps = {
@@ -39,17 +38,6 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         <CookieBanner dict={dict} locale={locale} />
       </ConsentProvider>
       <JsonLd data={medicalClinicJsonLd(locale)} />
-      {!SITE.gtmId.startsWith("[") && (
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${SITE.gtmId}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-            title="GTM"
-          />
-        </noscript>
-      )}
     </>
   );
 }

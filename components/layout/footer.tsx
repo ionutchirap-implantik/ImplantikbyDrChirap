@@ -3,6 +3,7 @@ import { MapPin, Clock, Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import { SOCIAL_HANDLE } from "@/lib/social/utm";
 import { PhoneLink } from "@/components/social/phone-link";
+import { CookieSettingsLink } from "@/components/consent/cookie-settings-link";
 import { LocationSection } from "@/components/location/location-section";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
@@ -105,6 +106,12 @@ export function Footer({ dict, locale }: FooterProps) {
               <Link href={localePath(locale, "/termeni")} className="text-muted-foreground hover:text-foreground">
                 {dict.footer.terms}
               </Link>
+            </li>
+            <li>
+              <CookieSettingsLink
+                label={dict.cookie.settings}
+                className="text-muted-foreground hover:text-foreground"
+              />
             </li>
             <li>
               <Link href={localePath(locale, "/social")} className="text-muted-foreground hover:text-foreground">
