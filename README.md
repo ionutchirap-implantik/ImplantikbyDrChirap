@@ -67,7 +67,7 @@ La fiecare trimitere a formularului, lead-ul se salvează în Supabase și clini
 3. În Vercel (sau `.env.local`), setează:
    - `RESEND_API_KEY` — din dashboard Resend
    - `LEAD_NOTIFY_TO` — inbox-ul clinicii (ex. `implantikdrchirap@gmail.com`)
-   - `LEAD_NOTIFY_FROM` — expeditor verificat (ex. `Implantik <notificari@implantik.ro>`)
+   - `LEAD_NOTIFY_FROM` — expeditor verificat în Resend (ex. `Implantik <implantikdrchirap@gmail.com>`)
 
 ### Supabase
 

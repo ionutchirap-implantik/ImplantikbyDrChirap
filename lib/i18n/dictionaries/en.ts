@@ -288,8 +288,7 @@ export const dictionary = {
     privacyTitle: "Privacy policy",
     cookiesTitle: "Cookie policy",
     termsTitle: "Terms and conditions",
-    placeholder:
-      "[LEGAL TEXT TO BE COMPLETED — consult lawyer / DPO for final version]",
+    placeholder: "",
   },
   faq: {
     q1: "How much does a dental implant cost in Iași?",

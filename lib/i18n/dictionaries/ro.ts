@@ -288,8 +288,7 @@ export const dictionary = {
     privacyTitle: "Politica de confidențialitate",
     cookiesTitle: "Politica cookies",
     termsTitle: "Termeni și condiții",
-    placeholder:
-      "[TEXT LEGAL DE COMPLETAT — consultă avocat / DPO pentru versiunea finală]",
+    placeholder: "",
   },
   faq: {
     q1: "Cât costă un implant dentar la Iași?",
