@@ -10,6 +10,11 @@ const CLINIC_ADDRESS = {
 
 const mapsAddressQuery = encodeURIComponent(CLINIC_ADDRESS.formatted);
 const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/5TvStSpTFQvoSzhy9" as const;
+const GOOGLE_CID = "16614678843600366661" as const;
+
+/** reviewsUri — format documentat Google Places API (!4m4!3m3 + !9m1!1b1) */
+const GOOGLE_MAPS_REVIEWS_URL =
+  `https://www.google.com/maps/place/Implantik+by+Dr.+Chirap+Clinica+Medicina+Dentara/data=!4m4!3m3!1s${CLINIC_ADDRESS.googlePlaceId}!9m1!1b1?hl=ro` as const;
 
 export const SITE = {
   name: "Implantik by Dr. Chirap",
@@ -45,10 +50,9 @@ export const SITE = {
   tiktokEventsToken: "[TIKTOK_EVENTS_TOKEN]",
   googleRating: "5,0★",
   googleRatingValue: 5.0,
-  googleCid: "16614678843600366661",
+  googleCid: GOOGLE_CID,
   googleProfileUrl: GOOGLE_MAPS_URL,
-  googleReviewsUrl:
-    "https://www.google.com/maps/place/Implantik+by+Dr.+Chirap+Clinica+Medicina+Dentara/@47.1598596,27.5710137,17z/data=!4m8!3m7!1s0x40cafb7240aa0941:0xe693326141ff6c45!8m2!3d47.1598596!4d27.5710137!9m1!1b1",
+  googleReviewsUrl: GOOGLE_MAPS_REVIEWS_URL,
   mapsUrl: GOOGLE_MAPS_URL,
   // Iframe embed (același pin ca mapsUrl)
   mapsEmbedUrl:
