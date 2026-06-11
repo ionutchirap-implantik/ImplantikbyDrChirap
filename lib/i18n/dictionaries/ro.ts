@@ -78,9 +78,9 @@ export const dictionary = {
         note: "[DOVEDIBIL — confirmat de clinică]",
       },
       {
-        value: "[ANI]",
+        value: "16+",
         label: "ani de experiență clinică",
-        note: "[DE COMPLETAT]",
+        note: "",
       },
       {
         value: "6",

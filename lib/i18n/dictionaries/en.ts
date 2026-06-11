@@ -78,9 +78,9 @@ export const dictionary = {
         note: "[VERIFIABLE — confirmed by the clinic]",
       },
       {
-        value: "[YEARS]",
+        value: "16+",
         label: "years of clinical experience",
-        note: "[TO BE COMPLETED]",
+        note: "",
       },
       {
         value: "6",
