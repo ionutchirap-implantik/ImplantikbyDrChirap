@@ -12,6 +12,13 @@ type PageMeta = {
   ogImagePath?: string;
 };
 
+/** Strip embedded brand suffix; root layout `title.template` appends SITE.name once. */
+export function normalizePageTitle(title: string): string {
+  return title
+    .replace(/\s*\|\s*Implantik(?:\s+by\s+Dr\.?\s*Chirap)?\s*$/i, "")
+    .trim();
+}
+
 export function buildMetadata({
   title,
   description,
@@ -22,11 +29,12 @@ export function buildMetadata({
   const siteUrl = getSiteUrl();
   const url = `${siteUrl}/${locale}${path === "/" ? "" : path}`;
   const ogImage = ogImagePath ? `${siteUrl}${ogImagePath}` : `${siteUrl}/opengraph-image`;
+  const pageTitle = normalizePageTitle(title);
 
   const alternateLocale = locale === "ro" ? "en_US" : "ro_RO";
 
   return {
-    title,
+    title: pageTitle,
     description,
     alternates: {
       canonical: url,
@@ -35,7 +43,7 @@ export function buildMetadata({
       ),
     },
     openGraph: {
-      title,
+      title: pageTitle,
       description,
       url,
       siteName: SITE.name,
@@ -47,13 +55,13 @@ export function buildMetadata({
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: pageTitle,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: pageTitle,
       description,
       images: [ogImage],
     },

@@ -75,7 +75,7 @@ export const dictionary = {
       {
         value: "7,000+",
         label: "dental implants placed",
-        note: "[VERIFIABLE — confirmed by the clinic]",
+        note: "",
       },
       {
         value: "16+",
@@ -102,7 +102,6 @@ export const dictionary = {
         "Written treatment plan with transparent steps and costs",
       ],
       cta: "Meet Dr. Chirap",
-      note: "[FULL BIO + TITLES + MEDICAL LICENSE NO. — TO BE PROVIDED]",
     },
     servicesTitle: "Services",
     servicesSubtitle:
@@ -149,8 +148,6 @@ export const dictionary = {
           "For young adults: full transparency, no pressure. We present the options — you decide.",
       },
     ],
-    servicesNote:
-      "[TO BE CONFIRMED with the clinic: emergency dentistry and digital radiology — cards added if available]",
     process: {
       title: "Your journey at Implantik",
       steps: [

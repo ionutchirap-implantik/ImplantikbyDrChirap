@@ -30,7 +30,6 @@ export function AboutDoctor({ dict, locale }: AboutDoctorProps) {
           <Button asChild className="mt-8">
             <Link href={localePath(locale, "/echipa/dr-ionut-chirap")}>{a.cta}</Link>
           </Button>
-          <p className="mt-6 text-xs text-muted-foreground">{a.note}</p>
         </RevealOnScroll>
       </div>
     </section>

@@ -75,7 +75,7 @@ export const dictionary = {
       {
         value: "7.000+",
         label: "implanturi inserate",
-        note: "[DOVEDIBIL — confirmat de clinică]",
+        note: "",
       },
       {
         value: "16+",
@@ -102,7 +102,6 @@ export const dictionary = {
         "Plan de tratament scris, cu etape și costuri transparente",
       ],
       cta: "Cunoaște-l pe Dr. Chirap",
-      note: "[BIO COMPLET + TITLURI + NR. COLEGIU — DE PRIMIT]",
     },
     servicesTitle: "Servicii",
     servicesSubtitle: "Implantologie și chirurgie orală, alături de stomatologie completă — sub același acoperiș.",
@@ -148,8 +147,6 @@ export const dictionary = {
           "Pentru tineri: transparență totală, fără presiune. Prezentăm opțiunile, tu decizi.",
       },
     ],
-    servicesNote:
-      "[DE CONFIRMAT cu clinica: urgențe stomatologice și radiologie digitală — dacă există, adăugăm carduri]",
     process: {
       title: "Cum arată drumul tău la Implantik",
       steps: [

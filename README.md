@@ -35,6 +35,13 @@ Deschide [http://localhost:3000](http://localhost:3000) — redirecționează au
 - Contact + Programare `/ro/contact`, `/ro/programare`
 - Banner cookie CMP
 
+## TODO-uri conținut (mutate din UI)
+
+- [ ] **Stat 7.000+ implanturi** — confirmare dovedibilă de la clinică (`home.stats[0]`)
+- [ ] **Bio complet Dr. Chirap** — titluri academice + nr. Colegiul Medicilor (`/echipa/dr-ionut-chirap`, secțiunea About)
+- [ ] **Servicii suplimentare** — confirmare cu clinica: urgențe stomatologice și radiologie digitală (carduri în grila de servicii, dacă există)
+- [ ] **Cazuri & rezultate** — 3 capturi statice postări Instagram în `components/home/cases-section.tsx` (înlocuiește `[CAPTURĂ POSTARE — DE ÎNLOCUIT]`)
+
 ## Placeholder-e de completat
 
 | Placeholder | Fișier |

@@ -47,7 +47,6 @@ export default async function Page({ params }: PageProps) {
           <SectionHeading title="Dr. Ionuț Chirap" />
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p>{about.text}</p>
-            <p className="text-sm">{about.note}</p>
           </div>
         </div>
       </div>

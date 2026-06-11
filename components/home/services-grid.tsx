@@ -51,7 +51,6 @@ export function ServicesGrid({ dict, locale }: ServicesGridProps) {
             </RevealOnScroll>
           ))}
         </div>
-        <p className="mt-8 text-center text-xs text-muted-foreground">{h.servicesNote}</p>
       </div>
     </section>
   );
