@@ -16,6 +16,7 @@ import { isValidLocale } from "@/lib/i18n/config";
 import { notFound } from "next/navigation";
 import { GOOGLE_REVIEWS } from "@/lib/google-reviews";
 import { SITE } from "@/lib/constants";
+import { getSiteUrl } from "@/lib/site-url";
 import { physicianJsonLd, reviewsJsonLd, JsonLd } from "@/lib/json-ld";
 
 type PageProps = {
@@ -58,7 +59,7 @@ export default async function HomePage({ params }: PageProps) {
           physicianJsonLd(locale),
           ...reviewsJsonLd(GOOGLE_REVIEWS, {
             name: SITE.name,
-            url: `${SITE.url}/${locale}`,
+            url: `${getSiteUrl()}/${locale}`,
           }),
         ]}
       />

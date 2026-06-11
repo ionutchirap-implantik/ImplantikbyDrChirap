@@ -1,13 +1,15 @@
 import { SITE } from "@/lib/constants";
+import { getSiteUrl } from "@/lib/site-url";
 import { GOOGLE_REVIEWS, GOOGLE_RATING_VALUE } from "@/lib/google-reviews";
 import type { Locale } from "@/lib/i18n/config";
 
 export function medicalClinicJsonLd(locale: Locale) {
+  const siteUrl = getSiteUrl();
   return {
     "@context": "https://schema.org",
     "@type": "Dentist",
     name: SITE.name,
-    url: `${SITE.url}/${locale}`,
+    url: `${siteUrl}/${locale}`,
     telephone: "+40758169234",
     email: SITE.email,
     priceRange: SITE.priceRange,
@@ -31,7 +33,7 @@ export function medicalClinicJsonLd(locale: Locale) {
       longitude: SITE.geo.longitude,
     },
     openingHours: SITE.openingHours,
-    image: `${SITE.url}/og-image.jpg`,
+    image: `${siteUrl}/opengraph-image`,
     sameAs: [
       SITE.mapsUrl,
       SITE.social.facebook,
@@ -42,6 +44,7 @@ export function medicalClinicJsonLd(locale: Locale) {
 }
 
 export function physicianJsonLd(locale: Locale = "ro") {
+  const siteUrl = getSiteUrl();
   const isRo = locale === "ro";
   return {
     "@context": "https://schema.org",
@@ -51,12 +54,12 @@ export function physicianJsonLd(locale: Locale = "ro") {
       ? "Medic specialist chirurgie orală și maxilo-facială"
       : "Oral and maxillofacial surgeon",
     worksFor: { "@type": "Dentist", name: SITE.name },
-    url: `${SITE.url}/${locale}/echipa/dr-ionut-chirap`,
+    url: `${siteUrl}/${locale}/echipa/dr-ionut-chirap`,
     description: isRo
       ? "Medic specialist în chirurgie orală și maxilo-facială, cu peste 7.000 de implanturi inserate. Implant dentar în Iași, All-on-4, reabilitări complexe."
       : "Oral and maxillofacial surgeon with over 7,000 implants placed. Dental implants in Iași, Romania, All-on-4, complex rehabilitation.",
     medicalSpecialty: "Oral and Maxillofacial Surgery",
-    image: `${SITE.url}${SITE.doctorPortraitPath}`,
+    image: `${siteUrl}${SITE.doctorPortraitPath}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.streetAddress,

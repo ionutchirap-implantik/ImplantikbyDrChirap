@@ -11,7 +11,7 @@ import { WhatsAppLink } from "@/components/social/whatsapp-link";
 import { RevealOnScroll } from "@/components/shared/reveal-on-scroll";
 import { RichServiceText } from "@/components/service/rich-service-text";
 import { breadcrumbJsonLd, serviceJsonLd, JsonLd } from "@/lib/json-ld";
-import { SITE } from "@/lib/constants";
+import { getSiteUrl } from "@/lib/site-url";
 import type { ServicePageContent } from "@/lib/i18n/service-pages/types";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/lib/i18n/config";
@@ -25,7 +25,8 @@ type ServicePageViewProps = {
 
 export function ServicePageView({ content, dict, locale }: ServicePageViewProps) {
   const page = `/${locale}${content.path}`;
-  const pageUrl = `${SITE.url}${page}`;
+  const siteUrl = getSiteUrl();
+  const pageUrl = `${siteUrl}${page}`;
   const accentHero = content.heroVariant === "accent";
 
   return (
@@ -153,7 +154,7 @@ export function ServicePageView({ content, dict, locale }: ServicePageViewProps)
         data={[
           serviceJsonLd(content.meta.title, content.meta.description, pageUrl),
           breadcrumbJsonLd([
-            { name: locale === "ro" ? "Acasă" : "Home", url: `${SITE.url}/${locale}` },
+            { name: locale === "ro" ? "Acasă" : "Home", url: `${siteUrl}/${locale}` },
             { name: content.h1, url: pageUrl },
           ]),
         ]}

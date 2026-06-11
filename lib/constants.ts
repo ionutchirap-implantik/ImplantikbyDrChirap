@@ -21,7 +21,6 @@ export const SITE = {
   shortName: "Implantik",
   tagline: "Clinică dentară, Iași",
   domain: "implantik.ro",
-  url: "https://implantik.ro",
   logoPath: "/logo.png",
   logoPdfPath: "/logo.pdf",
   doctorPortraitPath: "/team/dr-ionut-chirap.jpeg",

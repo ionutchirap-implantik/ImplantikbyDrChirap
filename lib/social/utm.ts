@@ -1,4 +1,5 @@
 import { SITE } from "@/lib/constants";
+import { getSiteUrl } from "@/lib/site-url";
 import type { Locale } from "@/lib/i18n/config";
 
 type UtmParams = {
@@ -13,7 +14,7 @@ export function buildUtmUrl(
   locale: Locale,
   { source, medium = "social", campaign, content }: UtmParams
 ): string {
-  const base = `${SITE.url}/${locale}${path.startsWith("/") ? path : `/${path}`}`;
+  const base = `${getSiteUrl()}/${locale}${path.startsWith("/") ? path : `/${path}`}`;
   const params = new URLSearchParams({
     utm_source: source,
     utm_medium: medium,

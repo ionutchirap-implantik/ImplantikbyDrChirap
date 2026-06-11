@@ -1,4 +1,5 @@
 import { SITE } from "@/lib/constants";
+import { getSiteUrl } from "@/lib/site-url";
 import {
   contactPreferenceLabel,
   formatLeadDateTime,
@@ -109,7 +110,7 @@ export function buildPatientConfirmationEmail(firstName: string): {
   html: string;
 } {
   const subject = "Am primit solicitarea ta — Implantik";
-  const privacyUrl = `${SITE.url}/confidentialitate`;
+  const privacyUrl = `${getSiteUrl()}/ro/confidentialitate`;
 
   const html = `<!DOCTYPE html>
 <html lang="ro">

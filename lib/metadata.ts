@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
+import { getSiteUrl } from "@/lib/site-url";
 import type { Locale } from "@/lib/i18n/config";
 import { locales } from "@/lib/i18n/config";
 
@@ -18,10 +19,9 @@ export function buildMetadata({
   locale,
   ogImagePath,
 }: PageMeta): Metadata {
-  const url = `${SITE.url}/${locale}${path === "/" ? "" : path}`;
-  const ogImage = ogImagePath
-    ? `${SITE.url}${ogImagePath}`
-    : `${SITE.url}/opengraph-image`;
+  const siteUrl = getSiteUrl();
+  const url = `${siteUrl}/${locale}${path === "/" ? "" : path}`;
+  const ogImage = ogImagePath ? `${siteUrl}${ogImagePath}` : `${siteUrl}/opengraph-image`;
 
   const alternateLocale = locale === "ro" ? "en_US" : "ro_RO";
 
@@ -31,7 +31,7 @@ export function buildMetadata({
     alternates: {
       canonical: url,
       languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE.url}/${l}${path === "/" ? "" : path}`])
+        locales.map((l) => [l, `${siteUrl}/${l}${path === "/" ? "" : path}`])
       ),
     },
     openGraph: {

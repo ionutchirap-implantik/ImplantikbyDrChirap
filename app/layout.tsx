@@ -1,10 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { SITE } from "@/lib/constants";
+import { getSiteUrl } from "@/lib/site-url";
 import { inter, poppins } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE.url),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: SITE.name,
     template: `%s | ${SITE.name}`,
