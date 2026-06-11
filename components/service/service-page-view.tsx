@@ -11,6 +11,7 @@ import { WhatsAppLink } from "@/components/social/whatsapp-link";
 import { RevealOnScroll } from "@/components/shared/reveal-on-scroll";
 import { RichServiceText } from "@/components/service/rich-service-text";
 import { breadcrumbJsonLd, serviceJsonLd, JsonLd } from "@/lib/json-ld";
+import { plainTextForSchema } from "@/lib/schema-plain-text";
 import { getSiteUrl } from "@/lib/site-url";
 import type { ServicePageContent } from "@/lib/i18n/service-pages/types";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
@@ -152,7 +153,7 @@ export function ServicePageView({ content, dict, locale }: ServicePageViewProps)
 
       <JsonLd
         data={[
-          serviceJsonLd(content.meta.title, content.meta.description, pageUrl),
+          serviceJsonLd(content.h1, plainTextForSchema(content.intro), pageUrl),
           breadcrumbJsonLd([
             { name: locale === "ro" ? "Acasă" : "Home", url: `${siteUrl}/${locale}` },
             { name: content.h1, url: pageUrl },

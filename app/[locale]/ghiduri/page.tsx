@@ -27,11 +27,15 @@ export default async function Page({ params }: PageProps) {
   const locale = localeParam as Locale;
   const dict = await getDictionary(locale);
   const title = locale === "ro" ? "Ghiduri" : "Guides";
+  const subtitle =
+    locale === "ro"
+      ? "Informații pentru pacienți — răspunsuri clare la întrebări frecvente. Nu înlocuiesc consultația medicală."
+      : "Information for patients — clear answers to common questions. They do not replace a medical consultation.";
 
   return (
     <section className="section-padding">
       <div className="container-narrow">
-        <SectionHeading title={title} subtitle={dict.scaffold.placeholder} />
+        <SectionHeading title={title} subtitle={subtitle} />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {guides.map((guide) => (
             <Link key={guide.slug} href={localePath(locale, `/ghiduri/${guide.slug}`)}>

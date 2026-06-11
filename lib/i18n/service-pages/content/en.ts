@@ -182,9 +182,14 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
         ],
       },
       {
+        title: "What is a sinus lift?",
+        body:
+          "A sinus lift is a procedure in which the maxillary sinus membrane is elevated and bone material is added to create sufficient support for implants in the posterior maxilla. It is performed under local anaesthesia within oral and maxillofacial surgery. For bone grafting and other preparatory procedures, see also [Implantology](/implantologie) and [Complex rehabilitation](/reabilitari-complexe).",
+      },
+      {
         title: "Why the specialist matters",
         body:
-          "Oral surgery procedures require competence gained through specialization. Dr. Chirap holds specialty certification in oral and maxillofacial surgery [FULL TITLES + COLLEGE NO. — TO BE COMPLETED], and cases are planned based on imaging investigations, with steps explained to the patient before any decision.",
+          "Oral surgery procedures require competence gained through specialization. Dr. Chirap holds specialty certification in oral and maxillofacial surgery, and cases are planned based on imaging investigations, with steps explained to the patient before any decision.",
       },
     ],
     faq: [
@@ -212,6 +217,7 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     internalLinks: [
       { label: "Implantology", href: "/implantologie" },
       { label: "Complex rehabilitation", href: "/reabilitari-complexe" },
+      { label: "Pricing", href: "/preturi" },
       { label: "Dr. Chirap", href: "/echipa/dr-ionut-chirap" },
       { label: "Book appointment", href: "/programare" },
     ],

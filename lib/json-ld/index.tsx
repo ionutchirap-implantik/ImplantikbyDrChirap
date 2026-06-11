@@ -1,6 +1,7 @@
 import { SITE } from "@/lib/constants";
 import { getSiteUrl } from "@/lib/site-url";
 import { GOOGLE_REVIEWS, GOOGLE_RATING_VALUE } from "@/lib/google-reviews";
+import { plainTextForSchema } from "@/lib/schema-plain-text";
 import type { Locale } from "@/lib/i18n/config";
 
 export function medicalClinicJsonLd(locale: Locale) {
@@ -95,7 +96,10 @@ export function faqJsonLd(items: { question: string; answer: string }[]) {
     mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: plainTextForSchema(item.answer),
+      },
     })),
   };
 }

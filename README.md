@@ -41,6 +41,22 @@ Deschide [http://localhost:3000](http://localhost:3000) — redirecționează au
 - [ ] **Bio complet Dr. Chirap** — titluri academice + nr. Colegiul Medicilor (`/echipa/dr-ionut-chirap`, secțiunea About)
 - [ ] **Servicii suplimentare** — confirmare cu clinica: urgențe stomatologice și radiologie digitală (carduri în grila de servicii, dacă există)
 - [ ] **Cazuri & rezultate** — 3 capturi statice postări Instagram în `components/home/cases-section.tsx` (înlocuiește `[CAPTURĂ POSTARE — DE ÎNLOCUIT]`)
+- [ ] **[DE COMPLETAT] Prețuri** — înlocuiește `[PREȚ — DE COMPLETAT]` în `lib/i18n/pricing/index.ts` cu valorile reale de la clinică
+- [ ] **[FAZA 2] Pagină dedicată** `/sinus-lift-iasi` — intenția este acoperită acum pe `/chirurgie-orala` (secțiune + FAQ); scaffold-ul rămas are `noindex` și canonical către chirurgie orală
+- [ ] **[CONȚINUT CONTINUU] Ghiduri** — 2–4 articole/lună din categoria E a strategiei (`/ghiduri/[slug]`); structura index + rute există, articolele sunt scaffold
+
+## Strategie SEO / AGEO
+
+Document: `docs/Implantik_Strategie_SEO_AGEO_Cuvinte_Cheie.md` (copie în `docs/` din rădăcină).
+
+### MANUAL — nu ține de cod
+
+- **Google Business Profile** — categorii corecte, toate serviciile, poze reale, postări regulate, program, link site; NAP identic peste tot
+- **Recenzii** — flux de cerere recenzii (fără stimulente); răspuns la fiecare recenzie Google
+- **Citări locale** — NAP identic în directoare (Cylex, Nicelocal, deschis.ro etc.)
+- **Keyword Planner + Search Console** — validare volume reale, monitorizare query-uri, CTR, poziții
+- **Ghiduri blog** — scriere continuă 2–4/lună (categoria E din strategie)
+- **Pagini geo cartiere** — fază 2, doar cu conținut real (Tătărași, Copou etc.)
 
 ## Placeholder-e de completat
 

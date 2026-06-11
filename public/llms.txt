@@ -1,27 +1,59 @@
 # Implantik by Dr. Chirap
 
-> Clinică de implantologie și stomatologie în Iași, România.
+> Dental implant and dentistry clinic in Iași, Romania.
 
-## Despre
-Implantik by Dr. Chirap oferă implantologie, chirurgie orală, stomatologie generală și estetică dentară/facială. Abordare bazată pe plan de tratament personalizat, transparență și consimțământ informat.
+## Clinic
+- Name: Implantik by Dr. Chirap
+- City: Iași, Romania
+- Address: Strada Milcov nr. 2, bl. 1206, sc. D, Iași 700581
+- Phone: +40 758 169 234
+- Email: implantikdrchirap@gmail.com
+- Hours: Monday–Friday 8:00–19:30; Saturday & Sunday closed
+- Coordinates: 47.1598596, 27.5710137
 
-## Pagini principale
-- /ro — Acasă
-- /ro/implantologie — Implantologie Iași
-- /ro/stomatologie-fara-bariere — Stomatologie pentru tineri, fără bariere
-- /ro/contact — Contact și programare
-- /ro/preturi — Prețuri transparente
-- /ro/echipa/dr-ionut-chirap — Dr. Ionuț Chirap
-- /ro/ghiduri — Ghiduri pentru pacienți
+## Lead physician
+- Dr. Ionuț Chirap — oral and maxillofacial surgeon (chirurgie orală și maxilo-facială)
+- Over 7,000 dental implants placed
+- Services: single implants, All-on-4/All-on-6, sinus lift, bone grafting, complex oral rehabilitation
 
-## Limbi
-- Română (implicit): /ro/
+## Services (summary)
+- Implantologie / Dental implants — personalized treatment plans, Nobel Biocare, Megagen AnyRidge, AlphaBio
+- All-on-4 & All-on-6 — full-arch rehabilitation on implants in Iași
+- Chirurgie orală și maxilo-facială / Oral surgery — sinus lift, bone grafting, wisdom teeth, complex extractions
+- Reabilitări complexe / Complex rehabilitation — severe bone loss, failed implants, phased plans
+- Protetică dentară / Dental prosthetics — crowns, bridges, implant-supported prostheses
+- Ortodonție / Orthodontics — metal braces, sapphire braces, Spark clear aligners
+- Stomatologie / General dentistry — consultations, fillings, scaling and hygiene
+- Estetică dentară / Dental aesthetics — veneers, professional whitening
+- Estetică facială / Facial aesthetics — hyaluronic acid and botulinum toxin (medical setting)
+- Stomatologie fără bariere / Dentistry without barriers — transparent care for young adults
+
+## Main pages (RO)
+- https://implantik.ro/ro — Home
+- https://implantik.ro/ro/implantologie — Dental implants Iași
+- https://implantik.ro/ro/implant-all-on-4-iasi — All-on-4 Iași
+- https://implantik.ro/ro/chirurgie-orala — Oral and maxillofacial surgery (includes sinus lift)
+- https://implantik.ro/ro/reabilitari-complexe — Complex oral rehabilitation
+- https://implantik.ro/ro/protetica-dentara — Dental prosthetics
+- https://implantik.ro/ro/ortodontie — Orthodontics Iași
+- https://implantik.ro/ro/stomatologie — General dentistry Iași
+- https://implantik.ro/ro/estetica-dentara — Dental aesthetics
+- https://implantik.ro/ro/estetica-faciala — Facial aesthetics
+- https://implantik.ro/ro/preturi — Pricing (indicative “from” values)
+- https://implantik.ro/ro/echipa/dr-ionut-chirap — Dr. Ionuț Chirap
+- https://implantik.ro/ro/ghiduri — Patient guides
+- https://implantik.ro/ro/contact — Contact
+- https://implantik.ro/ro/programare — Book appointment
+
+## English
+- https://implantik.ro/en — English home
+- Same paths under /en/ for all service pages above
+
+## Languages
+- Romanian (default): /ro/
 - English: /en/
 
-## Contact
-- Telefon: [TELEFON CLINICĂ]
-- WhatsApp: [NUMĂR WHATSAPP]
-- Adresă: [ADRESĂ], Iași, România
-
-## Note
-Conținutul este în draft. Cifre, poze și date de contact sunt placeholder-e de completat de clinică.
+## Notes
+- Prices are indicative; exact costs are provided in a written treatment plan at consultation.
+- No promotional offers or discount campaigns are published on the website.
+- Sinus lift content is on /chirurgie-orala; a dedicated /sinus-lift-iasi page is planned for phase 2.

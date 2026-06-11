@@ -182,9 +182,14 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
         ],
       },
       {
+        title: "Ce este sinus lift-ul?",
+        body:
+          "Sinus lift-ul este o intervenție prin care se ridică membrana sinusului maxilar și se adaugă material osos, pentru a crea suport suficient pentru implanturi în zona posterioară a maxilarului. Se realizează cu anestezie locală, în cadrul specialității de chirurgie orală și maxilo-facială. Pentru adiție osoasă și alte proceduri pregătitoare, vezi și [Implantologie](/implantologie) și [Reabilitări complexe](/reabilitari-complexe).",
+      },
+      {
         title: "De ce contează specialistul",
         body:
-          "Intervențiile de chirurgie orală cer competență dobândită prin specializare. Dr. Chirap deține specialitatea de chirurgie orală și maxilo-facială [TITLURI COMPLETE + NR. COLEGIU — DE COMPLETAT], iar cazurile sunt planificate pe baza investigațiilor imagistice, cu etape explicate pacientului înainte de orice decizie.",
+          "Intervențiile de chirurgie orală cer competență dobândită prin specializare. Dr. Chirap deține specialitatea de chirurgie orală și maxilo-facială, iar cazurile sunt planificate pe baza investigațiilor imagistice, cu etape explicate pacientului înainte de orice decizie.",
       },
     ],
     faq: [
@@ -212,6 +217,7 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     internalLinks: [
       { label: "Implantologie", href: "/implantologie" },
       { label: "Reabilitări complexe", href: "/reabilitari-complexe" },
+      { label: "Prețuri", href: "/preturi" },
       { label: "Dr. Chirap", href: "/echipa/dr-ionut-chirap" },
       { label: "Programare", href: "/programare" },
     ],

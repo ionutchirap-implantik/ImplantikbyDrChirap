@@ -1,34 +1,45 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ScaffoldPage } from "@/components/shared/scaffold-page";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
-import { createScaffoldMetadata } from "@/lib/create-scaffold-metadata";
-import { PLACEHOLDERS } from "@/lib/constants";
+import { PricingPage } from "@/components/pricing/pricing-page";
+import { breadcrumbJsonLd, JsonLd } from "@/lib/json-ld";
+import { buildMetadata } from "@/lib/metadata";
+import { getSiteUrl } from "@/lib/site-url";
+import { getPricingContent } from "@/lib/i18n/pricing";
 import { isValidLocale, type Locale } from "@/lib/i18n/config";
 
 type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale: localeParam } = await params;
   if (!isValidLocale(localeParam)) return {};
-  return createScaffoldMetadata(
-    localeParam as Locale,
-    "preturi",
-    "Prețuri transparente",
-    "Transparent pricing",
-    "Prețuri transparente — de la X lei. Fără oferte promoționale.",
-    "Transparent pricing — from X RON. No promotional offers."
-  );
+  const locale = localeParam as Locale;
+  const content = getPricingContent(locale);
+
+  return buildMetadata({
+    title: content.meta.title,
+    description: content.meta.description,
+    path: "/preturi",
+    locale,
+  });
 }
 
 export default async function Page({ params }: PageProps) {
   const { locale: localeParam } = await params;
   if (!isValidLocale(localeParam)) notFound();
   const locale = localeParam as Locale;
-  const dict = await getDictionary(locale);
-  const title = locale === "ro" ? "Prețuri transparente" : "Transparent pricing";
-  const desc =
-    locale === "ro"
-      ? `Prețuri de la — ${PLACEHOLDERS.prices}. Fără reduceri sau oferte promoționale.`
-      : `Prices from — ${PLACEHOLDERS.prices}. No discounts or promotional offers.`;
-  return <ScaffoldPage title={title} description={desc} dict={dict} locale={locale} />;
+  const content = getPricingContent(locale);
+  const siteUrl = getSiteUrl();
+  const pageUrl = `${siteUrl}/${locale}/preturi`;
+
+  return (
+    <>
+      <PricingPage content={content} locale={locale} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: locale === "ro" ? "Acasă" : "Home", url: `${siteUrl}/${locale}` },
+          { name: content.h1, url: pageUrl },
+        ])}
+      />
+    </>
+  );
 }

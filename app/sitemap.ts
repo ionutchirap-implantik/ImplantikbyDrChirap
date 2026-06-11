@@ -6,7 +6,6 @@ const paths = [
   "",
   "/implantologie",
   "/implant-all-on-4-iasi",
-  "/sinus-lift-iasi",
   "/reabilitari-complexe",
   "/chirurgie-orala",
   "/protetica-dentara",
