@@ -24,9 +24,12 @@ export function medicalClinicJsonLd(locale: Locale) {
     },
     openingHours: SITE.openingHours,
     image: `${SITE.url}/og-image.jpg`,
-    sameAs: [SITE.social.facebook, SITE.social.instagram, SITE.social.tiktok].filter(
-      (u) => !u.startsWith("[")
-    ),
+    sameAs: [
+      SITE.mapsUrl,
+      SITE.social.facebook,
+      SITE.social.instagram,
+      SITE.social.tiktok,
+    ].filter((u) => !u.startsWith("[")),
   };
 }
 

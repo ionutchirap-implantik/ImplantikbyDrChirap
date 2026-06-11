@@ -48,7 +48,7 @@ export function HeaderActions({ dict, locale, compact = false }: HeaderActionsPr
       </Link>
 
       <a
-        href={SITE.mapsDirectionsUrl}
+        href={SITE.mapsUrl}
         target="_blank"
         rel="noopener noreferrer"
         className={iconBtn}

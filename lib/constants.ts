@@ -9,6 +9,7 @@ const CLINIC_ADDRESS = {
 } as const;
 
 const mapsAddressQuery = encodeURIComponent(CLINIC_ADDRESS.formatted);
+const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/5TvStSpTFQvoSzhy9" as const;
 
 export const SITE = {
   name: "Implantik by Dr. Chirap",
@@ -42,13 +43,12 @@ export const SITE = {
   tiktokPixelId: process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID ?? "[TIKTOK_PIXEL_ID]",
   tiktokEventsToken: "[TIKTOK_EVENTS_TOKEN]",
   googleRating: "[RATING REAL]",
-  googleProfileUrl: "https://g.page/implantik?share",
-  // Embed + pin Google Maps — Implantik by Dr. Chirap, Strada Milcov nr. 2
+  googleProfileUrl: GOOGLE_MAPS_URL,
+  mapsUrl: GOOGLE_MAPS_URL,
+  // Iframe embed (același pin ca mapsUrl)
   mapsEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1356.4488081514626!2d27.571013699999998!3d47.159859600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb7240aa0941%3A0xe693326141ff6c45!2sImplantik%20by%20Dr.%20Chirap%20Clinica%20Medicina%20Dentara!5e0!3m2!1sen!2sro!4v1781158209675!5m2!1sen!2sro",
-  mapsDirectionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${mapsAddressQuery}`,
-  mapsPlaceUrl: `https://www.google.com/maps/place/Implantik+by+Dr.+Chirap+Clinica+Medicina+Dentara/@${CLINIC_ADDRESS.geo.latitude},${CLINIC_ADDRESS.geo.longitude},17z/data=!4m6!3m5!1s${encodeURIComponent(CLINIC_ADDRESS.googlePlaceId)}!8m2!3d${CLINIC_ADDRESS.geo.latitude}!4d${CLINIC_ADDRESS.geo.longitude}`,
-  mapsSearchUrl: `https://www.google.com/maps/search/?api=1&query=${mapsAddressQuery}`,
+  mapsDirectionsUrl: GOOGLE_MAPS_URL,
   wazeUrl: `https://www.waze.com/ul?q=${mapsAddressQuery}&ll=${CLINIC_ADDRESS.geo.latitude},${CLINIC_ADDRESS.geo.longitude}&navigate=yes`,
   social: {
     handle: "@implantikbydr.chirap",

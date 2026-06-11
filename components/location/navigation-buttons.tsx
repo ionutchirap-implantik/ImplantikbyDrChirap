@@ -19,7 +19,7 @@ export function NavigationButtons({ dict, page, location = "location_section" }:
     <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
       <Button size="lg" className="min-h-11 flex-1 sm:flex-none" asChild>
         <a
-          href={SITE.mapsDirectionsUrl}
+          href={SITE.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackMapsClick(page, location)}
