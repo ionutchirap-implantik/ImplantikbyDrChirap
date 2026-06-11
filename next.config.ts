@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { buildWordPressRedirects } from "./lib/redirects/wordpress-migration";
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -18,6 +19,9 @@ const csp = [
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [],
+  },
+  async redirects() {
+    return buildWordPressRedirects();
   },
   async headers() {
     return [

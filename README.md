@@ -80,6 +80,29 @@ Rulează migrările din `supabase/migrations/` în SQL Editor (proiect Supabase)
 3. Adaugă variabilele din `.env.example` (inclusiv Resend și Supabase)
 4. Deploy
 
+## Migrare WordPress → Next.js (redirect-uri 301)
+
+Maparea vechi → nou este în `lib/redirects/wordpress-redirects.json` și este aplicată în `next.config.ts` via `buildWordPressRedirects()` (inclusiv variante cu trailing slash, pentru un singur hop 301).
+
+- **Sitemap:** `app/sitemap.ts` listează doar rutele noi (`/ro/...`, `/en/...`).
+- **robots.txt:** indexare permisă doar pe producție (`VERCEL_ENV === 'production'`); preview-urile Vercel sunt `disallow: /`.
+- **404:** pagină personalizată cu linkuri către servicii, programare și ghiduri.
+
+### Înainte de cut-over (pas uman obligatoriu)
+
+- [ ] Maparea 301 verificată contra **Search Console** (Indexing → Pages) și **sitemap vechi** (`implantik.ro/wp-sitemap.xml`)
+- [ ] Orice URL indexat lipsă din mapare adăugat în `lib/redirects/wordpress-redirects.json`
+
+### După cut-over (test automat)
+
+```bash
+npm run test:redirects -- https://implantik.ro
+# sau
+node scripts/test-redirects.mjs https://implantik.ro
+```
+
+Scriptul verifică status 301/308, header `Location` corect și că destinația răspunde 200.
+
 ## Social media (Prompt #2)
 
 - **Link hub:** `/ro/social` — rute cu UTM către programare, servicii, WhatsApp
