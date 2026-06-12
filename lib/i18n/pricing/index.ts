@@ -4,7 +4,7 @@ import { pricingRo } from "./data-ro";
 import { pricingPath } from "./paths";
 import type { PricingContent } from "./types";
 
-export type { PricingContent, PricingCategory, PricingItem } from "./types";
+export type { PricingContent, PricingCategory, PricingItem, PricingSubsection } from "./types";
 export { pricingPath, resolveLocalizedPath } from "./paths";
 
 export function getPricingContent(locale: Locale): PricingContent {

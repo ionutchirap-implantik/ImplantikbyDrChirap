@@ -361,7 +361,7 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     intro:
       "Orthodontics corrects tooth position and bite — for function, health, and aesthetics. At Implantik we treat children and adults, with three main treatment options chosen together based on case, age, and lifestyle.",
     priceSummary:
-      "Metal braces: 1,800 RON/arch. Sapphire: 3,500 RON/arch. Spark aligners: price set at orthodontic consultation. [Price list](/preturi).",
+      "Metal braces: from 2,800 RON/arch · Sapphire braces: from 4,000 RON/arch · Spark aligners: from 7,500 RON/arch. [Price list](/prices#ortodontie).",
     sections: [
       {
         title: "Your treatment options",

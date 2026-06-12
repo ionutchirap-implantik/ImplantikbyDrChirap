@@ -20,7 +20,7 @@ export const pricingEn: PricingContent = {
       items: [
         { name: "Consultation", price: "150 RON" },
         { name: "OMF surgeon consultation", price: "200 RON" },
-        { name: "Orthodontic consultation", price: "200 RON" },
+        { name: "Orthodontic consultation", price: "250 RON" },
       ],
     },
     {
@@ -145,28 +145,107 @@ export const pricingEn: PricingContent = {
       id: "ortodontie",
       name: "Orthodontics",
       serviceHref: "/ortodontie",
-      items: [
-        { name: "Fixed braces — sapphire brackets", price: "3,500 RON/arch" },
-        { name: "Fixed braces — metal brackets", price: "1,800 RON/arch" },
+      sectionNote:
+        "For devices marked “from”, the final cost depends on the technical elements prescribed for your case and is detailed in the treatment plan.",
+      subsections: [
         {
-          name: "Spark clear aligners",
-          price: "price set at orthodontic consultation",
+          title: "Orthodontic consultation and assessment",
+          items: [
+            { name: "Orthodontic consultation", price: "250 RON" },
+            { name: "Orthodontic photography", price: "200 RON" },
+            { name: "Photography + study model", price: "400 RON" },
+            {
+              name: "General assessment (photography + study models mounted on articulator)",
+              price: "600 RON",
+            },
+            { name: "Photography + RC bite registration", price: "400 RON" },
+            { name: "Orthodontic treatment plan", price: "250 RON" },
+            { name: "Eruption check-up (6 months / 1 year)", price: "100 RON" },
+          ],
         },
-        { name: "Metal fixed brace activation", price: "150 RON/arch · 250 RON both" },
-        { name: "Ceramic/sapphire brace activation", price: "120 RON/arch · 200 RON both" },
-        { name: "Removable brace activation", price: "30 RON/arch" },
-        { name: "Bracket replacement/rebond", price: "50 RON" },
-        { name: "Fixed / removable retainer", price: "300 RON/arch" },
-        { name: "Transpalatal bar", price: "500 RON" },
-        { name: "Lingual arch", price: "500 RON" },
-        { name: "Removable space maintainer", price: "500 RON" },
-        { name: "Rapid palatal expander", price: "800 RON" },
-        { name: "Orthodontic mini-implant", price: "500 RON" },
-        { name: "Skeletal anchorage plates", price: "2,000 RON" },
-        { name: "Fitting + RC registration", price: "600 RON" },
-        { name: "Photo session + study models", price: "250 RON" },
-        { name: "Molar band cementation", price: "50 RON" },
-        { name: "Study model", price: "50 RON" },
+        {
+          title: "Fixed braces",
+          items: [
+            { name: "Conventional metal braces", price: "2,800 RON/arch" },
+            { name: "Self-ligating metal braces", price: "3,300 RON/arch" },
+            { name: "Sapphire aesthetic braces", price: "4,000 RON/arch" },
+          ],
+        },
+        {
+          title: "Spark clear aligners",
+          intro:
+            "The Spark level suited to your case (depending on complexity) is determined at the orthodontic consultation.",
+          dualArchPricing: {
+            tierLabel: "Level (by complexity)",
+            singleArchLabel: "One arch",
+            bothArchesLabel: "Both arches",
+          },
+          items: [
+            { name: "Spark 10", price: "7,500 RON", priceSecondary: "12,000 RON" },
+            { name: "Spark 20", price: "9,000 RON", priceSecondary: "18,000 RON" },
+            { name: "Spark 35", price: "11,000 RON", priceSecondary: "22,000 RON" },
+            { name: "Spark Advanced", price: "15,000 RON", priceSecondary: "24,000 RON" },
+          ],
+        },
+        {
+          title: "Auxiliary appliances and devices",
+          items: [
+            {
+              name: "Classic expander (includes study model, photos, cephalometric analysis)",
+              price: "2,000 RON",
+            },
+            {
+              name: "Acrylic removable appliance (includes study model, photos, cephalometric analysis)",
+              price: "2,000 RON",
+            },
+            { name: "Hybrid expander", price: "from 6,000 RON" },
+            { name: "Distalizer", price: "from 6,000 RON" },
+            { name: "Mesializer", price: "from 6,000 RON" },
+            { name: "Mouse-trap device", price: "from 6,000 RON" },
+            { name: "Delaire mask", price: "900 RON" },
+            { name: "Head-Gear device", price: "900 RON" },
+            { name: "Goshgarian arch", price: "1,000 RON" },
+            { name: "Lingual arch", price: "1,000 RON" },
+            { name: "Mandibular advancement splint", price: "1,000 RON" },
+            { name: "TMJ splint", price: "2,000 RON" },
+            { name: "Splint adjustment session", price: "150 RON" },
+            { name: "Articulator mounting (Kennedy cut)", price: "600 RON" },
+            { name: "Orthodontic mini-implant", price: "600 RON" },
+            {
+              name: "Skeletal anchors (per unit; fitting not included)",
+              price: "600 RON",
+            },
+          ],
+        },
+        {
+          title: "Activations and maintenance",
+          items: [
+            {
+              name: "Brace activation (metal / self-ligating / sapphire) — single arch",
+              price: "200 RON",
+            },
+            {
+              name: "Brace activation (metal / self-ligating / sapphire) — both arches",
+              price: "300 RON",
+            },
+            { name: "Maxillary expander removal", price: "200 RON" },
+          ],
+        },
+        {
+          title: "Completion and retention",
+          items: [
+            { name: "Fixed brace removal (per arch)", price: "300 RON" },
+            { name: "Retention splint", price: "300 RON" },
+            {
+              name: "Maxillary fixed brace removal + splint-type retainer",
+              price: "500 RON",
+            },
+            {
+              name: "Mandibular fixed brace removal + fixed retainer",
+              price: "500 RON",
+            },
+          ],
+        },
       ],
     },
     {

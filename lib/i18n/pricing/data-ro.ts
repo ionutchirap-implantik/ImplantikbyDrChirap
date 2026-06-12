@@ -20,7 +20,7 @@ export const pricingRo: PricingContent = {
       items: [
         { name: "Consultație", price: "150 RON" },
         { name: "Consultație chirurg BMF", price: "200 RON" },
-        { name: "Consultație ortodont", price: "200 RON" },
+        { name: "Consultație ortodont", price: "250 RON" },
       ],
     },
     {
@@ -145,28 +145,107 @@ export const pricingRo: PricingContent = {
       id: "ortodontie",
       name: "Ortodonție",
       serviceHref: "/ortodontie",
-      items: [
-        { name: "Aparat fix cu bracket-uri din safir", price: "3.500 RON/arcadă" },
-        { name: "Aparat fix cu bracket-uri din metal", price: "1.800 RON/arcadă" },
+      sectionNote:
+        'Pentru dispozitivele cu mențiunea „de la", costul final depinde de elementele tehnice prescrise pentru cazul tău și este detaliat în planul de tratament.',
+      subsections: [
         {
-          name: "Gutiere „invizibile” Spark",
-          price: "preț stabilit la consultația ortodontică",
+          title: "Consultație și evaluare ortodontică",
+          items: [
+            { name: "Consultație ortodonție", price: "250 RON" },
+            { name: "Fotografie ortodontică", price: "200 RON" },
+            { name: "Fotografie + model de studiu", price: "400 RON" },
+            {
+              name: "Evaluare generală (fotografie + modele de studiu montate în articulator)",
+              price: "600 RON",
+            },
+            { name: "Fotografie + înregistrare ocluzie RC", price: "400 RON" },
+            { name: "Plan de tratament ortodontic", price: "250 RON" },
+            { name: "Control erupție (6 luni / 1 an)", price: "100 RON" },
+          ],
         },
-        { name: "Activare aparat fix metalic", price: "150 RON/arcadă · 250 RON ambele" },
-        { name: "Activare aparat ceramică/safir", price: "120 RON/arcadă · 200 RON ambele" },
-        { name: "Activare aparat mobil", price: "30 RON/arcadă" },
-        { name: "Înlocuire/reatașare bracket", price: "50 RON" },
-        { name: "Contenție fixă / mobilă", price: "300 RON/arcadă" },
-        { name: "Bară transpalatinală", price: "500 RON" },
-        { name: "Arc lingual", price: "500 RON" },
-        { name: "Menținător de spațiu mobil", price: "500 RON" },
-        { name: "Disjunctor", price: "800 RON" },
-        { name: "Mini-implant ortodontic", price: "500 RON" },
-        { name: "Plăcuțe ancoraj scheletal", price: "2.000 RON" },
-        { name: "Montare + înregistrare RC", price: "600 RON" },
-        { name: "Ședință foto + MS", price: "250 RON" },
-        { name: "Cimentare inel molar", price: "50 RON" },
-        { name: "Model de studiu", price: "50 RON" },
+        {
+          title: "Aparate dentare fixe",
+          items: [
+            { name: "Aparat metalic convențional", price: "2.800 RON/arcadă" },
+            { name: "Aparat metalic autoligaturant", price: "3.300 RON/arcadă" },
+            { name: "Aparat estetic din safir", price: "4.000 RON/arcadă" },
+          ],
+        },
+        {
+          title: 'Gutiere „invizibile" Spark',
+          intro:
+            "Nivelul Spark potrivit cazului tău (în funcție de complexitate) se stabilește la consultația ortodontică.",
+          dualArchPricing: {
+            tierLabel: "Nivel (după complexitate)",
+            singleArchLabel: "O arcadă",
+            bothArchesLabel: "Ambele arcade",
+          },
+          items: [
+            { name: "Spark 10", price: "7.500 RON", priceSecondary: "12.000 RON" },
+            { name: "Spark 20", price: "9.000 RON", priceSecondary: "18.000 RON" },
+            { name: "Spark 35", price: "11.000 RON", priceSecondary: "22.000 RON" },
+            { name: "Spark Advanced", price: "15.000 RON", priceSecondary: "24.000 RON" },
+          ],
+        },
+        {
+          title: "Aparate și dispozitive auxiliare",
+          items: [
+            {
+              name: "Disjunctor clasic (include model de studiu, foto, analiză teleradiografie)",
+              price: "2.000 RON",
+            },
+            {
+              name: "Aparat mobil acrilic (include model de studiu, foto, analiză teleradiografie)",
+              price: "2.000 RON",
+            },
+            { name: "Disjunctor hibrid", price: "de la 6.000 RON" },
+            { name: "Distalizator", price: "de la 6.000 RON" },
+            { name: "Mezializator", price: "de la 6.000 RON" },
+            { name: "Dispozitiv mouse-trap", price: "de la 6.000 RON" },
+            { name: "Mască Delaire", price: "900 RON" },
+            { name: "Dispozitiv Head-Gear", price: "900 RON" },
+            { name: "Arc Goshgarian", price: "1.000 RON" },
+            { name: "Arc lingual", price: "1.000 RON" },
+            { name: "Gutieră de înălțare mandibulară", price: "1.000 RON" },
+            { name: "Gutieră ATM", price: "2.000 RON" },
+            { name: "Ședință adaptare gutieră", price: "150 RON" },
+            { name: "Montare în articulator (Kennedy cut)", price: "600 RON" },
+            { name: "Mini-implant ortodontic", price: "600 RON" },
+            {
+              name: "Ancore scheletale (per bucată; nu include montarea)",
+              price: "600 RON",
+            },
+          ],
+        },
+        {
+          title: "Activări și întreținere",
+          items: [
+            {
+              name: "Activare aparat (metalic / autoligaturant / safir) — unimaxilar",
+              price: "200 RON",
+            },
+            {
+              name: "Activare aparat (metalic / autoligaturant / safir) — bimaxilar",
+              price: "300 RON",
+            },
+            { name: "Îndepărtare disjunctor maxilar", price: "200 RON" },
+          ],
+        },
+        {
+          title: "Finalizare și contenție",
+          items: [
+            { name: "Îndepărtare aparat fix (per arcadă)", price: "300 RON" },
+            { name: "Gutieră de contenție", price: "300 RON" },
+            {
+              name: "Îndepărtare aparat fix maxilar + contenție tip gutieră",
+              price: "500 RON",
+            },
+            {
+              name: "Îndepărtare aparat fix mandibular + contenție fixă",
+              price: "500 RON",
+            },
+          ],
+        },
       ],
     },
     {
