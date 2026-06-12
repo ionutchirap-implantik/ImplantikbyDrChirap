@@ -63,6 +63,8 @@ export const dictionary = {
     close: "Close",
     withdrawNote:
       "To fully delete third-party cookies already placed, you can use your browser settings.",
+    ageNote:
+      "By making a choice, you confirm that you are at least 16 or acting with your legal representative’s consent.",
   },
   home: {
     heroEyebrow: "Iași · Dental Implants & Oral and Maxillofacial Surgery",

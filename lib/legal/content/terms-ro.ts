@@ -14,7 +14,7 @@ export const termsRo: LegalDocument = {
       title: "1. Introducere și acceptare",
       paragraphs: [
         "Bine ați venit pe implantik.ro, site-ul oficial al clinicii Implantik by Dr. Chirap din Iași. Site-ul este operat de Implantik Chirap SRL, CUI 40441553, J22/216/2019, cu sediul în Strada Milcov nr. 2, bl. 1206, sc. D, Iași 700581.",
-        "Accesând, navigând sau utilizând site-ul, inclusiv formularele de contact și programare, acceptați prezentele Termeni și condiții. Dacă nu sunteți de acord, vă rugăm să nu utilizați site-ul.",
+        "Acești termeni guvernează utilizarea site-ului. Folosirea formularelor și transmiterea solicitărilor presupun acceptarea lor. Pentru relația medicală efectivă prevalează documentele semnate la cabinet. Dacă nu sunteți de acord, vă rugăm să nu utilizați site-ul.",
         "Termenii se completează cu Politica de confidențialitate și Politica de cookies, care descriu prelucrarea datelor personale și utilizarea cookie-urilor. În caz de conflict între documente privind datele personale, prevalează Politica de confidențialitate.",
         "Versiunea aplicabilă este cea publicată online la data accesării, cu mențiunea datei de actualizare din antet. Pacienții internaționali sau cei interesați de servicii stomatologice în Iași sunt supuși acelorași termeni; comunicarea se realizează în limba română sau engleză, după preferință, iar relația medicală se desfășoară la sediul clinicii din România, conform legislației române.",
       ],
@@ -25,7 +25,7 @@ export const termsRo: LegalDocument = {
       paragraphs: [
         "Operatorul site-ului și furnizorul serviciilor medicale promovate prin site este Implantik Chirap SRL. Date de contact: implantikdrchirap@gmail.com, telefon (0758) 169 234, adresă Strada Milcov nr. 2, bl. 1206, sc. D, Iași 700581.",
         "Serviciile medicale sunt prestate la sediul clinicii de personal medical autorizat, sub coordonarea Dr. Ionuț Chirap, administrator și medic stomatolog. Structura organizatorică include personal medical și administrativ angajat sau colaborator, conform contractelor și autorizațiilor în vigoare.",
-        "Autorizații și înregistrări profesionale: activitate medicală stomatologică autorizată; cod CAEN principal 8623 — activități de asistență stomatologică; înregistrare Registrul Comerțului J22/216/2019; CUI 40441553. Medicii care prestează servicii dețin autorizații de liberă practică și înregistrări CMS/CMR, conform cerințelor legale.",
+        "Autorizații și înregistrări profesionale: activitate medicală stomatologică autorizată; cod CAEN principal 8623 — activități de asistență stomatologică; înregistrare Registrul Comerțului J22/216/2019; CUI 40441553. Medicii care prestează servicii dețin autorizații de liberă practică și înregistrări CMSR (Colegiul Medicilor Stomatologi din România), conform cerințelor legale.",
       ],
     },
     {
@@ -52,7 +52,7 @@ export const termsRo: LegalDocument = {
       id: "programari",
       title: "5. Programări, solicitări și relația cu pacientul",
       paragraphs: [
-        "Formularele de contact și programare permit transmiterea unei solicitări; trimiterea nu garantează automat confirmarea unei programări la o anumită dată/oră. Confirmarea se face de către recepția clinicii prin telefon, e-mail, WhatsApp sau alt canal comunicat.",
+        "Formularele de contact și programare permit transmiterea unei cereri de contact sau de programare, nu o rezervare fermă; programarea devine efectivă după confirmarea din partea clinicii, prin telefon, e-mail, WhatsApp sau alt canal comunicat.",
         "Vă rugăm să furnizați date corecte și actualizate. Pentru date privind sănătatea transmise voluntar prin formular, este necesar consimțământul explicit indicat în formular, conform Politicii de confidențialitate.",
         "Relația medicală propriu-zisă (consultație, tratament, facturare, consimțământ informat pentru proceduri) se guvernează de legislația medicală aplicabilă și de documentele semnate la cabinet, nu numai de acești termeni de utilizare a site-ului.",
         "Politica de anulare/reprogramare: vă rugăm să anunțați reprogramarea sau anularea cu minimum 24 de ore înainte de ora stabilită, prin telefon sau WhatsApp. Neprezentarea fără anunț (no-show) poate afecta prioritizarea programărilor viitoare. Tarifele afișate pe site sau comunicate au caracter orientativ până la evaluarea clinică; prețurile finale sunt cele din planul de tratament agreat. Plata se efectuează la cabinet, conform condițiilor comunicate de recepție.",
@@ -92,7 +92,7 @@ export const termsRo: LegalDocument = {
       paragraphs: [
         "Prelucrarea datelor personale efectuate prin site este descrisă în Politica de confidențialitate. Datele din formulare pot include categorii speciale privind sănătatea (GDPR art. 9) și sunt prelucrate cu măsuri sporite de protecție.",
         "Cookie-urile și tehnologiile de tracking sunt utilizate conform Politicii de cookies și numai cu consimțământul dvs. pentru categoriile non-esențiale. GTM (GTM-5QFHBCH) și tag-urile asociate se încarcă numai după consimțământ, conform Consent Mode v2.",
-        "Furnizor stocare lead-uri: Supabase — datele din formulare sunt stocate în baza de date Supabase, accesibile doar server-side, cu chei securizate. Pentru exercitarea drepturilor GDPR, contactați implantikdrchirap@gmail.com.",
+        "Furnizor stocare solicitări: Supabase — datele din formulare sunt stocate în baza de date Supabase, accesibile doar server-side, cu chei securizate. Pentru exercitarea drepturilor GDPR, contactați implantikdrchirap@gmail.com.",
       ],
     },
     {

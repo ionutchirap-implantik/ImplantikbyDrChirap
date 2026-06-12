@@ -131,6 +131,10 @@ export function CookieBanner({ dict, locale }: CookieBannerProps) {
         )}
       </div>
 
+      <p className="mt-2 text-center text-[11px] leading-snug text-primary-foreground/75">
+        {t.ageNote}
+      </p>
+
       {consent.decided && (
         <button
           type="button"

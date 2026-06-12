@@ -14,7 +14,7 @@ export const termsEn: LegalDocument = {
       title: "1. Introduction and acceptance",
       paragraphs: [
         "Welcome to implantik.ro, the official website of the Implantik by Dr. Chirap dental clinic in Iași. The site is operated by Implantik Chirap SRL, tax ID (CUI) 40441553, Trade Register no. J22/216/2019, with registered office at Strada Milcov nr. 2, bl. 1206, sc. D, Iași 700581.",
-        "By accessing, browsing, or using the site, including contact and appointment forms, you accept these Terms and Conditions. If you do not agree, please do not use the site.",
+        "These terms govern use of the website. Using the forms and submitting requests implies acceptance of these terms. For the actual medical relationship, documents signed at the clinic prevail. If you do not agree, please do not use the site.",
         "These terms are supplemented by the Privacy Policy and Cookie Policy, which describe personal data processing and cookie use. In case of conflict regarding personal data, the Privacy Policy prevails.",
         "The applicable version is the one published online at the time of access, with the update date shown in the header. International patients or those interested in dental services in Iași are subject to the same terms; communication is in Romanian or English as preferred, and the medical relationship takes place at the clinic premises in Romania under Romanian law.",
       ],
@@ -25,7 +25,7 @@ export const termsEn: LegalDocument = {
       paragraphs: [
         "The site operator and provider of medical services promoted through the site is Implantik Chirap SRL. Contact details: implantikdrchirap@gmail.com, phone (0758) 169 234, address Strada Milcov nr. 2, bl. 1206, sc. D, Iași 700581.",
         "Medical services are provided at the clinic premises by authorised medical staff, under the coordination of Dr. Ionuț Chirap, administrator and dental physician. The organisational structure includes employed or collaborating medical and administrative staff, in accordance with applicable contracts and authorisations.",
-        "Authorisations and professional registrations: authorised dental medical activity; main CAEN code 8623 — dental practice activities; Trade Register registration J22/216/2019; tax ID (CUI) 40441553. Physicians providing services hold private practice authorisations and CMS/CMR registrations as required by law.",
+        "Authorisations and professional registrations: authorised dental medical activity; main CAEN code 8623 — dental practice activities; Trade Register registration J22/216/2019; tax ID (CUI) 40441553. Physicians providing services hold private practice authorisations and CMSR (Romanian College of Dental Physicians) registrations as required by law.",
       ],
     },
     {
@@ -52,7 +52,7 @@ export const termsEn: LegalDocument = {
       id: "appointments",
       title: "5. Appointments, requests, and patient relationship",
       paragraphs: [
-        "Contact and appointment forms allow you to submit a request; submission does not automatically guarantee confirmation at a specific date/time. Confirmation is made by clinic reception via phone, e-mail, WhatsApp, or another communicated channel.",
+        "Contact and appointment forms allow you to submit a contact or appointment request, not a firm reservation; the appointment becomes effective after confirmation by the clinic via phone, e-mail, WhatsApp, or another communicated channel.",
         "Please provide accurate and up-to-date data. For health-related data voluntarily sent via forms, explicit consent as indicated in the form is required, in accordance with the Privacy Policy.",
         "The medical relationship itself (consultation, treatment, billing, informed consent for procedures) is governed by applicable medical legislation and documents signed at the clinic, not only by these website terms.",
         "Cancellation/rescheduling policy: please notify us of rescheduling or cancellation at least 24 hours before the scheduled time, by phone or WhatsApp. Failure to attend without notice (no-show) may affect prioritisation of future appointments. Prices shown on the site or communicated are indicative until clinical assessment; final prices are those in the agreed treatment plan. Payment is made at the clinic under conditions communicated by reception.",
@@ -92,7 +92,7 @@ export const termsEn: LegalDocument = {
       paragraphs: [
         "Personal data processing through the site is described in the Privacy Policy. Form data may include special categories of health-related data (GDPR Art. 9) and is processed with enhanced safeguards.",
         "Cookies and tracking technologies are used according to the Cookie Policy and only with your consent for non-essential categories. GTM (GTM-5QFHBCH) and associated tags load only after consent, in accordance with Consent Mode v2.",
-        "Lead storage provider: Supabase — form data is stored in a Supabase database, accessible server-side only, with secured keys. To exercise GDPR rights, contact implantikdrchirap@gmail.com.",
+        "Request storage provider: Supabase — form data is stored in a Supabase database, accessible server-side only, with secured keys. To exercise GDPR rights, contact implantikdrchirap@gmail.com.",
       ],
     },
     {

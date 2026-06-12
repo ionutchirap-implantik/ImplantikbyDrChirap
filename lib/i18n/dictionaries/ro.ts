@@ -63,6 +63,8 @@ export const dictionary = {
     close: "Închide",
     withdrawNote:
       "Pentru ștergerea completă a cookie-urilor terțe deja plasate, poți folosi setările browserului.",
+    ageNote:
+      "Prin exprimarea unei alegeri, confirmați că aveți cel puțin 16 ani sau acționați cu acordul reprezentantului legal.",
   },
   home: {
     heroEyebrow: "Iași · Implantologie & Chirurgie Orală și Maxilo-Facială",
