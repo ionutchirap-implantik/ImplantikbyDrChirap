@@ -35,6 +35,8 @@ export type ServicePageContent = {
   meta: { title: string; description: string };
   h1: string;
   intro: string;
+  /** Orientative prices with link to pricing page (CMSR-compliant, no promotional wording). */
+  priceSummary?: string;
   sections: ServiceSection[];
   faq: ServiceFaqItem[];
   internalLinks: ServiceInternalLink[];

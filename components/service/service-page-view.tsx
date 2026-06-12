@@ -44,6 +44,11 @@ export function ServicePageView({ content, dict, locale }: ServicePageViewProps)
               <p className="text-lg leading-relaxed text-muted-foreground">
                 <RichServiceText text={content.intro} locale={locale} />
               </p>
+              {content.priceSummary ? (
+                <p className="mt-4 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm leading-relaxed text-muted-foreground">
+                  <RichServiceText text={content.priceSummary} locale={locale} />
+                </p>
+              ) : null}
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button asChild>
                   <Link href={localePath(locale, "/programare")}>{dict.cta.book}</Link>

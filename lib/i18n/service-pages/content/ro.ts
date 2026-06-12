@@ -12,6 +12,8 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     h1: "Implant dentar în Iași",
     intro:
       "Implantul dentar este soluția modernă pentru înlocuirea unuia sau mai multor dinți lipsă: o rădăcină artificială din titan, inserată în os, pe care se fixează o coroană cu aspect și funcție naturale. La Implantik, implantologia este coordonată de Dr. Ionuț Chirap, medic specialist în chirurgie orală și maxilo-facială, cu peste 7.000 de implanturi inserate.",
+    priceSummary:
+      "Valorile orientative: implant dentar de la 2.500 lei, consultație 150 lei. Vezi [lista completă de prețuri](/preturi).",
     sections: [
       {
         title: "Când este indicat implantul dentar",
@@ -93,6 +95,8 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     h1: "All-on-4 și All-on-6 în Iași — dinți ficși pe implanturi",
     intro:
       "All-on-4 și All-on-6 sunt soluții de reabilitare completă a unei arcade: întreaga dantură fixă, sprijinită pe 4, respectiv 6 implanturi. Sunt indicate pacienților care au pierdut majoritatea dinților sau poartă proteză mobilă și își doresc dinți ficși. La Implantik, aceste reabilitări sunt planificate și realizate de Dr. Ionuț Chirap, medic specialist în chirurgie orală și maxilo-facială.",
+    priceSummary:
+      "All-on-4 cu lucrare provizorie: de la 3.500 €; All-on-6: de la 4.500 €. Lucrarea protetică definitivă All-on este separată, de la 20.000 lei (metalo-ceramică pe titan) sau 22.000 lei (zirconiu pe titan) — vezi [prețuri](/preturi).",
     sections: [
       {
         title: "Dinți ficși provizorii în 24 de ore",
@@ -170,6 +174,8 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     h1: "Chirurgie orală și maxilo-facială în Iași",
     intro:
       "Chirurgia orală și maxilo-facială este specialitatea care tratează chirurgical afecțiunile cavității orale și ale structurilor adiacente. La Implantik, intervențiile sunt realizate de Dr. Ionuț Chirap, medic specialist în chirurgie orală și maxilo-facială — aceeași mână care a inserat peste 7.000 de implanturi planifică și intervențiile pregătitoare.",
+    priceSummary:
+      "Sinus lift: 4.000 lei. Adiție osoasă: de la 4.000 lei (Istvan) sau 5.000 lei (Khoury). [Detalii prețuri](/preturi).",
     sections: [
       {
         title: "Intervenții realizate în clinică",
@@ -354,6 +360,8 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     h1: 'Ortodonție în Iași — aparat dentar și gutiere „invizibile" Spark',
     intro:
       "Ortodonția corectează poziția dinților și a mușcăturii — pentru funcție, sănătate și estetică. La Implantik tratăm copii și adulți, cu trei opțiuni principale de tratament, alese împreună cu tine în funcție de caz, vârstă și stil de viață.",
+    priceSummary:
+      "Aparat metalic: 1.800 lei/arcadă. Safir: 3.500 lei/arcadă. Gutiere Spark: preț stabilit la consultația ortodontică. [Lista prețuri](/preturi).",
     sections: [
       {
         title: "Opțiunile tale de tratament",
@@ -426,6 +434,8 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     h1: "Stomatologie generală și profilaxie în Iași",
     intro:
       "Sănătatea orală începe cu îngrijirea de bază: controale regulate, igienizare profesională și tratarea la timp a problemelor mici, înainte să devină mari. La Implantik, stomatologia generală este fundația pe care construim orice plan de tratament.",
+    priceSummary:
+      "Consultație: 150 lei. Detartraj + periaj: 150 lei. Igienizare completă ambele arcade: 450 lei. [Prețuri](/preturi).",
     sections: [
       {
         title: "Servicii",
@@ -433,8 +443,8 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
           "Consultație și plan de tratament — examinare completă, explicații pe înțeles, plan scris",
           "Tratamentul cariilor — obturații (plombe) fizionomice moderne",
           "Detartraj și igienizare profesională — îndepărtarea tartrului și a plăcii bacteriene, periaj profesional",
-          "Tratamente endodontice (canal) — [DE CONFIRMAT in-house; dacă da, secțiune proprie sau pagină dedicată /endodontie]",
-          "Tratament parodontal — [DE CONFIRMAT; dacă da, pagină dedicată /parodontologie]",
+          "Tratamente endodontice (canal) — vezi secțiunea Endodonție pe [pagina de prețuri](/preturi)",
+          "Pedodonție — tratamente pentru copii; valori pe [pagina de prețuri](/preturi)",
         ],
       },
       {
@@ -487,6 +497,8 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     h1: "Estetică dentară în Iași",
     intro:
       "Estetica dentară înseamnă îmbunătățirea aspectului zâmbetului — cu rezultate naturale, nu artificiale. La Implantik, orice tratament estetic începe cu o discuție despre ce îți dorești și o evaluare onestă a ceea ce este potrivit pentru tine.",
+    priceSummary:
+      "Albire profesională: 1.700 lei. Fațete ceramică: 2.000 lei/dinte. [Prețuri](/preturi).",
     sections: [
       {
         title: "Tratamente",
@@ -544,7 +556,9 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     },
     h1: "Estetică facială în Iași — realizată medical",
     intro:
-      "Estetica facială completează armonia zâmbetului: tratamente minim invazive, realizate medical, cu informare completă și rezultate naturale. La Implantik, procedurile de estetică facială sunt efectuate de medic, cu produse certificate și protocoale corecte. [COMPETENȚA MEDICULUI PENTRU ACESTE PROCEDURI — DE CONFIRMAT ȘI AFIȘAT]",
+      "Estetica facială completează armonia zâmbetului: tratamente minim invazive, realizate medical, cu informare completă și rezultate naturale. La Implantik, procedurile de estetică facială sunt efectuate de medic, cu produse certificate și protocoale corecte.",
+    priceSummary:
+      "Costul tratamentelor de estetică facială se stabilește la consultație, în funcție de indicație și planul agreat.",
     sections: [
       {
         title: "Tratamente",

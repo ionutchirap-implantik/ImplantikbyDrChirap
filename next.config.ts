@@ -21,7 +21,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [],
   },
   async redirects() {
-    return buildWordPressRedirects();
+    return [
+      { source: "/en/preturi", destination: "/en/prices", permanent: true },
+      { source: "/en/preturi/", destination: "/en/prices", permanent: true },
+      ...buildWordPressRedirects(),
+    ];
   },
   async headers() {
     return [

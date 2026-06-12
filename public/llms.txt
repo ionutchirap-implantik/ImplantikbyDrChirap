@@ -39,7 +39,8 @@
 - https://implantik.ro/ro/stomatologie — General dentistry Iași
 - https://implantik.ro/ro/estetica-dentara — Dental aesthetics
 - https://implantik.ro/ro/estetica-faciala — Facial aesthetics
-- https://implantik.ro/ro/preturi — Pricing (indicative “from” values)
+- https://implantik.ro/ro/preturi — Pricing (official clinic price list, RO)
+- https://implantik.ro/en/prices — Pricing (official clinic price list, EN)
 - https://implantik.ro/ro/echipa/dr-ionut-chirap — Dr. Ionuț Chirap
 - https://implantik.ro/ro/ghiduri — Patient guides
 - https://implantik.ro/ro/contact — Contact

@@ -7,7 +7,7 @@ import { isValidLocale, type Locale } from "@/lib/i18n/config";
 type PageProps = { params: Promise<{ locale: string }> };
 
 export function generateStaticParams() {
-  return [{ locale: "ro" }];
+  return [{ locale: "en" }];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -20,6 +20,6 @@ export default async function Page({ params }: PageProps) {
   const { locale: localeParam } = await params;
   if (!isValidLocale(localeParam)) notFound();
   const locale = localeParam as Locale;
-  assertPricingLocale(locale, "/preturi");
+  assertPricingLocale(locale, "/prices");
   return <PricingPageRoute locale={locale} />;
 }

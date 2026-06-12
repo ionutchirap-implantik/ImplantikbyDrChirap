@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/site-url";
-import { locales } from "@/lib/i18n/config";
+import { locales, type Locale } from "@/lib/i18n/config";
+import { pricingPath } from "@/lib/i18n/pricing/paths";
 
 const paths = [
   "",
@@ -14,7 +15,6 @@ const paths = [
   "/ortodontie",
   "/stomatologie",
   "/turism-dentar",
-  "/preturi",
   "/echipa",
   "/echipa/dr-ionut-chirap",
   "/cazuri-clinice",
@@ -31,21 +31,33 @@ const paths = [
   "/termeni",
 ];
 
+function pathForLocale(locale: Locale, path: string): string {
+  if (path === "/preturi") {
+    return pricingPath(locale);
+  }
+  return path;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
   const siteUrl = getSiteUrl();
+  const allPaths = [...paths, "/preturi"];
 
   for (const locale of locales) {
-    for (const path of paths) {
+    for (const path of allPaths) {
+      const localizedPath = pathForLocale(locale, path);
       entries.push({
-        url: `${siteUrl}/${locale}${path}`,
+        url: `${siteUrl}/${locale}${localizedPath}`,
         lastModified: new Date(),
         changeFrequency: path === "" ? "weekly" : "monthly",
         priority: path === "" ? 1 : path.includes("implantologie") || path.includes("contact") ? 0.9 : 0.7,
         alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => [l, `${siteUrl}/${l}${path}`])
-          ),
+          languages:
+            path === "/preturi"
+              ? { ro: `${siteUrl}/ro/preturi`, en: `${siteUrl}/en/prices` }
+              : Object.fromEntries(
+                  locales.map((l) => [l, `${siteUrl}/${l}${path === "/" ? "" : path}`])
+                ),
         },
       });
     }

@@ -12,6 +12,8 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     h1: "Dental implants in Iași",
     intro:
       "A dental implant is the modern solution for replacing one or more missing teeth: an artificial titanium root placed in the bone, with a crown that looks and functions naturally. At Implantik, implantology is led by Dr. Ionuț Chirap, oral and maxillofacial surgeon, with over 7,000 implants placed.",
+    priceSummary:
+      "Indicative values: dental implant from 2,500 RON, consultation 150 RON. See the [full price list](/preturi).",
     sections: [
       {
         title: "When is a dental implant indicated?",
@@ -93,6 +95,8 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     h1: "All-on-4 and All-on-6 in Iași — fixed teeth on implants",
     intro:
       "All-on-4 and All-on-6 are full-arch rehabilitation solutions: a complete fixed denture supported by 4 or 6 implants. They are indicated for patients who have lost most of their teeth or wear removable dentures and want fixed teeth. At Implantik, these rehabilitations are planned and performed by Dr. Ionuț Chirap, oral and maxillofacial surgeon.",
+    priceSummary:
+      "All-on-4 with provisional prosthesis: from 3,500 EUR; All-on-6: from 4,500 EUR. Definitive All-on prosthetic work is separate, from 20,000 RON (metal-ceramic on titanium) or 22,000 RON (zirconia on titanium) — see [pricing](/preturi).",
     sections: [
       {
         title: "Provisional fixed teeth within 24 hours",
@@ -170,6 +174,8 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     h1: "Oral and maxillofacial surgery in Iași",
     intro:
       "Oral and maxillofacial surgery is the specialty that surgically treats conditions of the oral cavity and adjacent structures. At Implantik, procedures are performed by Dr. Ionuț Chirap, oral and maxillofacial surgeon — the same specialist who has placed over 7,000 implants also plans preparatory interventions.",
+    priceSummary:
+      "Sinus lift: 4,000 RON. Bone grafting: from 4,000 RON (Istvan) or 5,000 RON (Khoury). [Pricing details](/preturi).",
     sections: [
       {
         title: "Procedures performed in-clinic",
@@ -354,6 +360,8 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     h1: "Orthodontics in Iași — braces and Spark clear aligners",
     intro:
       "Orthodontics corrects tooth position and bite — for function, health, and aesthetics. At Implantik we treat children and adults, with three main treatment options chosen together based on case, age, and lifestyle.",
+    priceSummary:
+      "Metal braces: 1,800 RON/arch. Sapphire: 3,500 RON/arch. Spark aligners: price set at orthodontic consultation. [Price list](/preturi).",
     sections: [
       {
         title: "Your treatment options",
@@ -426,6 +434,8 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     h1: "General dentistry and prevention in Iași",
     intro:
       "Oral health starts with basic care: regular check-ups, professional hygiene, and treating small problems in time before they become large ones. At Implantik, general dentistry is the foundation on which we build any treatment plan.",
+    priceSummary:
+      "Consultation: 150 RON. Scaling + brushing: 150 RON. Full hygiene both arches: 450 RON. [Pricing](/preturi).",
     sections: [
       {
         title: "Services",
@@ -433,8 +443,8 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
           "Consultation and treatment plan — full exam, plain-language explanations, written plan",
           "Cavity treatment — modern aesthetic fillings",
           "Scaling and professional hygiene — removal of tartar and bacterial plaque, professional brushing",
-          "Endodontic treatment (root canal) — [TO BE CONFIRMED in-house; if yes, dedicated section or page /endodontie]",
-          "Periodontal treatment — [TO BE CONFIRMED; if yes, dedicated page /parodontologie]",
+          "Endodontic treatment (root canal) — see Endodontics on our [pricing page](/preturi)",
+          "Paediatric dentistry — treatments for children; values on our [pricing page](/preturi)",
         ],
       },
       {
@@ -487,6 +497,8 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     h1: "Cosmetic dentistry in Iași",
     intro:
       "Cosmetic dentistry means improving the appearance of your smile — with natural results, not artificial ones. At Implantik, every aesthetic treatment starts with a discussion about what you want and an honest evaluation of what is suitable for you.",
+    priceSummary:
+      "Professional whitening: 1,700 RON. Ceramic veneers: 2,000 RON/tooth. [Pricing](/preturi).",
     sections: [
       {
         title: "Treatments",
@@ -544,7 +556,9 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     },
     h1: "Facial aesthetics in Iași — performed medically",
     intro:
-      "Facial aesthetics complements smile harmony: minimally invasive treatments, performed medically, with full information and natural results. At Implantik, facial aesthetic procedures are performed by a physician, with certified products and correct protocols. [PHYSICIAN COMPETENCE FOR THESE PROCEDURES — TO BE CONFIRMED AND DISPLAYED]",
+      "Facial aesthetics complements smile harmony: minimally invasive treatments, performed medically, with full information and natural results. At Implantik, facial aesthetic procedures are performed by a physician, with certified products and correct protocols.",
+    priceSummary:
+      "The cost of facial aesthetic treatments is set at consultation, depending on indication and the agreed plan.",
     sections: [
       {
         title: "Treatments",

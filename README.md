@@ -41,7 +41,8 @@ Deschide [http://localhost:3000](http://localhost:3000) — redirecționează au
 - [ ] **Bio complet Dr. Chirap** — titluri academice + nr. Colegiul Medicilor (`/echipa/dr-ionut-chirap`, secțiunea About)
 - [ ] **Servicii suplimentare** — confirmare cu clinica: urgențe stomatologice și radiologie digitală (carduri în grila de servicii, dacă există)
 - [ ] **Cazuri & rezultate** — 3 capturi statice postări Instagram în `components/home/cases-section.tsx` (înlocuiește `[CAPTURĂ POSTARE — DE ÎNLOCUIT]`)
-- [ ] **[DE COMPLETAT] Prețuri** — înlocuiește `[PREȚ — DE COMPLETAT]` în `lib/i18n/pricing/index.ts` cu valorile reale de la clinică
+- [ ] **[DE VERIFICAT] Prețuri** — confirmă cu clinica rândurile ambigue din listă (endodonție retratament, scanare bimax, coroane pe implant, protezare provizorie Scutan, Spark aligners) — vezi `lib/i18n/pricing/data-ro.ts`
+- [ ] **[ITERAȚIE VIITOARE] Pagini serviciu** — Endodonția și Pedodonția sunt confirmate prin lista de prețuri → de creat pagini dedicate (`/endodontie`, `/pedodontie`) cu linkuri din `/stomatologie` și `/preturi`
 - [ ] **[FAZA 2] Pagină dedicată** `/sinus-lift-iasi` — intenția este acoperită acum pe `/chirurgie-orala` (secțiune + FAQ); scaffold-ul rămas are `noindex` și canonical către chirurgie orală
 - [ ] **[CONȚINUT CONTINUU] Ghiduri** — 2–4 articole/lună din categoria E a strategiei (`/ghiduri/[slug]`); structura index + rute există, articolele sunt scaffold
 
