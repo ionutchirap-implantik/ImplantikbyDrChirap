@@ -17,7 +17,12 @@ export const SERVICE_HERO_IMAGES: Record<ServicePageSlug, string> = {
 export const TEAM_IMAGES = {
   drIonutChirap: "/team/dr-ionut-chirap.jpeg",
   drAnaMariaChirap: "/team/dr-ana-maria-chirap.jpeg",
-  drMadalinaAndriescu: "/team/dr-madalina-andriescu.jpeg",
+} as const;
+
+export const ECHIPA_IMAGES = {
+  drDacianaMatei: "/echipa/dr-daciana-matei.jpg",
+  drBiancaMihalcutChirila: "/echipa/dr-bianca-mihalcut-chirila.jpg",
+  drIoanaAndriescu: "/echipa/dr-ioana-andriescu.jpg",
 } as const;
 
 export const CLINIC_IMAGES = {

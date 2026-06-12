@@ -39,4 +39,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Raw uploads & personal documents (optimized copies live in public/)
+poze/
+medici echipa/
+
 .vercel

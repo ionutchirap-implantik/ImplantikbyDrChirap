@@ -472,6 +472,7 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     ],
     internalLinks: [
       { label: "Pricing", href: "/preturi" },
+      { label: "Our team", href: "/echipa" },
       { label: "Book appointment", href: "/programare" },
       { label: "Implantology", href: "/implantologie" },
     ],

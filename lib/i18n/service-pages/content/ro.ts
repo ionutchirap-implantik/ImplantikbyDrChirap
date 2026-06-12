@@ -472,6 +472,7 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     ],
     internalLinks: [
       { label: "Prețuri", href: "/preturi" },
+      { label: "Echipa", href: "/echipa" },
       { label: "Programare", href: "/programare" },
       { label: "Implantologie", href: "/implantologie" },
     ],

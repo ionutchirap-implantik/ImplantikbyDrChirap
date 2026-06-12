@@ -44,6 +44,31 @@ export function medicalClinicJsonLd(locale: Locale) {
   };
 }
 
+export function teamMemberPhysicianJsonLd({
+  name,
+  jobTitle,
+  alumniOf,
+  url,
+}: {
+  name: string;
+  jobTitle: string;
+  alumniOf: string;
+  url?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    name,
+    jobTitle,
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: alumniOf,
+    },
+    worksFor: { "@type": "Dentist", name: SITE.name },
+    ...(url ? { url } : {}),
+  };
+}
+
 export function physicianJsonLd(locale: Locale = "ro") {
   const siteUrl = getSiteUrl();
   const isRo = locale === "ro";

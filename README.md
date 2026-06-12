@@ -39,6 +39,8 @@ Deschide [http://localhost:3000](http://localhost:3000) — redirecționează au
 
 - [ ] **Stat 7.000+ implanturi** — confirmare dovedibilă de la clinică (`home.stats[0]`)
 - [ ] **Bio complet Dr. Chirap** — titluri academice + nr. Colegiul Medicilor (`/echipa/dr-ionut-chirap`, secțiunea About)
+- [ ] **Nr. Colegiul Medicilor** — Dr. Matei, Dr. Mihălcuț-Chirilă, Dr. Andriescu (`/echipa`)
+- [ ] **Asistente medicale** — confirmare nume opționale pentru mențiunea de pe `/echipa`
 - [ ] **Servicii suplimentare** — confirmare cu clinica: urgențe stomatologice și radiologie digitală (carduri în grila de servicii, dacă există)
 - [ ] **Cazuri & rezultate** — 3 capturi statice postări Instagram în `components/home/cases-section.tsx` (înlocuiește `[CAPTURĂ POSTARE — DE ÎNLOCUIT]`)
 - [ ] **[DE VERIFICAT] Prețuri** — confirmă cu clinica rândurile ambigue din listă (endodonție retratament, scanare bimax, coroane pe implant, protezare provizorie Scutan, Spark aligners) — vezi `lib/i18n/pricing/data-ro.ts`
