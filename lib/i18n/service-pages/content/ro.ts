@@ -359,7 +359,7 @@ export const servicePagesRo: Record<ServicePageSlug, ServicePageContent> = {
     },
     h1: 'Ortodonție în Iași — aparat dentar și gutiere „invizibile" Spark',
     intro:
-      "Ortodonția corectează poziția dinților și a mușcăturii — pentru funcție, sănătate și estetică. La Implantik tratăm copii și adulți, cu trei opțiuni principale de tratament, alese împreună cu tine în funcție de caz, vârstă și stil de viață.",
+      "Ortodonția corectează poziția dinților și a mușcăturii — pentru funcție, sănătate și estetică. La Implantik tratăm copii și adulți, cu trei opțiuni principale de tratament, alese împreună cu tine în funcție de caz, vârstă și stil de viață. Tratamentele ortodontice sunt coordonate de Dr. Rocsana Anichiforesei, medic specialist în Ortodonție — [vezi echipa](/echipa).",
     priceSummary:
       "Aparat metalic: de la 2.800 lei/arcadă · Aparat safir: de la 4.000 lei/arcadă · Gutiere Spark: de la 7.500 lei/arcadă. [Lista prețuri](/preturi#ortodontie).",
     sections: [

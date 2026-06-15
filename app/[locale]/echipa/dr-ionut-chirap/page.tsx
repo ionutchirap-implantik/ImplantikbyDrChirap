@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { breadcrumbJsonLd, physicianJsonLd, JsonLd } from "@/lib/json-ld";
 import { getSiteUrl } from "@/lib/site-url";
 import { SITE } from "@/lib/constants";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
+import { TEAM_LEAD } from "@/lib/i18n/team";
 import { isValidLocale, type Locale } from "@/lib/i18n/config";
 
 type PageProps = { params: Promise<{ locale: string }> };
@@ -34,10 +34,10 @@ export default async function Page({ params }: PageProps) {
   const { locale: localeParam } = await params;
   if (!isValidLocale(localeParam)) notFound();
   const locale = localeParam as Locale;
-  const dict = await getDictionary(locale);
-  const about = dict.home.about;
+  const isRo = locale === "ro";
   const siteUrl = getSiteUrl();
   const pageUrl = `${siteUrl}/${locale}/echipa/dr-ionut-chirap`;
+  const paragraphs = (isRo ? TEAM_LEAD.fullBioRo : TEAM_LEAD.fullBioEn).split("\n\n");
 
   return (
     <section className="section-padding">
@@ -46,7 +46,7 @@ export default async function Page({ params }: PageProps) {
           <Image
             src={SITE.doctorPortraitPath}
             alt={
-              locale === "ro"
+              isRo
                 ? "Dr. Ionuț Chirap — chirurg oral și maxilo-facial, implant dentar Iași"
                 : "Dr. Ionuț Chirap — oral and maxillofacial surgeon, dental implants Iași"
             }
@@ -57,9 +57,17 @@ export default async function Page({ params }: PageProps) {
           />
         </div>
         <div>
-          <SectionHeading title="Dr. Ionuț Chirap" />
+          <SectionHeading title={TEAM_LEAD.name} />
+          <p className="mt-2 text-sm font-medium text-primary">
+            {isRo ? TEAM_LEAD.jobTitleRo : TEAM_LEAD.jobTitleEn}
+          </p>
+          <p className="mt-4 text-sm font-medium text-muted-foreground">
+            {isRo ? TEAM_LEAD.shortBioRo : TEAM_LEAD.shortBioEn}
+          </p>
           <div className="mt-6 space-y-4 text-muted-foreground">
-            <p>{about.text}</p>
+            {paragraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </div>
@@ -67,9 +75,9 @@ export default async function Page({ params }: PageProps) {
         data={[
           physicianJsonLd(locale),
           breadcrumbJsonLd([
-            { name: locale === "ro" ? "Acasă" : "Home", url: `${siteUrl}/${locale}` },
-            { name: locale === "ro" ? "Echipa" : "Team", url: `${siteUrl}/${locale}/echipa` },
-            { name: "Dr. Ionuț Chirap", url: pageUrl },
+            { name: isRo ? "Acasă" : "Home", url: `${siteUrl}/${locale}` },
+            { name: isRo ? "Echipa" : "Team", url: `${siteUrl}/${locale}/echipa` },
+            { name: TEAM_LEAD.name, url: pageUrl },
           ]),
         ]}
       />

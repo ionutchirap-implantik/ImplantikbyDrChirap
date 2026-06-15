@@ -49,11 +49,15 @@ export function teamMemberPhysicianJsonLd({
   jobTitle,
   alumniOf,
   url,
+  medicalSpecialty,
+  image,
 }: {
   name: string;
   jobTitle: string;
   alumniOf: string;
   url?: string;
+  medicalSpecialty?: string;
+  image?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -65,6 +69,8 @@ export function teamMemberPhysicianJsonLd({
       name: alumniOf,
     },
     worksFor: { "@type": "Dentist", name: SITE.name },
+    ...(medicalSpecialty ? { medicalSpecialty } : {}),
+    ...(image ? { image } : {}),
     ...(url ? { url } : {}),
   };
 }
@@ -77,13 +83,13 @@ export function physicianJsonLd(locale: Locale = "ro") {
     "@type": "Physician",
     name: "Dr. Ionuț Chirap",
     jobTitle: isRo
-      ? "Medic specialist chirurgie orală și maxilo-facială"
-      : "Oral and maxillofacial surgeon",
+      ? "Medic specialist în chirurgie orală și maxilo-facială · Coordonatorul clinicii"
+      : "Oral and Maxillofacial Surgeon · Clinic coordinator",
     worksFor: { "@type": "Dentist", name: SITE.name },
     url: `${siteUrl}/${locale}/echipa/dr-ionut-chirap`,
     description: isRo
-      ? "Medic specialist în chirurgie orală și maxilo-facială, cu peste 7.000 de implanturi inserate. Implant dentar în Iași, All-on-4, reabilitări complexe."
-      : "Oral and maxillofacial surgeon with over 7,000 implants placed. Dental implants in Iași, Romania, All-on-4, complex rehabilitation.",
+      ? "Medic specialist în chirurgie orală și maxilo-facială, cu peste 7.000 de implanturi inserate. Coordonatorul clinicii Implantik. Implant dentar în Iași, All-on-4, reabilitări complexe."
+      : "Oral and maxillofacial surgery specialist with over 7,000 implants placed. Clinic coordinator at Implantik. Dental implants in Iași, Romania, All-on-4, complex rehabilitation.",
     medicalSpecialty: "Oral and Maxillofacial Surgery",
     image: `${siteUrl}${SITE.doctorPortraitPath}`,
     address: {

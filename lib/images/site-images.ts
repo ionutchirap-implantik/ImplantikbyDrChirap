@@ -20,6 +20,8 @@ export const TEAM_IMAGES = {
 } as const;
 
 export const ECHIPA_IMAGES = {
+  drAnaMariaChirap: "/echipa/dr-ana-maria-chirap.jpg",
+  drRocsanaAnichiforesei: "/echipa/dr-rocsana-anichiforesei.jpg",
   drDacianaMatei: "/echipa/dr-daciana-matei.jpg",
   drBiancaMihalcutChirila: "/echipa/dr-bianca-mihalcut-chirila.jpg",
   drIoanaAndriescu: "/echipa/dr-ioana-andriescu.jpg",

@@ -8,6 +8,12 @@ export type TeamMember = {
   imageAlt: string;
   href?: string;
   alumniOf: string;
+  medicalSpecialty?: string;
+  imagePlaceholder?: boolean;
+  professionalTraining?: {
+    sectionTitle: string;
+    items: string[];
+  };
 };
 
 export type TeamPageContent = {

@@ -359,7 +359,7 @@ export const servicePagesEn: Record<ServicePageSlug, ServicePageContent> = {
     },
     h1: "Orthodontics in Iași — braces and Spark clear aligners",
     intro:
-      "Orthodontics corrects tooth position and bite — for function, health, and aesthetics. At Implantik we treat children and adults, with three main treatment options chosen together based on case, age, and lifestyle.",
+      "Orthodontics corrects tooth position and bite — for function, health, and aesthetics. At Implantik we treat children and adults, with three main treatment options chosen together based on case, age, and lifestyle. Orthodontic treatments are coordinated by Dr. Rocsana Anichiforesei, orthodontics specialist — [meet the team](/echipa).",
     priceSummary:
       "Metal braces: from 2,800 RON/arch · Sapphire braces: from 4,000 RON/arch · Spark aligners: from 7,500 RON/arch. [Price list](/prices#ortodontie).",
     sections: [

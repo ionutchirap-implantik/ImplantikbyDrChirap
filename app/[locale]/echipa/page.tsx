@@ -43,7 +43,9 @@ export default async function Page({ params }: PageProps) {
         name: member.name,
         jobTitle: member.jobTitle,
         alumniOf: member.alumniOf,
+        medicalSpecialty: member.medicalSpecialty,
         url: teamUrl,
+        image: member.imagePlaceholder ? undefined : `${siteUrl}${member.image}`,
       })
     ),
   ];
@@ -65,7 +67,12 @@ export default async function Page({ params }: PageProps) {
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {content.members.map((member) => (
-              <TeamMemberCard key={member.id} member={member} readMoreLabel={content.readMore} />
+              <TeamMemberCard
+                key={member.id}
+                member={member}
+                readMoreLabel={content.readMore}
+                readLessLabel={content.readLess}
+              />
             ))}
           </div>
         </section>
