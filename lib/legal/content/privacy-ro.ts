@@ -25,7 +25,7 @@ export const privacyRo: LegalDocument = {
       paragraphs: [
         "Operatorul datelor cu caracter personal este Implantik Chirap SRL, persoană juridică română, cu sediul social în Strada Milcov nr. 2, bl. 1206, sc. D, Iași 700581, România, înregistrată la Registrul Comerțului sub nr. J22/216/2019, CUI 40441553.",
         "Date de contact pentru aspecte legate de protecția datelor: e-mail implantikdrchirap@gmail.com, telefon (0758) 169 234, site implantik.ro. Program răspuns solicitări GDPR: luni–vineri, 8:00–19:30.",
-        "Reprezentant legal: Dr. Ionuț Chirap, administrator.",
+        "Reprezentant legal: Dr. Ana Maria Chirap, administrator.",
         "Operatorul păstrează evidența activităților de prelucrare prevăzută de art. 30 GDPR. Sub incidența GDPR, operatorii nu au obligația de înregistrare/notificare la ANSPDCP. Persoanele vizate pot contacta ANSPDCP conform secțiunii 11.",
       ],
     },

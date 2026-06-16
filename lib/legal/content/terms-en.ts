@@ -24,7 +24,7 @@ export const termsEn: LegalDocument = {
       title: "2. Website operator identity",
       paragraphs: [
         "The site operator and provider of medical services promoted through the site is Implantik Chirap SRL. Contact details: implantikdrchirap@gmail.com, phone (0758) 169 234, address Strada Milcov nr. 2, bl. 1206, sc. D, Iași 700581.",
-        "Medical services are provided at the clinic premises by authorised medical staff, under the coordination of Dr. Ionuț Chirap, administrator and dental physician. The organisational structure includes employed or collaborating medical and administrative staff, in accordance with applicable contracts and authorisations.",
+        "Medical services are provided at the clinic premises by authorised medical staff, under the coordination of Dr. Ionuț Chirap, oral and maxillofacial surgery specialist. Legal representative: Dr. Ana Maria Chirap, administrator. The organisational structure includes employed or collaborating medical and administrative staff, in accordance with applicable contracts and authorisations.",
         "Authorisations and professional registrations: authorised dental medical activity; main CAEN code 8623 — dental practice activities; Trade Register registration J22/216/2019; tax ID (CUI) 40441553. Physicians providing services hold private practice authorisations and CMSR (Romanian College of Dental Physicians) registrations as required by law.",
       ],
     },
