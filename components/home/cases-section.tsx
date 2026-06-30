@@ -1,19 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { RevealOnScroll } from "@/components/shared/reveal-on-scroll";
 import { SITE } from "@/lib/constants";
+import { CASE_IMAGES } from "@/lib/images/site-images";
 import type { Dictionary } from "@/lib/i18n/get-dictionary";
 
 type CasesSectionProps = {
   dict: Dictionary;
 };
-
-/** Înlocuiește cu capturi statice ale postărilor Instagram (fără embed / script terț). */
-const POST_CAPTURE_PLACEHOLDER = "[CAPTURĂ POSTARE — DE ÎNLOCUIT]";
-
-const CASE_CARD_COUNT = 3;
 
 export function CasesSection({ dict }: CasesSectionProps) {
   const c = dict.home.cases;
@@ -26,19 +23,23 @@ export function CasesSection({ dict }: CasesSectionProps) {
         <RevealOnScroll>
           <div className="mx-auto flex max-w-4xl flex-col items-center gap-8">
             <div className="grid w-full gap-5 sm:grid-cols-3">
-              {Array.from({ length: CASE_CARD_COUNT }, (_, index) => (
+              {CASE_IMAGES.map((src, index) => (
                 <Link
-                  key={index}
+                  key={src}
                   href={SITE.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group block overflow-hidden rounded-2xl border border-primary/25 bg-background shadow-md transition-shadow hover:border-primary/40 hover:shadow-lg"
-                  aria-label={`${c.cta} — ${POST_CAPTURE_PLACEHOLDER}`}
+                  aria-label={`${c.cta} — ${c.imageAlts[index]}`}
                 >
-                  <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-primary/20 via-primary/10 to-primary/5 p-4 transition-colors group-hover:from-primary/25 group-hover:to-primary/10">
-                    <span className="text-center text-xs font-medium leading-snug text-primary/80">
-                      {POST_CAPTURE_PLACEHOLDER}
-                    </span>
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={src}
+                      alt={c.imageAlts[index]}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                    />
                   </div>
                 </Link>
               ))}

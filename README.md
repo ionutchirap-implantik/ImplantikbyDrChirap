@@ -43,7 +43,7 @@ Deschide [http://localhost:3000](http://localhost:3000) — redirecționează au
 - [ ] **[DE PRIMIT] poză Dr. Rocsana Anichiforesei** → `public/echipa/dr-rocsana-anichiforesei.jpg`
 - [ ] **Asistente medicale** — confirmare nume opționale pentru mențiunea de pe `/echipa`
 - [ ] **Servicii suplimentare** — confirmare cu clinica: urgențe stomatologice și radiologie digitală (carduri în grila de servicii, dacă există)
-- [ ] **Cazuri & rezultate** — 3 capturi statice postări Instagram în `components/home/cases-section.tsx` (înlocuiește `[CAPTURĂ POSTARE — DE ÎNLOCUIT]`)
+- [x] **Cazuri & rezultate** — 3 capturi statice în `public/images/cases/` + `components/home/cases-section.tsx`
 - [ ] **[DE VERIFICAT] Prețuri** — confirmă cu clinica rândurile ambigue din listă (endodonție retratament, scanare bimax, coroane pe implant, protezare provizorie Scutan, Spark aligners) — vezi `lib/i18n/pricing/data-ro.ts`
 - [ ] **[ITERAȚIE VIITOARE] Pagini serviciu** — Endodonția și Pedodonția sunt confirmate prin lista de prețuri → de creat pagini dedicate (`/endodontie`, `/pedodontie`) cu linkuri din `/stomatologie` și `/preturi`
 - [ ] **[FAZA 2] Pagină dedicată** `/sinus-lift-iasi` — intenția este acoperită acum pe `/chirurgie-orala` (secțiune + FAQ); scaffold-ul rămas are `noindex` și canonical către chirurgie orală

@@ -182,6 +182,11 @@ export const dictionary = {
       cta: "See more on Instagram",
       follow: "@implantikbydr.chirap",
       consentNote: "Real results — see the full gallery on our Instagram profile.",
+      imageAlts: [
+        "Implantik clinical case example — shared with patient consent",
+        "Implantik clinical case example — shared with patient consent",
+        "Implantik clinical case example — shared with patient consent",
+      ],
     },
     testimonialsTitle: "What patients say",
     faqTitle: "Frequently asked questions",

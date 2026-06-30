@@ -26,6 +26,12 @@ export const ECHIPA_IMAGES = {
   drIoanaAndriescu: "/echipa/dr-ioana-andriescu.jpg",
 } as const;
 
+export const CASE_IMAGES = [
+  "/images/cases/caz-clinic-1.jpeg",
+  "/images/cases/caz-clinic-2.jpeg",
+  "/images/cases/caz-clinic-3.jpeg",
+] as const;
+
 export const CLINIC_IMAGES = {
   clinic1: "/images/clinic/clinic-1.jpeg",
   clinic2: "/images/clinic/clinic-2.jpeg",
