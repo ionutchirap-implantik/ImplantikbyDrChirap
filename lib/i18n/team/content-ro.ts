@@ -57,19 +57,6 @@ export const teamRo: TeamPageContent = {
       },
     },
     {
-      id: "daciana-matei",
-      name: "Dr. Daciana-Mihaela Matei",
-      jobTitle: "Medic stomatolog",
-      shortBio:
-        "Medic stomatolog, absolventă a Facultății de Medicină Dentară, UMF «Grigore T. Popa» Iași. Face parte din povestea Implantik încă din studenție — din 2020 ca voluntar, iar din 2024 ca medic.",
-      fullBio:
-        "Dr. Daciana-Mihaela Matei a absolvit Facultatea de Medicină Dentară a Universității de Medicină și Farmacie «Grigore T. Popa» din Iași (2018–2024) și s-a format, pas cu pas, chiar în clinica Implantik — unde a activat ca voluntar din 2020, iar din 2024 este medic stomatolog al echipei.\n\nSe concentrează pe stomatologia preventivă și pe tratamentele de zi cu zi: profilaxie (detartraj, periaj profesional), tratamentul cariilor, tratamente endodontice și extracții simple — cu accent pe crearea unui mediu relaxant pentru pacient și pe explicarea clară a fiecărui pas.\n\nParticipă constant la congrese și cursuri de formare continuă (STOMIS Iași 2022, Congress of Dental Medicine Iași 2024, «Repere în Medicina Avansată» 2025, workshop de chirurgie parodontală).",
-      image: "/echipa/dr-daciana-matei.jpg",
-      imageAlt: "Dr. Daciana-Mihaela Matei — medic stomatolog, Implantik Iași",
-      alumniOf: "Universitatea de Medicină și Farmacie Grigore T. Popa Iași",
-      medicalSpecialty: "Dentistry",
-    },
-    {
       id: "bianca-mihalcut-chirila",
       name: "Dr. Bianca-Ioana Mihălcuț-Chirilă",
       jobTitle: "Medic stomatolog",

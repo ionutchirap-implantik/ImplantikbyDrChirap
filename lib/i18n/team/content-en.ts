@@ -57,19 +57,6 @@ export const teamEn: TeamPageContent = {
       },
     },
     {
-      id: "daciana-matei",
-      name: "Dr. Daciana-Mihaela Matei",
-      jobTitle: "Dentist",
-      shortBio:
-        "Dentist, graduate of the Faculty of Dental Medicine, Grigore T. Popa University of Medicine and Pharmacy Iași. Part of the Implantik story since her student years — as a volunteer from 2020 and as a dentist from 2024.",
-      fullBio:
-        "Dr. Daciana-Mihaela Matei graduated from the Faculty of Dental Medicine at Grigore T. Popa University of Medicine and Pharmacy in Iași (2018–2024) and trained step by step at Implantik clinic — where she volunteered from 2020 and has been a dentist on the team since 2024.\n\nShe focuses on preventive dentistry and day-to-day treatments: prophylaxis (scaling, professional brushing), cavity treatment, endodontic care, and simple extractions — with emphasis on a relaxed environment for patients and clear explanation of each step.\n\nShe regularly attends congresses and continuing education courses (STOMIS Iași 2022, Congress of Dental Medicine Iași 2024, «Repere în Medicina Avansată» 2025, periodontal surgery workshop).",
-      image: "/echipa/dr-daciana-matei.jpg",
-      imageAlt: "Dr. Daciana-Mihaela Matei — dentist, Implantik Iași",
-      alumniOf: "Grigore T. Popa University of Medicine and Pharmacy Iași",
-      medicalSpecialty: "Dentistry",
-    },
-    {
       id: "bianca-mihalcut-chirila",
       name: "Dr. Bianca-Ioana Mihălcuț-Chirilă",
       jobTitle: "Dentist",

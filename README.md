@@ -39,7 +39,7 @@ Deschide [http://localhost:3000](http://localhost:3000) — redirecționează au
 
 - [ ] **Stat 7.000+ implanturi** — confirmare dovedibilă de la clinică (`home.stats[0]`)
 - [ ] **Bio complet Dr. Chirap** — nr. Colegiul Medicilor (`/echipa/dr-ionut-chirap`)
-- [ ] **Nr. Colegiul Medicilor** — Dr. Matei, Dr. Mihălcuț-Chirilă, Dr. Andriescu (`/echipa`)
+- [ ] **Nr. Colegiul Medicilor** — Dr. Mihălcuț-Chirilă, Dr. Andriescu (`/echipa`)
 - [ ] **[DE PRIMIT] poză Dr. Rocsana Anichiforesei** → `public/echipa/dr-rocsana-anichiforesei.jpg`
 - [ ] **Asistente medicale** — confirmare nume opționale pentru mențiunea de pe `/echipa`
 - [ ] **Servicii suplimentare** — confirmare cu clinica: urgențe stomatologice și radiologie digitală (carduri în grila de servicii, dacă există)
